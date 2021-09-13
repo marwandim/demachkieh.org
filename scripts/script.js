@@ -23,7 +23,7 @@ $(document).ready(function(){
 		mask = '9[9]';
 		file = 'policyUpdate';
 	}
-	
+
 	if($("body").attr('class') === 'arabic')
 	{
 		path = '';
@@ -31,11 +31,11 @@ $(document).ready(function(){
 	//////////////////////////////////////////
 
 	var htmlString = '<div class="item active"><img src="' + path + 'images/' + file + '/' + '1' + extension + '" width="460" height="345"></div>';
-		
+
 	for(var i = 2; i <= slides; ++i)
 	{
 		htmlString += '<div class="item"><img src="' + path + 'images/' + file + '/' + i + extension + '" width="460" height="345"></div>'
-		
+
 	}
 	$( "#carouselSlides" ).html( htmlString );
 
@@ -50,11 +50,11 @@ $(document).ready(function(){
 	// This triggers after each slide change
 	$('.carousel').on('slid.bs.carousel', function () {
 	  var currentIndex = $('div.active').index() + 1;
-	 
+
 	  // Now display this wherever you want
 	  $('#slideText input').val(currentIndex);
 	  carouselIndicators(currentIndex);
-		
+
 	});
 
 	function updateCarousel(slide) {
@@ -98,8 +98,9 @@ $(document).ready(function(){
 			html += '<li data-target="#myCarousel" data-slide-to="' + (slide - 1) + '" >' + slide + '</li>';
 		}
 
-		
-		$( "#carouselIndicators" ).html(html); 
-			
+
+		$( "#carouselIndicators" ).html(html);
+
+
 	}
 });

@@ -21,7 +21,7 @@ body {
 .modal-footer {
   background-color: #f9f9f9;
 }
-  
+
 body.arabic, body2.arabic {
 	font-size: 18px;
 
@@ -46,17 +46,17 @@ p a:hover {
 	position: relative;
 }
 #header div.language  {
-	margin:0 0px 0 0; 
+	margin:0 0px 0 0;
 	text-transform: uppercase;
 }
 #header div.language a {
 	line-height: 20px;
-	margin:0 10px 0 0; 
+	margin:0 10px 0 0;
 	color: #839a00;
 	text-decoration: none;
 }
 #header.arabic div.language a {
-	margin:0 0 0 10px; 
+	margin:0 0 0 10px;
 }
 
 #header div.genealogy {
@@ -77,7 +77,7 @@ p a:hover {
 	text-align: center;
 	text-shadow: 0 1px #ffc600;
 	z-index: 3;
-	
+
 }
 #header div.genealogy2 {
 	background: url(../images/interface.png) no-repeat 0 -956px;
@@ -97,7 +97,7 @@ p a:hover {
 	text-align: center;
 	text-shadow: 0 1px #ffc600;
 	z-index: 3;
-	
+
 }
 #header div.genealogy3{
 	background: url(../images/interface.png) no-repeat 0 -956px;
@@ -117,7 +117,7 @@ p a:hover {
 	text-align: center;
 	text-shadow: 0 1px #ffc600;
 	z-index: 3;
-	
+
 }
 
 #header.arabic div.genealogy3 {
@@ -142,19 +142,19 @@ p a:hover {
 #header.arabic div.genealogy, #header.arabic div.genealogy2, #header.arabic div.genealogy3 {
 	left: 50px;
 	font-size: 24px;
-	
+
 }
 
 
 
 #header div.genealogy a, #header div.genealogy2 a, #header div.genealogy3 a{
-	line-height: 20px;	
+	line-height: 20px;
 	color: #1f1005;
 	text-decoration: none;
-	
+
 }
 
-#header div.genealogy3 a { 
+#header div.genealogy3 a {
 	padding-left: 10px;
 }
 
@@ -163,13 +163,13 @@ p a:hover {
 	margin: 0 auto;
 	overflow: hidden;
 	width: 960px;
-	
-	
+
+
 }
 #header div.section a {
 	display: inline-block;
 	float: left;
-	
+
 }
 #header.arabic div.section a {
 	float: right;
@@ -400,7 +400,7 @@ p a:hover {
 	width: 162px;
 	z-index: 3;
 }
-	
+
 #body.arabic div div div div#content h2 {
 	right:0;
 	font-size: 27px;
@@ -519,10 +519,10 @@ p a:hover {
 	font-size:18px;
 }
 #body div div div div#content div ol{
-	font-size:14px;	
+	font-size:14px;
 }
 #body.arabic div div div div#content div ol, #body2.arabic div div div div#content div ol{
-	font-size:18px;	
+	font-size:18px;
 }
 #body div div div div#content div ol li{
 	padding: 0px 0 10px 0px;
@@ -783,13 +783,13 @@ p a:hover {
 	background: url(../images/yellowbox.png) no-repeat;
 }
 #body div div div div#sidebar ul li#yellowbox h2,
-#body div div div div#sidebar ul li#pinkbox h2 {	
+#body div div div div#sidebar ul li#pinkbox h2 {
 	font-size: 19px;
 	font-style: italic;
 	margin: 0;
 }
 #body.arabic div div div div#sidebar ul li#yellowbox h2,
-#body.arabic div div div div#sidebar ul li#pinkbox h2 {	
+#body.arabic div div div div#sidebar ul li#pinkbox h2 {
 	font-size: 24px;
 }
 #body div div div div#sidebar ul li#yellowbox h2 {
@@ -1027,7 +1027,7 @@ p a:hover {
 }
 #footer div:first-child div div:first-child div.first {
 	background: url(../images/interface.png) no-repeat 0 -231px;
-	
+
 	height: 136px;
 	margin: 30px 0 0;
 	padding: 15px 20px 23px;
@@ -1054,7 +1054,7 @@ p a:hover {
 	width: 260px;
 }
 #footer div:first-child div div:first-child div.section {
-	margin: 0; 
+	margin: 0;
 	width: auto;
 }
 #footer div:first-child div div:first-child div.section h3 {
@@ -1127,7 +1127,7 @@ p a:hover {
 	font-style: italic;
 	height: 85px;
 	margin: 0;
-	padding: 30px 0 0;	
+	padding: 30px 0 0;
 	width: 264px;
 }
 #footer div:first-child div div div.section div p {
@@ -1196,7 +1196,5 @@ p a:hover {
 	position: fixed;
 	z-index:100000000;
 	height: 35px;
-	
+
 }
-
-

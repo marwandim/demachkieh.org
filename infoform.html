@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="shortcut icon" href="images/familytreeAR.jpg" />
+	<meta charset="UTF-8">
+	<meta name="description" content="موقع ال دمشقية,عائلة دمشقيه,Demachkieh Website,Demashkieh family" />
+	<meta name="keywords" content="موقع ال دمشقية,عائلة دمشقيه,Demachkieh Website,Demashkieh family" />
+	<meta name="author" content="Marwan Mahmoud Demachkieh"/>
+
+	<title>آل دمشقيه - انتساب / تحديث</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script src="./scripts/utils.js"></script>
+</head>
+<body class="arabic">
+	<div id="header" class="arabic">
+		<div class="language">
+			<a href="en/infoform.php" style="font-size:12px"> English</a>
+
+		</div>
+
+		<div class="genealogy">
+			<a href="genealogy.html"> تسلسل جيني</a>
+		</div>
+
+		<div class="section">
+			<a  href="index.html"><img src="images/logoAR.png" width="250px" height="100px" alt="Image"></a>
+			<ul>
+				<li>
+					<a href="contact.html">إتصل بنا</a>
+				</li>
+				<li>
+					<a href="history.html">نبذه عن العائله</a>
+				</li>
+				<li>
+					<a href="legal.html">علم وخبر</a>
+				</li>
+				<li>
+					<a href="policy.html">شروط الانتساب</a>
+				</li>
+				<li>
+					<a href="index.html">الصفحة الرئيسية</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="donation.html">تبرعات</a>
+				</li>
+				<li class="current">
+					<a href="infoform.php">انتساب / تحديث</a>
+				</li>
+				<li>
+					<a href="familytree.html">شجره العائله</a>
+				</li>
+				<li>
+					<a href="membersname.html">اعضاء ابجدي</a>
+				</li>
+				<li>
+					<a href="membersnumber.html">اعضاء رقمي</a>
+				</li>
+			</ul>
+		</div>
+
+
+		<span></span>
+	</div>
+	<div id="body" class="arabic">
+		<div>
+			<div>
+				<div>
+					<div id="content">
+
+						<h2>استمارة المعلومات</h2>
+						<div>
+
+								<h3>طلب الانتساب / تحديث بيانات الاعضاء</h3>
+
+								<p>
+									<strong>هل ترغب في الانضمام إلى الجمعية أو أنت عضوا وترغب في تحديث بعض المعلومات؟</strong>
+								</p>
+								<p>
+									يرجى ملء النموذج التالي واستكمال كافة الحقول إذا كان ذلك ممكنا. لا تنسى ملء عنوان بريدك الإلكتروني أو رقم الهاتف حتى نتمكن من   العودة اليكم بعد مراجعت المعلومات الخاصة بكم.
+								</p>
+							<form name="infoform" onsubmit="return submitForm(this);">
+									<table>
+										<tr>
+											<td>نوع الطلب:
+												<span class="warning">*</span>
+											</td>
+											<td>
+													<select name="requestType">
+														<option value=""  selected> -- حدد نوع الطلب -- </option>
+														<option value="Register"
+														>طلب انتساب</option>
+														<option value="Update">تحديث بيانات الاعضاء</option>
+
+													</select>
+												</td>
+											</tr>
+										<tr>
+										<td>الاسم:
+											<span class="warning">*</span>
+										</td>
+										<td>
+										 <input type="text" name="name">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>اسم الأب/الجد:<span class="warning">*</span>
+										</td>
+										<td><input type="text" name="father"
+
+												>
+										 <br>
+										</td>
+										</tr>
+										<tr>
+										<td>اسم الأم:<span class="warning">*</span>
+										</td>
+										<td><input type="text" name="mother">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>رقم ومكان  السجل:<span class="warning">*</span>
+										</td>
+										</td>
+										<td><input type="text" name="sijil">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>تاريخ الولادة:<span class="warning">*</span>
+										</td>
+										</td>
+										<td><input type="text" name="birthDate">
+										 <br>
+										</td>
+										</tr>
+										<tr>
+										<td>مكان الولادة:<span class="warning">*</span>
+										</td>
+										</td>
+										<td><input type="text" name="birthPlace">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>البريد الإلكتروني:<span class="warning">*</span>
+										</td>
+										<td><input type="text" name="email">
+										 <br>
+										</td>
+										</tr>
+										<tr>
+										<td>ذكر/أنثى:
+
+										</td>
+										<td>
+										<select name="gender">
+											<option value=""  selected></option>
+											<option value="Male"
+											>ذكر</option>
+											<option value="Female">أنثى</option>
+
+										</select>
+										</td>
+										</tr>
+
+										<tr>
+										<td>المهنة:
+
+										</td>
+										<td><input type="text" name="profession">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>عنوان العمل:
+
+										</td>
+										<td><textarea cols="20" rows="2" name="workAddress">
+
+												</textarea>
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>عنوان السكن:
+
+										</td>
+										<td><textarea cols="20" rows="2" name="homeAddress">
+
+												</textarea>
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>فاكس:
+
+										</td>
+										<td><input type="text" name="fax">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>هاتف العمل:
+
+										</td>
+										<td><input type="text" name="workPhone">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>هاتف المنزل:
+
+										</td>
+										<td><input type="text" name="homePhone">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>أسماء الأولاد:
+
+										</td>
+										<td><input type="text" name="kids">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>الوضع العائلي:
+
+										</td>
+										<td>
+											<select name="maritalStatus">
+												<option value=""  selected></option>
+												<option value="Married"
+												>متأهل</option>
+												<option value="Divorced"
+												>مطلق</option>
+												<option value="Single">أعزب</option>
+
+											</select>
+
+										</td>
+										</tr>
+										<tr>
+										<td>اسم الزوج/الزوجة:
+
+										</td>
+										<td><input type="text" name="spouseName">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>مهنة الزوج/الزوجة:
+
+										</td>
+										<td><input type="text" name="spouseWork">
+										<br>
+										</td>
+										</tr>
+										<tr>
+										<td>مساهمة:
+
+										</td>
+										<td><input type="text" name="help">
+										<br>
+										</td>
+										</tr>
+
+										<tr>
+										<td><strong> بدل اشتراك سنوي:</strong>
+
+										</td>
+										<td><strong>75,000 ل.ل.</strong>
+
+										</td>
+										</tr>
+										 <tr>
+
+											<td>
+
+											</tr>
+										<br>
+										</td>
+
+										<tr><td><br><br><br></td></tr>
+
+											<td></td>
+											<td>
+												<input type="submit" value="ارسل" name="send">
+											</td>
+										</tr>
+										</p>
+									</table>
+								</form>
+
+						</div>
+
+					</div>
+					<div id="sidebar">
+						<h3>أخبار الأسرة والتحديثات</h3>
+						<ul>
+							<li id="yellowbox">
+								<h2>الموقع الجديد للأسرة</h2>
+								<img src="images/logoAR.png" alt="image"/>
+								<p>
+									<br>
+									ميزات جديدة<br><span>ومعلومات محدثة</span><br>
+								</p>
+							</li>
+							<li id="pinkbox">
+								<h2>مروان محمود دمشقيه</h2>
+								<p>
+									و قد عنيت انا بجمع كل المعلومات والتحقق منها، وتخزينها، ونشرها.
+									<br><br><span><span><span>اتبعونا للحصول على كل ما هو جديد.</span></span></span>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="arabic">
+
+		<div>
+			<p class="footnote">
+				جميع الحقوق محفوظة &copy; 2019. مروان محمود دمشقيه.
+			</p>
+		</div>
+	</div>
+</body>
+</html>
