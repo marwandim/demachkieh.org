@@ -1,32 +1,30 @@
 //	Scripts used by the HTML pages.
 //
+//	HISTORY
+//	19-Jun-2005	GenoPro			Created and written the PV_*() routines.
+//	23-Jul-2005	Ron Prior       	Added the "Explorer Tree"
+//	23-Nov-2005	Ron Prior       	Added the hide/show map functions
+//	13-Nov-2006	Ron Prior		Added Google Maps API functions & showGoogleMap
+//	22-Feb-2007	Ron Prior		Replace 'top' with 'mytop' so that report can be embedded (e.g. in an iframe)
+//	07-Apr-2007	Ron Prior		MIT Simile Timeline functionality
 //
-	if ( typeof String.prototype.endsWith != 'function' ) {
-	  String.prototype.endsWith = function( str ) {
-		return this.substring( this.length - str.length, this.length ) === str;
-	  }
-	};
-	if(!window.console){ window.console = {log: function(){} }; }
 	// set mytop to point to report 'top' in case loaded via iframe
-	var mytop = null; myopt = {}; gMap = {};
+
+	var mytop = null; gMap = {};
 	if (self.frames.length>2) mytop = self;
 	try{if (!mytop && parent.frames["heading"]) mytop = parent;}catch(e){}
 	try{if (!mytop && parent.parent.frames["heading"]) mytop = parent.parent;}catch(e){}
 	try{if (!mytop && parent.parent.parent.frames["heading"]) mytop = parent.parent.parent;}catch(e){}
 	if (!mytop) mytop = self; //give up!svgframe
-	var cache = mytop;
 
 // Common HTML page initialisation code
 function PageInit(forceframes, title,tree, fCacheToggles) {
 	var i = arguments.length;
-	if (self == parent && forceframes) document.getElementById('divFrameset').style.display='block';
+	if (self == parent) document.getElementById('divFrameset').style.display='block';
 	if (i > 2 && (tree)) explorerTreeRefresh(tree);
 	if (i < 4 || fCacheToggles) InitToggleTree();
-	if (window.location.search.indexOf('noframes') > 0) {
-		alert(window.parent.location);
-		myopt.noframes = true;
-		return;
-    } else if (self == parent || self == mytop) {
+
+        if (self == parent || self == mytop) {
 		// redirect to the home page with the current page in query string
 		var beginWebFileName = location.pathname.lastIndexOf('/');
 		var beginFileName = location.pathname.lastIndexOf('\\');
@@ -40,67 +38,84 @@ function PageInit(forceframes, title,tree, fCacheToggles) {
 		if (forceframes) mytop.location = 'default.htm?page=' + fileName;
 	}
 	showLastModified();
-	if (title && i > 1) $.postMessage('title='+title, window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
+	if (i > 1) mytop.document.title = title;
 }
 
-function smallScreen() {
-   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-     return true;
-   } else {
-     return false;
-   }
-}
-var SmartPhone = {
-    getUserAgent: function() {
-        return navigator.userAgent;
-    },
-    isAndroid: function() {
-        return this.getUserAgent().match(/Android/i);
-    },
-    isBlackBerry: function() {
-        return this.getUserAgent().match(/BlackBerry/i);
-    },
-    isIOS: function() {
-        return this.getUserAgent().match(/iPhone|iPad|iPod/i);
-    },
-    isOpera: function() {
-        return this.getUserAgent().match(/Opera Mini/i);
-    },
-    isWindows: function() {
-        return this.isWindowsDesktop() || this.isWindowsMobile();
-    },
-    isWindowsMobile: function() {
-        return this.getUserAgent().match(/IEMobile/i);
-    },
-    isWindowsDesktop: function() {
-        return this.getUserAgent().match(/WPDesktop/i); ;
-    },
-    isAny: function() {
-        var foundAny = false;
-        var getAllMethods = Object.getOwnPropertyNames(SmartPhone).filter(function(property) {
-            return typeof SmartPhone[property] == 'function';
-        });
+//	Core routine for the Picture Viewer (PV) to animate the slideshow.
+function PV_PickCore(id, nDirection)
+	{
+	var oPicker = document.getElementById("idPVs_" + id);
+	var cPictures = oPicker.options.length;	
+	var iSelected = (oPicker.selectedIndex + cPictures + nDirection) % cPictures; 
+	var strValue = oPicker.options[iSelected].value;
+	var ich = strValue.indexOf('\x1f');
+	document.getElementById("idPVp_" + id).innerHTML = strValue.substring(0, ich);
+	var strValue = strValue.substring(ich + 1, strValue.length);
+	var ich = strValue.indexOf('\x1f');
+	var oName = document.getElementById("idPVn_" + id);
+ 	if (oName) oName.innerHTML = (ich == -1)?strValue:strValue.substring(0, ich);
+	if (ich > -1 ) {
+		var strValue = strValue.substring(ich + 1, strValue.length);
+		var ich = strValue.indexOf('\x1f');
+		document.getElementById("idPVc_" + id).innerHTML = strValue.substring(0, ich);
+		var strValue = strValue.substring(ich + 1, strValue.length);
+		var ich = strValue.indexOf('\x1f');
+		var strDescription = strValue.substring(ich + 1, strValue.length);
+
+		var oVisibility = document.getElementById("idPVv_" + id);
+		if (oVisibility) {
+			if (strDescription) {
+				elementRemoveClass(oVisibility, "hide");
+				elementAddClass(oVisibility, "show");
+			} else {
+				elementRemoveClass(oVisibility, "show");
+				elementAddClass(oVisibility, "hide");
+			}
+		}
+		var oDescription = document.getElementById("idPVd_" + id);
+		if (oDescription) oDescription.innerHTML = strDescription;
 	}
-};
+	oPicker.selectedIndex = iSelected;
+	} // PV_PickCore()
+
+function PV_Info(id)
+	{
+	PV_PickCore(id, 0);
+	}
+function PV_Next(id)
+	{
+	PV_PickCore(id, +1);
+	}
+function PV_Prev(id)
+	{
+	PV_PickCore(id, -1);
+	}
+
+var g_idTimer;	// Global variable to store the id of the timer, so we can stop it later
+
+function PV_Pause(id)
+	{
+	// The id is not used, but passed for code orthogonality
+	if (g_idTimer != null)
+		clearTimeout(g_idTimer);
+	g_idTimer = null;
+	}
+ // Start the picture slideshow to display a new picture every 3 second
+function PV_Play(id)
+	{
+	PV_Pause(id);
+	PV_Next(id);
+	// get picture interval from associated speed slider
+	var nInterval=getSliderVal(document.getElementById("idPVslider_" + id));
+	g_idTimer = setTimeout("PV_Play('" + id + "');", nInterval);
+	}
 
 
-//	routines for the Picture Viewer (PV) to animate the slideshow.
-function PV_Next(el, id)
-	{
-	$('#idPVp_'+id).fadeQueue('slow');
-	}
-function PV_Prev(el, id)
-	{
-	$('#idPVp_'+id).fadeQueue(-600);
-	}
-function PV_Pause(el, id)
-	{
-	$('#idPVp_'+id).fadeQueue(false);
-	}
-function PV_Play(el, id)
-	{
-	$('#idPVp_'+id).fadeQueue(true, getSliderVal(document.getElementById("idPVslider_" + id)), 'slow');
-	}
+// Set the text of the status bar
+function ss(s){window.status=s;return true;}
+
+// Clear the text of the status bar
+function cs(){window.status='';}
 
 /*
 
@@ -275,11 +290,10 @@ function xTclk(evt, group) {
           window.parent.location.href = href;
           break;
         case '_top':
-          window.location.href = href;
+          window.mytop.location.href = href;
           break;
         default:
-			return true;
-          //window.open(href, target);
+          window.open(href, target);
           break;
       }
     }
@@ -400,10 +414,8 @@ function _explorerTreeSetState(ul, collapse, excludedElements, group) {
 // found branch. Returns the LI that contains the specified HREF, or null if
 // unsuccessful.
 function explorerTreeOpenTo(win, id, href, scroll, expand, group) {
-	
-  var li = win.document.getElementById(id);
-  var div = li.parentNode;
-  li = _explorerTreeSearch(li, href);
+//  var li = _explorerTreeSearch(win.document.getElementById(id), _explorerTreeNormalizeHref(href));
+  var li = _explorerTreeSearch(win.document.getElementById(id), href);
   if (li) {
     if (!win.IE7) {
       if (explorerTreeAutoCollapse[id]) {
@@ -438,7 +450,7 @@ function explorerTreeOpenTo(win, id, href, scroll, expand, group) {
         h = 0;
       }
       // scroll so the list item is centered on the window
-      div.scrollTop = li.offsetTop - h / 2;
+      win.scroll(0, li.offsetTop - h / 2);
     }
   }
   return li;
@@ -684,93 +696,122 @@ function makeWindow(img)
 
 function CenterMap(x,y,hlight)
 {
-	//$.cookie('CenterMap', x+','+y+','+hlight);
-}
-function openPopUpFrame(url) {
-		$.postMessage('openPopup='+url, window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
+document.cookie='CenterMap='+x+','+y+','+hlight
 }
 
-function showHome() {
-		$.postMessage('showHome', window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
-}
-function showPopUpFrame(percent) {
-	if (parent != self) { // ignore if not in a frameset
-		//evt.target.parentElement.target = 'popup';
-		$.postMessage('showPopup' +(percent && percent != ''? '='+percent : ''), window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
-		}
+function showPopUpFrame(percent,svg) {
+ if (parent != self) { // ignore if not in a frameset
+	if (!svg && mytop.popupToggleState != mytop.popupMaxButton.src) {
+		mytop.document.getElementById('lower').cols = mytop.saveLower2;
+		mytop.document.getElementById('rhs').rows = mytop.saveRhs2;
+		mytop.popupToggleState = mytop.popupMaxButton.src;
+	}
+	var pc=(percent ? percent : '');
+	if(mytop.document.getElementById('rhs').rows=="*,0" || pc != "")      // don't change if already changed by user
+	{	if(pc=='') pc='65%';
+		mytop.document.getElementById('rhs').rows="*,"+pc;
+	}
+ }
 }
 function hidePopUpFrame(e, newpage) {
-		$.postMessage('hidePopup'+(newpage ? '='+newpage : ''), window.location.protocol == 'file:' ? '*' : window.location.href, parent.parent);
+	mytop.document.getElementById('rhs').rows="*,0";
+	if (mytop.popupToggleState != mytop.popupMaxButton.src) {
+		mytop.document.getElementById('lower').cols = mytop.saveLower2;
+		mytop.popupToggleState = mytop.popupMaxButton.src;
+	}
+	mytop.gnoParam.popupTitle='';
+	mytop.gnoParam.popupHTML='';
+	mytop.frames["popup"].location = (newpage)?newpage:'popup.htm'
 }
 function hideGenoMapFrame(e) {
 	if (!e && window.event) e=window.event;
 	if (!e) return false;
+
 	var button;
 	if (e.target) button=e.target;
 	if (e.srcElement) button=e.srcElement;
-	button = button.previousSibling
-	if (button) button = button.previousSibling;
-	if (button && button.src.indexOf("images/restore.gif") != -1) {
-		$.postMessage('hideMap',window.location.protocol == 'file:' ? '*' : window.location.href, parent.parent);
-		button.src = "../images/maximize.gif";
-	} else {
-		$.postMessage('hidePopup=popup.htm', window.location.protocol == 'file:' ? '*' : window.location.href, parent.parent);
+	button = button.previousSibling.previousSibling;
+	if (button.src != mytop.popupMaxButton.src) {
+		mytop.document.getElementById('lower').cols = mytop.saveLower2;
+		mytop.document.getElementById('rhs').rows = mytop.saveRhs2;
+		mytop.popupToggleState = mytop.popupMaxButton.src;
+		button.src = mytop.popupToggleState;
 	}
+	hidePopUpFrame(e, '../popup.htm')
 }
 
 function tocHide() {
-	$.postMessage('hideTOC', window.location.protocol == 'file:' ? '*' : window.location.href, parent.parent);
+      var lowerFrame = mytop.document.getElementById('lower');
+      if (lowerFrame.cols != mytop.minLower) {
+  		   mytop.saveLower = lowerFrame.cols;
+		     lowerFrame.cols = mytop.minLower;
+      }
 }
 
-function tocShow(toc) {
-	$.postMessage('showTOC='+toc, window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
+function tocShow() {
+		mytop.document.getElementById('lower').cols = mytop.saveLower;
 }
 
-function tocExit(popup) {
-	if (tocStateToggle == 'Close') {
-		$.postMessage('hideTOC'+(popup ? '='+popup : ''), window.location.protocol == 'file:' ? '*' : window.location.href, parent.parent);
-	} else {
-		if (popup) $.postMessage('openPopup='+popup, window.location.protocol == 'file:' ? '*' : window.location.href, parent.parent);
-	}
-	return true;
+function tocExit() {
+         if (mytop.tocStateToggle.src == mytop.tocStateClose.src) tocHide();
+         hidePopUpFrame();
 }
-/* ££
+function tocSetToggle() {
+         var toggle = document.images["tocStateButton"];
+         toggle.src = mytop.tocStateToggle.src;
+         toggle.alt = mytop.tocStateToggle.alt;
+         toggle.title = mytop.tocStateToggle.title;
+}
+
+function tocToggle() {
+         mytop.tocStateToggle = (mytop.tocStateToggle.src == mytop.tocStateClose.src ? mytop.tocStateOpen : mytop.tocStateClose);
+         tocSetToggle();
+}
+
 function initPopupToggle(button) {
-	document.images[button].src = $.cookie('popupToggleState');
+	document.images[button].src = mytop.popupToggleState;
 }
-*/
-function togglePopUpFrame(button, prefix)
+
+function togglePopUpFrame(button)
 {
   button = (button ? button : "togglePopUp")
-//££	if ($.cookie('popupToggleState') == "images/maximize.gif") {
-	if (document.images[button].src.indexOf("images/maximize.gif") >= 0)  {
-		document.images[button].src=(prefix ? prefix : '') + "images/restore.gif";
-		$.postMessage('maxPopup', window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
+	if (mytop.popupToggleState == mytop.popupMaxButton.src) {
+    var frameLower = mytop.document.getElementById('lower'), frameRhs = mytop.document.getElementById('rhs')
+		mytop.saveLower2 = frameLower.cols;
+		mytop.saveRhs2 = frameRhs.rows;
+		frameLower.cols = "0,*";
+		frameRhs.rows = "0,*";
+		mytop.popupToggleState = mytop.popupResButton.src;
+		document.images[button].src= mytop.popupToggleState;
 	}
 	else {
-       restorePopUpFrame(button, prefix);	
+       restorePopUpFrame(button)	
   }
 }
 
-function restorePopUpFrame(button, prefix) {
-	button = (button ? button : "togglePopUp")
-	if (document.images[button].src.endsWith("images/restore.gif")) {
-		document.images[button].src=(prefix ? prefix : '') + "images/maximize.gif";
-		$.postMessage('restorePopup', window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
+function restorePopUpFrame(button) {
+  button = (button ? button : "togglePopUp")
+	if (mytop.popupToggleState == mytop.popupResButton.src) {
+		mytop.document.getElementById('lower').cols = mytop.saveLower2;
+		mytop.document.getElementById('rhs').rows = mytop.saveRhs2;
+		mytop.popupToggleState = mytop.popupMaxButton.src;
+		document.images[button].src= mytop.popupToggleState;
 	}
 }
 
 function savePopupContent(div, subtitle) {
-	//$.cookie('popupHTML', document.getElementById(div).innerHTML);
-	//$.cookie('popupTitle', subtitle);
+	mytop.gnoParam.popupHTML = document.getElementById(div).innerHTML;
+	mytop.gnoParam.popupTitle = subtitle;
 }
+
 function loadPopupContent(div, subtitle) {
-	//document.getElementById(div).innerHTML = $.cookie('popupHTML');
-	//document.getElementById(subtitle).innerHTML = $.cookie('popupTitle');
+	document.getElementById(div).innerHTML = mytop.gnoParam.popupHTML;
+	document.getElementById(subtitle).innerHTML = mytop.gnoParam.popupTitle;
 }
 
 function displayPopup() {
-	$.postMessage('setpopup', window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
+	mytop.frames['popup'].location='popup.htm';
+	//mytop.frames['popup'].location.reload();
 }
 
 function getArgs(  ) {
@@ -880,9 +921,10 @@ var sliderActive = false;
 function drawSliderByVal(slider, val) {
 	var p=(val-sliderMin)/(sliderMax-sliderMin);
 	var x=-slider.width+(slider.width-sliderKnob.width)*p;
-	var knobs = $('div#idPVp_'+slider.id.substr(11)+' img.knob');
+	sliderKnob.style.left=x + "px";
 	var v=(Math.round((sliderMax+sliderMin-val)/100)/10)+'';
-	knobs.css('left', x+'px').attr({title: v, alt : v});
+	sliderKnob.title=v;
+	sliderKnob.alt=v;
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 function setSliderByClientX(slider, clientX) {
@@ -956,7 +998,7 @@ function stopEvent(event) {
     // on their excellent Google Maps API tutorial at  
     // http://www.econym.demon.co.uk/googlemaps/
 
-var mapZoom, mapPlace, mapObj, mapOms, mapInfoWin, geocoder;
+var mapZoom, mapPlace, mapObj, geocoder;
 
 function exitGoogleMap() {
 	if(mapObj) mapObj = null;
@@ -969,24 +1011,19 @@ function initGoogleMap() {
 	if ((ht-130)>0) el.style.height = (ht - 130) + 'px';
 }
 function addMarker(point, tooltip, html) {
-	var marker = new google.maps.Marker({
-		position: point,
-		map: mapObj,
-		desc: html,
-		title: tooltip
+		var marker = new google.maps.Marker({
+      position: point,
+      map: mapObj,
+      title: tooltip
     });
+
    if (html) {
-	  /* not used with Overlapping Marker Spiderfier
       var infowindow = new google.maps.InfoWindow({
           content: html
       });
-	  */
-	  mapOms.addMarker(marker);
-	  /* not used with Overlapping Marker Spiderfier
       google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(mapObj,marker);
       });
-	  */
     }
         return marker;
 }
@@ -1051,8 +1088,8 @@ function checkGoogleMap(strLat, strLng, strPlace, mapType, zoom, back, show) {
     		gMap.lng = getCoord(strLng);
 				showGoogleMap();
 			} else {
-				showPopUpFrame();
-				$.postMessage('setpopup=gmap_place.htm', window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
+				showPopUpFrame('', false);
+				mytop.frames["popup"].location = 'gmap_place.htm';
 			}
 		} else {
 			geocoder = new google.maps.Geocoder();
@@ -1103,7 +1140,7 @@ function addAddressToMap(response, status) {
 //		if (gMap.show) {
 			showGoogleMap();
 //		} else {
-//			$.cookie('frames["popup"].location = 'gmap_place.htm?';
+//			mytop.frames["popup"].location = 'gmap_place.htm?';
 //
 //		}
 	}
@@ -1122,30 +1159,16 @@ function makeGoogleMap() {
       mapTypeControlOptions: {style:google.maps.MapTypeControlStyle.DROPDOWN_MENU}
     };
     var gMapObj = new google.maps.Map(document.getElementById("GoogleMap"), gMapOptions);
-	mapObj = gMapObj;
-	mapOms = new OverlappingMarkerSpiderfier(mapObj);
-	
-	mapInfoWin = new google.maps.InfoWindow();
-	
-	mapOms.addListener('click', function(marker, event) {
-		mapInfoWin.setContent(marker.desc);
-		mapInfoWin.open(mapObj, marker);
-	});
-	
-	mapOms.addListener('spiderfy', function(markers) {
-		mapInfoWin.close();
-	});
-	var markers=[];
-	var bounds = new google.maps.LatLngBounds();
-	for (var i=0; i<gMapData.markers.length; i++) {
-		var point = new google.maps.LatLng(getCoord(gMapData.markers[i].lat), getCoord(gMapData.markers[i].lng));
-		var marker = addMarker(point, gMapData.markers[i].label, gMapData.markers[i].html);
-		bounds.extend(point);
+		mapObj = gMapObj;
+    var markers=[];
+		var bounds = new google.maps.LatLngBounds();
+		for (var i=0; i<gMapData.markers.length; i++) {
+			var point = new google.maps.LatLng(getCoord(gMapData.markers[i].lat), getCoord(gMapData.markers[i].lng));
+			var marker = addMarker(point, gMapData.markers[i].label, gMapData.markers[i].html);
+			bounds.extend(point);
       markers.push(marker);
     }
-	gMapObj.setOptions({ maxZoom: 6 });
-	gMapObj.fitBounds(bounds);
-	gMapObj.setOptions({ maxZoom: null });		
+		gMapObj.fitBounds(bounds);
     gMapObj.enableKeyDragZoom({key: 'alt'});
         var zoomfunc = zoomGoogleMapLater(gMapObj, bounds, markers);
 		setTimeout(zoomfunc, 1000)
@@ -1156,11 +1179,9 @@ function zoomGoogleMapLater(map, bounds, markers) {
 		if (map.getBounds()) {
 			var clat = (bounds.getNorthEast().lat() + bounds.getSouthWest().lat()) /2;
 			var clng = (bounds.getNorthEast().lng() + bounds.getSouthWest().lng()) /2;
-			map.setOptions({ maxZoom: 6 });
 			map.fitBounds(bounds);
-			map.setOptions({ maxZoom: null });
 			map.setCenter(new google.maps.LatLng(clat,clng));
-			var markerCluster = new MarkerClusterer(map, markers, {maxZoom:6, gridSize:30, imagePath: 'google-maps-utility/images/m'});
+      var markerCluster = new MarkerClusterer(map, markers, {maxZoom:6, gridSize:30});
 		} else {
 			var zoomfunc = zoomGoogleMapLater(map, bounds, markers);
 			setTimeout(zoomfunc, 1000)
@@ -1174,8 +1195,23 @@ function zoomGoogleMapLater(map, bounds, markers) {
 
 */
 
-function timeLineOnLoad(tlParam) {
+function timeLineOnLoad() {
+
   var today = new Date();
+
+  /* Variant of standard Timeline.loadJSON but store JSON data in global var
+  Timeline.loadJSON = function(url, f) {
+	var fError = function(statusText, status, xmlhttp) {
+		alert("Failed to load json data from " + url + "\n" + statusText);
+	};
+	var fDone = function(xmlhttp) {
+		eval('tlParam.json0 = ' + xmlhttp.responseText + '') 
+		f(tlParam.json0, url);
+	};
+    	tlParam.url = url;
+    	SimileAjax.XmlHttp.get(url, fError, fDone);
+  };
+*/
   // Override data/time info in bubble
   Timeline.DefaultEventSource.Event.prototype.fillTime = function() {};
 
@@ -1184,8 +1220,6 @@ function timeLineOnLoad(tlParam) {
   if ('unit' in urlParam) urlParam.unit = parseInt(urlParam.unit);
   for (prop in urlParam) {
 	tlParam[prop] = urlParam[prop];
-	if (tlParam[prop] == "true") tlParam[prop] = true;
-	if (tlParam[prop] == "false") tlParam[prop] = false;
   }
 
   tlParam.eventSource0 = new Timeline.DefaultEventSource();
@@ -1212,19 +1246,23 @@ function timeLineOnLoad(tlParam) {
   if (! ('div'		in tlParam)) tlParam.div = document.getElementById("timeline0");
   if (! ('wrapEvents'	in tlParam)) tlParam.wrapEvents = true;
 
+//for (prop in tlParam) { alert(prop+'='+tlParam[prop]);};
+	
   if (tlParam.data) {
   	tlParam.constrained = document.getElementById("constrainer");
+	Timeline.loadJSON(tlParam.data, function(json, url) {  
     tlParam.json0=json;
-	document.getElementById("subtitle").innerHTML = json.subtitle;
-	if (('date' in tlParam) && tlParam.help) {
-		// put help next to target event (help is last event in json data)
-		tlParam.json0.events[tlParam.json0.events.length-1].start = tlParam.date;
-	} else {
-		tlParam.date = json.date;
-	}
-	tlParam.nowTag = json.nowTag;
-	tlParam.eventSource0.loadJSON(json, tlParam.url);
-	timeLineDraw(tlParam)
+		document.getElementById("subtitle").innerHTML = json.subtitle;
+		if (('date' in tlParam) && tlParam.help) {
+			// put help next to target event (help is last event in json data)
+			tlParam.json0.events[tlParam.json0.events.length-1].start = tlParam.date;
+		} else {
+			tlParam.date = json.date;
+		}
+		tlParam.nowTag = json.nowTag;
+		tlParam.eventSource0.loadJSON(json, url);
+		timeLineDraw(tlParam.date)
+	});
   } else {
 	// personal & family timelines - data already loaded in html script so just load into eventSource
 
@@ -1243,18 +1281,18 @@ function timeLineOnLoad(tlParam) {
 	};
 	tlParam.help = false;
 	if ('constrained' in tlParam) delete tlParam.constrained;
-	timeLineDraw(tlParam);
+	timeLineDraw(tlParam.date);
 	tl.getBand(0).setMinVisibleDate(Timeline.DateTime.parseGregorianDateTime(tlParam.date) - (365 * 24 * 60 * 60 * 1000))
   }
 }
-function timeLineDraw(tlParam) {
+function timeLineDraw(date) {
   	var bandInfos = [
 		Timeline.createBandInfo({
 //  		trackHeight:    tlParam.trackHeight,
 //   	  trackGap:       tlParam.trackGap,
   		align:		      'Top',
     	eventSource:    tlParam.eventSource0,
-    	date:           Timeline.DateTime.parseGregorianDateTime(tlParam.date),
+    	date:           Timeline.DateTime.parseGregorianDateTime(date),
    	 	width:          "100%", 
 //    	intervalUnit:   tlParam.unit, 
 //    	intervalPixels: tlParam.pixels,
@@ -1317,9 +1355,9 @@ function timeLineDraw(tlParam) {
         ];
 	tl = Timeline.create(tlParam.div, bandInfos);
 	tl.layout();
-	timeLineOnResize(tlParam);
+	timeLineOnResize();
 }
-function timeLineZoom(tlParam, zoomIn) {
+function timeLineZoom(zoomIn) {
 	var l = Timeline.DateTime.gregorianUnitLengths;
 	var u = tlParam.unit;
 	if (!zoomIn) {
@@ -1343,9 +1381,9 @@ function timeLineZoom(tlParam, zoomIn) {
 			}
 		}
 	} 
-	timeLineRedraw(tlParam);
+	timeLineRedraw();
 }
-function timeLineRedraw(tlParam) {
+function timeLineRedraw() {
 
 	// remove help event if still present
 	if (tlParam.help) {
@@ -1357,7 +1395,7 @@ function timeLineRedraw(tlParam) {
 	tlParam.eventSource0.loadJSON(tlParam.json0, tlParam.url);
 	if(tl) timeLineDraw(tl.getBand(0).getCenterVisibleDate())
 }
-function timeLineToggleDuration(tlParam) {
+function timeLineToggleDuration() {
 	for (var i=0; i < tlParam.json0.events.length; i++) {
 		if (tlParam.duration) {
 			// move any 'end' dates out of the way so that Timeline doesn't see them
@@ -1375,11 +1413,11 @@ function timeLineToggleDuration(tlParam) {
 		}
 	}
 	tlParam.duration = ! tlParam.duration;
-	timeLineRedraw(tParam);
+	timeLineRedraw();
 }
 
 var resizeTimerID = null;
-function timeLineOnResize(tlParam) {
+function timeLineOnResize() {
     var ht = getInnerHeight();
     //var ht = document.documentElement.clientHeight;
     if (ht > 0 && tlParam.constrained) tlParam.constrained.style.height=(ht - 135) + 'px';
@@ -1391,21 +1429,7 @@ function timeLineOnResize(tlParam) {
     }
 }
 function getInnerHeight() {
-      var h;
-      if (self.innerHeight) {
-        // Netscape, Mozilla, Opera
-        h = self.innerHeight;
-      } else if (document.documentElement && document.documentElement.clientHeight) {
-        // IE6 in 'standards' mode
-        h = document.documentElement.clientHeight;
-      } else if (document.body && document.body.clientHeight) {
-        // other IEs
-        h = document.body.clientHeight;
-      } else {
-        h = 0;
-      }
-
-	return h;
+	return self.innerHeight || (document.documentElement.clientHeight || document.body.clientHeight); 
 }
 function showLastModified() {
     var out = document.getElementById('lastModified');
@@ -1419,12 +1443,52 @@ function showLastModified() {
        }
     }
 }
-// Handle GenoMap SVG images
+// Handle GenoMap SVG/PDF images
 //
 
+function setSvgPdfFrame(flip) {
+  if (!flip) {
+    var param = getArgs();
+    // normalise coordinates
+    var dX = -mapInfo.Bounds[0];
+    var dY = -mapInfo.Bounds[1];
+    mapInfo.Bounds[2] += dX;
+    mapInfo.Bounds[3] += dY;
+    mapInfo.Bounds[0] = 0;
+    mapInfo.Bounds[1] = 0;
+    mapInfo.X=(param.x ? parseInt(param.x) + dX : (mapInfo.Bounds[2] - mapInfo.Bounds[0]) / 2);
+    mapInfo.Y=(param.y ? parseInt(param.y) + dY : (mapInfo.Bounds[3] - mapInfo.Bounds[1]) / 2);
+    mapInfo.Highlight = (param.highlight ? param.highlight=="true" : false);
+    mapInfo.Toggle=(param.toggle ? param.toggle : 'SVG');
+    pdfparam='#zoom='+mapInfo.PdfZoom + '&navpanes=0'
+    if (mapInfo.ZoomExtent) pdfparam = '#view=Fit&navpanes=0';
+    if (mapInfo.Highlight) pdfparam = '#navpanes=0&zoom='+mapInfo.PdfZoom + ','+mapInfo.X+','+mapInfo.Y+'&highlight='+(mapInfo.X-30)+','+(mapInfo.X+30)+','+(mapInfo.Y-30)+','+(mapInfo.Y+30);
+    pdfparam = pdfparam + '&toolbar='+(mapInfo.PdfToolbar ? "1" : "0");
+  }
+	if (mapInfo.SVG && mapInfo.PDF) {
+    if (flip) mapInfo.Toggle = (mapInfo.Toggle=='SVG' ? 'PDF' : 'SVG');
+    	var texts=[mapInfo.SvgTip,mapInfo.PdfTip];
+  		if (mapInfo.Toggle == 'PDF') {
+  			document.images['toggleSvgPdfImg'].src = imgSvg.src;
+  			document.images['toggleSvgPdfImg'].title = texts[0];
+  		} else {
+  			document.images['toggleSvgPdfImg'].src = imgPdf.src;
+  			document.images['toggleSvgPdfImg'].title = texts[1];
+  		}
+		}
+    if (mapInfo.Toggle=='SVG') {
+    	checkSVGViewer();
+    	emitSVG(document.getElementById("svgpdf"), 'src="' + mapInfo.File + '" id="svgEmbed" height="100%" width="100%" type="image/svg+xml" border="2"');
+      embed = document.getElementById('svgEmbed');
+      waitForSvgLoad(mapInfo, 0);
+    } else {
+    	document.getElementById("svgpdf").innerHTML = "<iframe width='100%' height='100%' src='" + mapInfo.File.substring(0,mapInfo.File.lastIndexOf('.')) + ".pdf"  +pdfparam+ "'/>";
+    }
+    if (mapInfo.ExpandFrame && (mytop.popupToggleState == mytop.popupMaxButton.src)) togglePopUpFrame('togglePopUp');
+}
 function waitForSvgLoad(info, counter) {
- //       try {
-          svgdoc = (embed.nodeName = 'DIV' ? embed.firstChild.nextSibling : embed.getSVGDocument());
+        try {
+          svgdoc = embed.getSVGDocument();
           if (svgdoc && svgdoc.defaultView)  {// try the W3C standard way first
               svgwin = svgdoc.defaultView;
               svgwin.init(info)
@@ -1435,314 +1499,12 @@ function waitForSvgLoad(info, counter) {
               svgwin = embed.getWindow();
               svgwin.init(info)
           }
+        } catch(exception) {
+          if (! counter || counter < 120) { // wait for 60 secs max
+             setTimeout(function () {waitForSvgLoad(info, ++counter);}, 500);
+             return;
+          } else {
+            alert('GenoMaps may not display correctly as the required SVG interface does not appear to be supported by this browser');
+          }
+        }
 }
-
-/*
-  == fadeQueue - 1/13/2009 - "Cowboy" Ben Alman - http://benalman.com/ ==
-  
-  changed by 'genome' to allow a default delay to be set and to fade backward or forward.
-					  also avoid requirement to use absolute/relative positioning (just set 2nd and subsequent to display:none; )
-  
-  Sequentially fade child items in a container (note: child items get rearranged)
-  
-  Sample Usage:
-  $('div.container').fadeQueue( 'normal' );             // fade once at 'normal' speed
-  $('div.container').fadeQueue( true, 2000, 'normal' ); // fade loop, every 2 sec, 'normal' speed
-  $('div.container').fadeQueue( false );                // stop fade loop
-  
-*/
-(function($) {
-  
-  var fadeQueue = 'fadeQueue';
-  
-  $.fn[ fadeQueue ] = function( start, delay, speed ) {
-    return this.each(function(){
-      var that = $(this),
-        data;
-      
-      // Get the per-element fadeQueue data store, or create it if necessary.
-      that.data( fadeQueue, data = that.data( fadeQueue ) || {} );
-      
-      // Actually perform the append + fade bit, you know, the good stuff!
-      function fade( speed ) {
-		if (typeof speed == 'number' && speed < 0) {
-			that.children(':first')
-			  .hide();
-			that.children(':last')
-			  .prependTo( that )
-			  .fadeIn( -speed );
-		} else {
-			that.children(':first')
-			  .hide()
-			  .appendTo( that );
-			that.children(':first')
-			  .fadeIn( speed );
-		}
-      };
-      
-      // Only fade speed was specified, so fade once and exit.
-      if ( typeof start !== 'boolean' ) {
-        return fade( start );
-      }
-      
-      // Clear any pending timeout for this element.
-      if ( data.id ) {
-        clearTimeout( data.id );
-        delete data.id;
-      }
-	  // set delay as default delay if positive value e.g. 
-      if (typeof delay == 'number' && delay > 0) data.delay = delay;
-	  
-      // Fade immediately and start the loop.
-      start && (function loopy(){
-        fade( speed);
-		// if default delay set use it. absolute value of a negative delay is only used if no default
-        data.id = setTimeout( loopy, data.delay ? data.delay : (typeof delay == 'number' ? Math.abs(delay) : delay) );
-      })();
-      
-    });
-  };
-  
-})(jQuery);
-
-/*!
- * jQuery postMessage - v0.5 - 9/11/2009
- * http://benalman.com/projects/jquery-postmessage-plugin/
- * 
- * Copyright (c) 2009 "Cowboy" Ben Alman
- * Dual licensed under the MIT and GPL licenses.
- * http://benalman.com/about/license/
- */
-
-// Script: jQuery postMessage: Cross-domain scripting goodness
-//
-// *Version: 0.5, Last updated: 9/11/2009*
-// 
-// Project Home - http://benalman.com/projects/jquery-postmessage-plugin/
-// GitHub       - http://github.com/cowboy/jquery-postmessage/
-// Source       - http://github.com/cowboy/jquery-postmessage/raw/master/jquery.ba-postmessage.js
-// (Minified)   - http://github.com/cowboy/jquery-postmessage/raw/master/jquery.ba-postmessage.min.js (0.9kb)
-// 
-// About: License
-// 
-// Copyright (c) 2009 "Cowboy" Ben Alman,
-// Dual licensed under the MIT and GPL licenses.
-// http://benalman.com/about/license/
-// 
-// About: Examples
-// 
-// This working example, complete with fully commented code, illustrates one
-// way in which this plugin can be used.
-// 
-// Iframe resizing - http://benalman.com/code/projects/jquery-postmessage/examples/iframe/
-// 
-// About: Support and Testing
-// 
-// Information about what version or versions of jQuery this plugin has been
-// tested with and what browsers it has been tested in.
-// 
-// jQuery Versions - 1.3.2
-// Browsers Tested - Internet Explorer 6-8, Firefox 3, Safari 3-4, Chrome, Opera 9.
-// 
-// About: Release History
-// 
-// 0.5 - (9/11/2009) Improved cache-busting
-// 0.4 - (8/25/2009) Initial release
-
-(function($){
-  '$:nomunge'; // Used by YUI compressor.
-  
-  // A few vars used in non-awesome browsers.
-  var interval_id,
-    last_hash,
-    cache_bust = 1,
-    
-    // A var used in awesome browsers.
-    rm_callback,
-    
-    // A few convenient shortcuts.
-    window = this,
-    FALSE = !1,
-    
-    // Reused internal strings.
-    postMessage = 'postMessage',
-    addEventListener = 'addEventListener',
-    
-    p_receiveMessage,
-	
-	isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0, // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera) 
-    isFirefox = typeof InstallTrigger !== 'undefined', // Firefox 1.0+ 
-    isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0, // At least Safari 3+: "[object HTMLElementConstructor]" 
-    isChrome = !!window.chrome && !isOpera, // Chrome 1+ 
-    isIE = /*@cc_on!@*/ false || document.documentMode, // At least IE6   
-    // I couldn't get window.postMessage to actually work in Opera 9.64!
-    has_postMessage = window[postMessage];
-  
-  // Method: jQuery.postMessage
-  // 
-  // This method will call window.postMessage if available, setting the
-  // targetOrigin parameter to the base of the target_url parameter for maximum
-  // security in browsers that support it. If window.postMessage is not available,
-  // the target window's location.hash will be used to pass the message. If an
-  // object is passed as the message param, it will be serialized into a string
-  // using the jQuery.param method.
-  // 
-  // Usage:
-  // 
-  // > jQuery.postMessage( message, target_url [, target ] );
-  // 
-  // Arguments:
-  // 
-  //  message - (String) A message to be passed to the other frame.
-  //  message - (Object) An object to be serialized into a params string, using
-  //    the jQuery.param method.
-  //  target_url - (String) The URL of the other frame this window is
-  //    attempting to communicate with. This must be the exact URL (including
-  //    any query string) of the other window for this script to work in
-  //    browsers that don't support window.postMessage.
-  //  target - (Object) A reference to the other frame this window is
-  //    attempting to communicate with. If omitted, defaults to `parent`.
-  // 
-  // Returns:
-  // 
-  //  Nothing.
-  
-  $[postMessage] = function( message, target_url, target ) {
-	//console.log('postMessage', message); //debug
-    if ( !target_url ) { return; }
-    // Serialize the message if not a string. Note that this is the only real
-    // jQuery dependency for this script. If removed, this script could be
-    // written as very basic JavaScript.
-    message = typeof message === 'string' ? message : $.param( message );
-    
-    // Default to parent if unspecified.
-    target = target || parent;
-    
-    if ( has_postMessage ) {
-      // The browser supports window.postMessage, so call it with a targetOrigin
-      // set appropriately, based on the target_url parameter.
-	  var re = /([^\:]+\:\/\/[^\/]+).*/
-      target[postMessage]( message, target_url.replace(re , '$1' ) );
-      
-    } else if ( target_url ) {
-      // The browser does not support window.postMessage, so set the location
-      // of the target to target_url#message. A bit ugly, but it works! A cache
-      // bust parameter is added to ensure that repeat messages trigger the
-      // callback.
-      target.location.href = target_url.replace( /#.*$/, '' ) + '#' + (+new Date) + (cache_bust++) + '&' + message;
-    }
-  };
-  
-  // Method: jQuery.receiveMessage
-  // 
-  // Register a single callback for either a window.postMessage call, if
-  // supported, or if unsupported, for any change in the current window
-  // location.hash. If window.postMessage is supported and source_origin is
-  // specified, the source window will be checked against this for maximum
-  // security. If window.postMessage is unsupported, a polling loop will be
-  // started to watch for changes to the location.hash.
-  // 
-  // Note that for simplicity's sake, only a single callback can be registered
-  // at one time. Passing no params will unbind this event (or stop the polling
-  // loop), and calling this method a second time with another callback will
-  // unbind the event (or stop the polling loop) first, before binding the new
-  // callback.
-  // 
-  // Also note that if window.postMessage is available, the optional
-  // source_origin param will be used to test the event.origin property. From
-  // the MDC window.postMessage docs: This string is the concatenation of the
-  // protocol and "://", the host name if one exists, and ":" followed by a port
-  // number if a port is present and differs from the default port for the given
-  // protocol. Examples of typical origins are https://example.org (implying
-  // port 443), http://example.net (implying port 80), and http://example.com:8080.
-  // 
-  // Usage:
-  // 
-  // > jQuery.receiveMessage( callback [, source_origin ] [, delay ] );
-  // 
-  // Arguments:
-  // 
-  //  callback - (Function) This callback will execute whenever a <jQuery.postMessage>
-  //    message is received, provided the source_origin matches. If callback is
-  //    omitted, any existing receiveMessage event bind or polling loop will be
-  //    canceled.
-  //  source_origin - (String) If window.postMessage is available and this value
-  //    is not equal to the event.origin property, the callback will not be
-  //    called.
-  //  source_origin - (Function) If window.postMessage is available and this
-  //    function returns false when passed the event.origin property, the
-  //    callback will not be called.
-  //  delay - (Number) An optional zero-or-greater delay in milliseconds at
-  //    which the polling loop will execute (for browser that don't support
-  //    window.postMessage). If omitted, defaults to 100.
-  // 
-  // Returns:
-  // 
-  //  Nothing!
-  
-  $.receiveMessage = p_receiveMessage = function( callback, source_origin, delay ) {
-    if ( has_postMessage ) {
-      // Since the browser supports window.postMessage, the callback will be
-      // bound to the actual event associated with window.postMessage.
-      
-      if ( callback ) {
-        // Unbind an existing callback if it exists.
-        rm_callback && p_receiveMessage();
-        
-        // Bind the callback. A reference to the callback is stored for ease of
-        // unbinding.
-        rm_callback = function(e) {
-          if ( ( typeof source_origin === 'string' && e.origin !== source_origin )
-            || ( $.isFunction( source_origin ) && source_origin( e.origin ) === FALSE ) ) {
-            //return FALSE;
-          }
-          callback( e );
-        };
-      }
-      
-      if ( window[addEventListener] ) {
-        window[ callback ? addEventListener : 'removeEventListener' ]( 'message', rm_callback, FALSE );
-      } else {
-        window[ callback ? 'attachEvent' : 'detachEvent' ]( 'onmessage', rm_callback );
-      }
-      
-    } else {
-      // Since the browser sucks, a polling loop will be started, and the
-      // callback will be called whenever the location.hash changes.
-      
-      interval_id && clearInterval( interval_id );
-      interval_id = null;
-      
-      if ( callback ) {
-        delay = typeof source_origin === 'number'
-          ? source_origin
-          : typeof delay === '5number'
-            ? delay
-            : 100;
-        
-        interval_id = setInterval(function(){
-          var hash = document.location.hash,
-            re = /^#?\d+&/;
-          if ( hash !== last_hash && re.test( hash ) ) {
-            last_hash = hash;
-            callback({ data: hash.replace( re, '' ) });
-          }
-        }, delay );
-      }
-    }
-  };
-  
-})(jQuery);
-(function($) {
-	$.fn.log = function (msg) {
-		  console.log("%s: %o", msg, this[0], this[1]);
-		  return this;
-	};
-})(jQuery);
-
-// set a default when frame receive a 'postMessage' message is to switch to the URL in the message
-// some pages will override this e.g. default.htm
-		$.receiveMessage(function(e){
-			window.location.assign(e.data);
-		});
-

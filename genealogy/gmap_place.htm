@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -20,7 +19,7 @@ $(function () {
            var params = getArgs();
            params.place = params.place.replace(/;;/g,','); 
            showGoogleMap(params);
-           showPopUpFrame();
+           showPopUpFrame('', false);
            initGoogleMap();
            window.onresize=initGoogleMap;
         });
@@ -36,7 +35,7 @@ $(function () {
 	<img src="images/maximize.gif" class="control24" name="togglePopUp" onclick="javascript:togglePopUpFrame(this.name);" alt="Click to enlarge/reduce the size of this popup frame" title="Click to enlarge/reduce the size of this popup frame"/>
 	<img src="images/close.gif" class="control24" onclick="hidePopUpFrame(event);" alt="Hide this popup frame" title="Hide this popup frame"/>
 </div>
-<h4 id='subtitle'>subtitle</h4>
+<h3 id='subtitle'>subtitle</h3>
 <div style='text-align: center;'><div class='googlemap' id='GoogleMap'></div></div>
    </div>
   <div class='curvycorners_bottom'><div></div></div>
