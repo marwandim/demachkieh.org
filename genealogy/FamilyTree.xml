@@ -1,0 +1,1110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GenoPro>
+  <Software>GenoPro
+    <Name>GenoPro® - Picture Your Family Tree!(TM)</Name>
+    <Version>3.0.1.3</Version>
+    <Address>http://www.genopro.com</Address>
+  </Software>
+  <Date>31 Oct 2021</Date>
+
+<Global>
+  <Name>
+    <Full Format="%T %F (%N) %M %L (%L2) %S"/>
+    <Display Format="%F %M %L (%L2)" Lines="3"/>
+  </Name>
+  <Font>Arial</Font>
+  <Display>
+    <Tag>YoB_YoD</Tag>
+    <Colors>
+      <Gender Symbol="#000000" Text="#000000" Fill="#FFFFFF">
+        <Fill>
+          <Top Left="#FF0000" Right="#FF0000"/>
+          <Bottom Left="#FF0000" Right="#FF0000"/>
+        </Fill>
+      </Gender>
+      <Border Outline="#6E6EFF">
+        <Fill>#FFFF80</Fill>
+      </Border>
+      <Label Top="#000000" Bottom="#000000">
+        <Fill Top="#FFFFFF" Bottom="#FFFFFF"/>
+      </Label>
+    </Colors>
+  </Display>
+  <ActiveGenoMap>aref abdallah</ActiveGenoMap>
+</Global>
+<GenoMaps>
+<GenoMap Name="aref abdallah" Position="88,-30" BoundaryRect="-251,211,427,-271">
+  <Selection>ind00209</Selection>
+</GenoMap>
+<GenoMap Name="zakaria abdel-latif" Position="-40,47" BoundaryRect="-432,301,352,-206">
+  <Selection>ind00967</Selection>
+</GenoMap>
+<GenoMap Name="nadim bader" Position="-7,-27" BoundaryRect="-332,226,317,-281">
+  <Selection>ind00014</Selection>
+</GenoMap>
+</GenoMaps>
+<Individuals>
+<Individual ID="ind00209">
+  <Name>aref abdallah Demachkieh
+    <Display>aref abdallah Demachkieh</Display>
+    <First>aref</First>
+    <Middle>abdallah</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="53,211,127,124">90,185</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00210">
+  <Name>abdel-rahman aref Demachkieh
+    <Display>abdel-rahman aref Demachkieh</Display>
+    <First>abdel-rahman</First>
+    <Middle>aref</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="-188,71,-113,-16">-150,45</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00211">
+  <Name>laila abdel-rahman Demachkieh
+    <Display>laila abdel-rahman Demachkieh</Display>
+    <First>laila</First>
+    <Middle>abdel-rahman</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="-251,-69,-169,-156">-210,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00212">
+  <Name>riham abdel-rahman Demachkieh
+    <Display>riham abdel-rahman Demachkieh</Display>
+    <First>riham</First>
+    <Middle>abdel-rahman</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="-171,-69,-89,-156">-130,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00213">
+  <Name>moh&#39;d-aref abdel-rahman Demachkieh
+    <Display>moh&#39;d-aref abdel-rahman Demachkieh</Display>
+    <First>moh&#39;d-aref</First>
+    <Middle>abdel-rahman</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="-91,-74,-9,-161">-50,-100</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00214">
+  <Name>khaled aref Demachkieh
+    <Display>khaled aref Demachkieh</Display>
+    <First>khaled</First>
+    <Middle>aref</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="123,71,197,-16">160,45</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00215">
+  <Name>walid khaled Demachkieh
+    <Display>walid khaled Demachkieh</Display>
+    <First>walid</First>
+    <Middle>khaled</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="13,-69,87,-156">50,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00216">
+  <Name>mohamad khaled Demachkieh
+    <Display>mohamad khaled Demachkieh</Display>
+    <First>mohamad</First>
+    <Middle>khaled</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="103,-69,177,-156">140,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00217">
+  <Name>aya khaled Demachkieh
+    <Display>aya khaled Demachkieh</Display>
+    <First>aya</First>
+    <Middle>khaled</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="183,-69,257,-156">220,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00218">
+  <Name>omar khaled Demachkieh
+    <Display>omar khaled Demachkieh</Display>
+    <First>omar</First>
+    <Middle>khaled</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="253,-69,327,-156">290,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00219">
+  <Name>ghida khaled Demachkieh
+    <Display>ghida khaled Demachkieh</Display>
+    <First>ghida</First>
+    <Middle>khaled</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="333,-69,407,-156">370,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00220">
+  <Name>bahia aref Demachkieh
+    <Display>bahia aref Demachkieh</Display>
+    <First>bahia</First>
+    <Middle>aref</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" BoundaryRect="353,71,427,-16">390,45</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00967">
+  <Name>zakaria abdel-latif Demachkieh
+    <Display>zakaria abdel-latif Demachkieh</Display>
+    <First>zakaria</First>
+    <Middle>abdel-latif</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-422,301,-348,214">-385,275</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.</Comment>
+</Individual>
+<Individual ID="ind00968">
+  <Name>mohamad zakaria Demachkieh
+    <Display>mohamad zakaria Demachkieh</Display>
+    <First>mohamad</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-392,41,-318,-46">-355,15</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.01.</Comment>
+</Individual>
+<Individual ID="ind00969">
+  <Name>sahar mohamad Demachkieh
+    <Display>sahar mohamad Demachkieh</Display>
+    <First>sahar</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-432,-119,-358,-206">-395,-145</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Comment>1.1.2.11.02.08.04.01.01.</Comment>
+</Individual>
+<Individual ID="ind00970">
+  <Name>zakaria mohamad Demachkieh
+    <Display>zakaria mohamad Demachkieh</Display>
+    <First>zakaria</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-362,-119,-288,-206">-325,-145</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.01.02.</Comment>
+</Individual>
+<Individual ID="ind00971">
+  <Name>tarek mohamad Demachkieh
+    <Display>tarek mohamad Demachkieh</Display>
+    <First>tarek</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-282,-119,-208,-206">-245,-145</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.01.03.</Comment>
+</Individual>
+<Individual ID="ind00972">
+  <Name>dalal zakaria Demachkieh
+    <Display>dalal zakaria Demachkieh</Display>
+    <First>dalal</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-322,201,-248,114">-285,175</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Comment>1.1.2.11.02.08.04.02.</Comment>
+</Individual>
+<Individual ID="ind00973">
+  <Name>ibrahim zakaria Demachkieh
+    <Display>ibrahim zakaria Demachkieh</Display>
+    <First>ibrahim</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-232,201,-158,114">-195,175</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.03.</Comment>
+</Individual>
+<Individual ID="ind00974">
+  <Name>issam zakaria Demachkieh
+    <Display>issam zakaria Demachkieh</Display>
+    <First>issam</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-142,61,-68,-26">-105,35</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.04.</Comment>
+</Individual>
+<Individual ID="ind00975">
+  <Name>amal issam Demachkieh
+    <Display>amal issam Demachkieh</Display>
+    <First>amal</First>
+    <Middle>issam</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-132,-69,-58,-156">-95,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Comment>1.1.2.11.02.08.04.04.01.</Comment>
+</Individual>
+<Individual ID="ind00976">
+  <Name>suzanne issam Demachkieh
+    <Display>suzanne issam Demachkieh</Display>
+    <First>suzanne</First>
+    <Middle>issam</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-62,-69,12,-156">-25,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Comment>1.1.2.11.02.08.04.04.02.</Comment>
+</Individual>
+<Individual ID="ind00977">
+  <Name>mohamad issam Demachkieh
+    <Display>mohamad issam Demachkieh</Display>
+    <First>mohamad</First>
+    <Middle>issam</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="8,-69,82,-156">45,-95</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.04.03.</Comment>
+</Individual>
+<Individual ID="ind00978">
+  <Name>randa zakaria Demachkieh
+    <Display>randa zakaria Demachkieh</Display>
+    <First>randa</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="-62,191,12,104">-25,165</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Comment>1.1.2.11.02.08.04.05.</Comment>
+</Individual>
+<Individual ID="ind00979">
+  <Name>abdel-kader zakaria Demachkieh
+    <Display>abdel-kader zakaria Demachkieh</Display>
+    <First>abdel-kader</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="23,106,97,19">60,80</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.06.</Comment>
+</Individual>
+<Individual ID="ind00980">
+  <Name>samar zakaria Demachkieh
+    <Display>samar zakaria Demachkieh</Display>
+    <First>samar</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="113,191,187,104">150,165</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Comment>1.1.2.11.02.08.04.07.</Comment>
+</Individual>
+<Individual ID="ind00981">
+  <Name>bilal zakaria Demachkieh
+    <Display>bilal zakaria Demachkieh</Display>
+    <First>bilal</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="zakaria abdel-latif" BoundaryRect="188,191,262,104">225,165</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Comment>1.1.2.11.02.08.04.08.</Comment>
+</Individual>
+<Individual ID="ind00014">
+  <Name Format="Custom">s. e. nadim bader Dimashkieh
+    <Display>nadim bader Demachkieh</Display>
+    <First>nadim</First>
+    <Middle>bader</Middle>
+    <Last>Demachkieh</Last>
+    <Title>s.e.</Title>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="-172,226,-98,139">-135,200</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00015">
+  <Name>Prof riad nadim Demachkieh
+    <Display>riad nadim Demachkieh</Display>
+    <First>riad</First>
+    <Middle>nadim</Middle>
+    <Last>Demachkieh</Last>
+    <Title>Prof</Title>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="-252,66,-178,-21">-215,40</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00016">
+  <Name>talal riad Demachkieh
+    <Display>talal riad Demachkieh</Display>
+    <First>talal</First>
+    <Middle>riad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="-332,-74,-258,-161">-295,-100</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00017">
+  <Name>kenza riad Demachkieh
+    <Display>kenza riad Demachkieh</Display>
+    <First>kenza</First>
+    <Middle>riad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="-222,-74,-148,-161">-185,-100</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00018">
+  <Name>karim riad Demachkieh
+    <Display>karim riad Demachkieh</Display>
+    <First>karim</First>
+    <Middle>riad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="-142,-74,-68,-161">-105,-100</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00019">
+  <Name Format="Custom">s. e. ahmad-ramez nadim Dimashkieh
+    <Display>ahmad-ramez nadim Demachkieh</Display>
+    <First>ahmad-ramez</First>
+    <Middle>nadim</Middle>
+    <Last>Demachkieh</Last>
+    <Title>s.e.</Title>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="76,76,153,-11">115,50</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind00020">
+  <Name>hala ahmad-ramez Demachkieh
+    <Display>hala ahmad-ramez Demachkieh</Display>
+    <First>hala</First>
+    <Middle>ahmad-ramez</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="-66,-74,16,-161">-25,-100</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00021">
+  <Name>maysa ahmad-ramez Demachkieh
+    <Display>maysa ahmad-ramez Demachkieh</Display>
+    <First>maysa</First>
+    <Middle>ahmad-ramez</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="14,-74,96,-161">55,-100</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind00022">
+  <Name>nadim ahmad-ramez Demachkieh
+    <Display>nadim ahmad-ramez Demachkieh</Display>
+    <First>nadim</First>
+    <Middle>ahmad-ramez</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position z="120" GenoMap="nadim bader" BoundaryRect="94,-84,176,-171">135,-110</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind01438">
+  <Name>aya walid Demachkieh
+    <Display>aya walid Demachkieh</Display>
+    <First>aya</First>
+    <Middle>walid</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-32,-184,42,-271">5,-210</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01439">
+  <Name>khaled wa;id Demachkieh
+    <Display>khaled wa;id Demachkieh</Display>
+    <First>khaled</First>
+    <Middle>wa;id</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="33,-178,107,-271">70,-210</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080">
+        <Fill>#FFFF80</Fill>
+      </Border>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>10 Jan 2021</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01317">
+  <Name>marwa abdel-kader Demachkieh
+    <Display>marwa abdel-kader Demachkieh</Display>
+    <First>marwa</First>
+    <Middle>abdel-kader</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="zakaria abdel-latif" BoundaryRect="58,-4,132,-91">95,-30</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01318">
+  <Name>rawan abdel-kader Demachkieh
+    <Display>rawan abdel-kader Demachkieh</Display>
+    <First>rawan</First>
+    <Middle>abdel-kader</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="zakaria abdel-latif" BoundaryRect="108,2,182,-91">145,-30</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>1 Jan 1998</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01319">
+  <Name>mohamad abdel-kader
+    <Display>mohamad abdel-kader</Display>
+    <First>mohamad</First>
+    <Middle>abdel-kader</Middle>
+  </Name>
+  <Position GenoMap="zakaria abdel-latif" BoundaryRect="161,2,229,-91">195,-30</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>25 Dec 2002</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01320">
+  <Name>ibrahim abdel-kader Demachkieh
+    <Display>ibrahim abdel-kader Demachkieh</Display>
+    <First>ibrahim</First>
+    <Middle>abdel-kader</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="zakaria abdel-latif" BoundaryRect="213,2,287,-91">250,-30</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>1 Feb 2005</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01321">
+  <Name>lina abdel-kader Demachkieh
+    <Display>lina abdel-kader Demachkieh</Display>
+    <First>lina</First>
+    <Middle>abdel-kader</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="zakaria abdel-latif" BoundaryRect="278,2,352,-91">315,-30</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>22 Nov 2007</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01322">
+  <Name>ambara zakaria
+    <Display>ambara zakaria</Display>
+    <First>ambara</First>
+    <Middle>zakaria</Middle>
+  </Name>
+  <Position GenoMap="zakaria abdel-latif" BoundaryRect="256,197,324,118">290,165</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>15 Jan 1961</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01186">
+  <Name>maria ahmad-ramez Demachkieh
+    <Display>maria ahmad-ramez Demachkieh</Display>
+    <First>maria</First>
+    <Middle>ahmad-ramez</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="nadim bader" BoundaryRect="204,-74,286,-161">245,-100</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01434">
+  <Name>cyrus nadim Demachkieh
+    <Display>cyrus nadim Demachkieh</Display>
+    <First>cyrus</First>
+    <Middle>nadim</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="nadim bader" BoundaryRect="118,-188,192,-281">155,-220</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>17 Feb 2015</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01435">
+  <Name>raef nadim Demachkieh
+    <Display>raef nadim Demachkieh</Display>
+    <First>raef</First>
+    <Middle>nadim</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="nadim bader" BoundaryRect="178,-188,252,-281">215,-220</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>11 Sep 2016</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01436">
+  <Name>luca nadim Demachkieh
+    <Display>luca nadim Demachkieh</Display>
+    <First>luca</First>
+    <Middle>nadim</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position GenoMap="nadim bader" BoundaryRect="243,-188,317,-281">280,-220</Position>
+  <Display>
+    <Colors>
+      <Border Outline="#000080"/>
+    </Colors>
+  </Display>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>28 Apr 2019</Date>
+  </Birth>
+</Individual>
+</Individuals>
+<Families>
+<Family ID="fam00055">
+  <Position z="110">120,125
+    <Top>
+      <Left>90,125</Left>
+      <Right>150,125</Right>
+    </Top>
+    <Bottom>
+      <Left>-150,95</Left>
+      <Right>390,95</Right>
+    </Bottom>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00056">
+  <Position z="110">-120,-15
+    <Top>
+      <Left>-150,-15</Left>
+      <Right>-50,-15</Right>
+    </Top>
+    <Bottom>
+      <Left>-210,-45</Left>
+      <Right>-50,-45</Right>
+    </Bottom>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00057">
+  <Position z="110">190,-15
+    <Top>
+      <Left>160,-15</Left>
+      <Right>260,-15</Right>
+    </Top>
+    <Bottom>
+      <Left>50,-45</Left>
+      <Right>370,-45</Right>
+    </Bottom>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00252">
+  <Position z="110" GenoMap="zakaria abdel-latif">-315,220
+    <Top>
+      <Left>-385,220</Left>
+      <Right>290,220</Right>
+    </Top>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00253">
+  <Position z="110" GenoMap="zakaria abdel-latif">-365,-75
+    <Top>
+      <Left>-395,-75</Left>
+      <Right>-225,-75</Right>
+    </Top>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00254">
+  <Position z="110" GenoMap="zakaria abdel-latif">-75,-35
+    <Top>
+      <Left>-105,-35</Left>
+      <Right>45,-35</Right>
+    </Top>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00006">
+  <Position z="110" GenoMap="nadim bader">-135,80
+    <Top>
+      <Left>-215,80</Left>
+      <Right>115,80</Right>
+    </Top>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00007">
+  <Position z="110" GenoMap="nadim bader">-215,-20
+    <Top>
+      <Left>-215,-20</Left>
+      <Right>-215,-20</Right>
+    </Top>
+    <Bottom>
+      <Left>-295,-50</Left>
+      <Right>-105,-50</Right>
+    </Bottom>
+    <Points>-215,-20, -215,-40, -215,-50</Points>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00008">
+  <Position z="110" GenoMap="nadim bader">115,-10
+    <Top>
+      <Left>115,-10</Left>
+      <Right>115,-10</Right>
+    </Top>
+    <Bottom>
+      <Left>-25,-40</Left>
+      <Right>245,-40</Right>
+    </Bottom>
+  </Position>
+  <Relation>Marriage</Relation>
+</Family>
+<Family ID="fam00406">
+  <Position>50,-160
+    <Top>
+      <Left>5,-160</Left>
+      <Right>100,-160</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00369">
+  <Position GenoMap="zakaria abdel-latif">115,25
+    <Top>
+      <Left>60,25</Left>
+      <Right>315,25</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00405">
+  <Position GenoMap="nadim bader">135,-175
+    <Top>
+      <Left>135,-175</Left>
+      <Right>280,-175</Right>
+    </Top>
+  </Position>
+</Family>
+</Families>
+<PedigreeLinks>
+<PedigreeLink PedigreeLink="Parent" Family="fam00055" Individual="ind00209">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00055" Individual="ind00210">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00056" Individual="ind00210">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00056" Individual="ind00211">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00056" Individual="ind00212">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00056" Individual="ind00213">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00055" Individual="ind00214">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00057" Individual="ind00214">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00057" Individual="ind00215">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00057" Individual="ind00216">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00057" Individual="ind00217">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00057" Individual="ind00218">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00057" Individual="ind00219">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00055" Individual="ind00220">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00252" Individual="ind00967">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00968">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00253" Individual="ind00968">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00253" Individual="ind00969">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00253" Individual="ind00970">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00253" Individual="ind00971">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00972">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00973">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00974">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00254" Individual="ind00974">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00254" Individual="ind00975">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00254" Individual="ind00976">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00254" Individual="ind00977">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00978">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00979">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00980">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind00981">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00006" Individual="ind00014">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00006" Individual="ind00015">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00007" Individual="ind00015">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00007" Individual="ind00016">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00007" Individual="ind00017">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00007" Individual="ind00018">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00006" Individual="ind00019">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00008" Individual="ind00019">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00008" Individual="ind00020">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00008" Individual="ind00021">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Biological" Family="fam00008" Individual="ind00022">
+  <Position z="100"/>
+</PedigreeLink>
+<PedigreeLink PedigreeLink="Parent" Family="fam00406" Individual="ind00215"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00406" Individual="ind01438"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00406" Individual="ind01439"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00369" Individual="ind00979"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00369" Individual="ind01317"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00369" Individual="ind01318"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00369" Individual="ind01319"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00369" Individual="ind01320"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00369" Individual="ind01321"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00252" Individual="ind01322"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00008" Individual="ind01186"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00405" Individual="ind00022"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00405" Individual="ind01434"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00405" Individual="ind01435"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00405" Individual="ind01436"/>
+</PedigreeLinks>
+</GenoPro>
