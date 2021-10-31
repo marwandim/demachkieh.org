@@ -42,6 +42,12 @@ SimileAjax.DOM.registerEventWithObject(this._div,"mousemove",this,"_onMouseMove"
 SimileAjax.DOM.registerEventWithObject(this._div,"mouseup",this,"_onMouseUp");
 SimileAjax.DOM.registerEventWithObject(this._div,"mouseout",this,"_onMouseOut");
 SimileAjax.DOM.registerEventWithObject(this._div,"dblclick",this,"_onDblClick");
+//
+// mod to allow touch gestures
+//
+SimileAjax.DOM.registerEventWithObject(this._div,"touchstart",this,"_onTouchStart");
+SimileAjax.DOM.registerEventWithObject(this._div,"touchmove",this,"_onTouchMove");
+
 var F=this._theme!=null?this._theme.mouseWheel:"scroll";
 if(F==="zoom"||F==="scroll"||this._zoomSteps){if(SimileAjax.Platform.browser.isFirefox){SimileAjax.DOM.registerEventWithObject(this._div,"DOMMouseScroll",this,"_onMouseScroll");
 }else{SimileAjax.DOM.registerEventWithObject(this._div,"mousewheel",this,"_onMouseScroll");
@@ -256,7 +262,27 @@ this._moveEther(C);
 if(H.preventDefault){H.preventDefault();
 }H.returnValue=false;
 };
-Timeline._Band.prototype._onDblClick=function(C,B,E){var A=SimileAjax.DOM.getEventRelativeCoordinates(B,C);
+//
+// Mod for touch gestures
+//
+Timeline._Band.prototype._onTouchStart=function(D,A,E) {
+	if(A.touches.length == 1) {
+		var touch = A.changedTouches[0]; this._dragX=touch.clientX; this._dragY=touch.clientY; 
+	}
+}
+
+Timeline._Band.prototype._onTouchMove=function(D,A,E) {
+	if(A.touches.length == 1) { A.preventDefault();
+		var touch = A.changedTouches[0];
+		var C=touch.clientX-this._dragX;
+		var B=touch.clientY-this._dragY;
+		this._dragX=touch.clientX;
+		this._dragY=touch.clientY;
+		this._moveEther(this._timeline.isHorizontal()?C:B);
+		this._positionHighlight(); this._fireOnScroll();
+		this._setSyncWithBandDate();
+	}
+};Timeline._Band.prototype._onDblClick=function(C,B,E){var A=SimileAjax.DOM.getEventRelativeCoordinates(B,C);
 var D=A.x-(this._viewLength/2-this._viewOffset);
 this._autoScroll(-D);
 };
@@ -2031,9 +2057,11 @@ Timeline.OriginalEventPainter.prototype._encodeEventElID=function(B,A){return Ti
 Timeline.OriginalEventPainter.prototype._findFreeTrack=function(E,D){var A=E.getTrackNum();
 if(A!=null){return A;
 /* mod 2011/02/19 (genome) if wrap not required always return a new track */
-}if(!this._band._wrapEvents){return this._tracks.length;
+}
+if(!this._band._wrapEvents){return this._tracks.length;}
 /* mod 2011/02/19 end */
-}for(var C=0;
+
+for(var C=0;
 C<this._tracks.length;
 C++){var B=this._tracks[C];
 if(B>D){break;

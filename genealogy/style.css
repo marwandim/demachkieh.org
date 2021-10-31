@@ -1,43 +1,51 @@
 
 /* Default theme */
-/* Default updated 2012.08.26 with calendar and title theme, background image removed */
 @media print {
-       html,body {width: 184mm;}
+    html,body {width: 257mm;
+			   font-family: Arial, Helvetica;}
 }
-html{ font-size: 100%}
+
+html{ 
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
 body {
- color: #003000;
- background-color: #F6F6F2;
- font-size: 0.830em;
- font-family: Arial, Helvetica;
- line-height: 1.3;
- background: #F6F6F2 none);
- 
+	height: 100%;
+	color: #003000;
+	background-color: #F6F6F2;
+	font-size: 0.830em;
+	font-family: Arial, Helvetica;
+	line-height: 1.3;
+	background: #F6F6F2 none);
+	
 }
 sub {
  line-height: 0;
 }
 body.gno-heading {background-color: #F6EAA2;margin: 0px;}
-body.gno-index {margin: 0px;}
+body.gno-index {margin: 0px; overflow-y:hidden;}
 body.gno-detail {margin:0px; padding:8px;}
 /* body.gno-popup {} */
 
-table
+svg {overflow: hidden;}
+
+table.customtagtable
 {
 font-size: 0.830em; empty-cells:show; background-color:#F6F6F2;
 }
-tr td
-{
-background-color:#F6F6F2;
-}
-th
+th.customtagtable
 {
 background-color:#FBF5D1;
 }
 
-h1 { color: #330077; font-size: 1.162em;}
-h2 { color: #330077; font-size: 1em; } 
-h3 { color: #330077; font-size: 0.91em; }
+h2 { color: #330077; font-size: 1.162em;}
+h3 { color: #330077; font-size: 1em; } 
+h3.familyheading { font-size: 1em; } /* reduce if you want family heading smaller than individual heading */
+h4 { color: #330077; font-size: 0.91em; }
+h5 { color: #330077; font-size: 1em; font-weight:500;}
+h6 { color: #330077; display: inline;}
 
 a:link { color: #330077; text-decoration: none; }
 a:visited { color: #660088; text-decoration: none; }
@@ -50,12 +58,14 @@ a:active img {border-style:none; border-width:0px;}
 a:hover img {border-style:none; border-width:0px;}
 a:focus img {border-style:none; border-width:0px;}
 
+svg a:hover {text-decoration: none}
+
 .bold {font-weight: bold;}
 .boldu {font-weight: bold; text-decoration: underline;}
 
-h1.heading { font-size: 1.4em; text-align:center; }
-h1.h0 { font-size: 1.66em; }
-h1.h2 { font-size: 1em; }
+h2.heading { font-size: 1.4em; text-align:center; }
+h2.h0 { font-size: 1.66em; }
+h2.h3 { font-size: 1em; }
 
 img.bottom {vertical-align:text-bottom;}
 img.top {vertical-align:text-top;}
@@ -68,6 +78,8 @@ ul li {margin:0px; padding:0px;}
 .alignright {text-align:right;}
 
 .alignmiddle {vertical-align:middle;}
+
+.avoidbreak {page-break-inside: avoid;}
 
 .boxupper {border-left:2px solid silver; border-top:2px solid silver; border-right:2px solid silver; padding: 5px;}
 
@@ -84,6 +96,20 @@ ul li {margin:0px; padding:0px;}
 .buttontoc2 {clear:right; float:right;margin-left: 10px; cursor:pointer;}
 
 .caption {font-size: 0.750em;}
+
+.cover {text-align:center; vertical-align: middle;}
+
+.cover .title{height:100%}
+
+.cover table {width:100%; height:100%;}
+
+/* PDF cover image, centered using known height and width */
+.cover img {
+    margin-top: 400px;
+    margin-bottom: 400px;
+    width:0px;
+    height:0px;
+    }
 
 .childrenindent {margin-left: 15px; }
 
@@ -127,15 +153,20 @@ ul li {margin:0px; padding:0px;}
 
 .langtoggle { color: #330077; text-decoration: underline; font-size: 0.664em;}
 
+.Landscape {width:1150px; height:800px;}
+
 .namehighlight {text-decoration: underline;}
 
 .nobr { white-space: nowrap; }
-
-.note {font-size: 0.750em;}
+.note {font-size: 0.83em; margin-left:10px !important;}
+.note li.xT-h  {font-weight:bold;}
+.note ul.xT-n  {font-weight:normal;}
 
 .nowrap { white-space: nowrap;}
 
 .std {font-size:0.823em;font-style:normal;margin-left:0px;}
+
+.page-break	{ display: none;}
 
 .pic {border-style: outset; padding: 2px;cursor:pointer;text-align:left;}
 
@@ -145,14 +176,18 @@ ul li {margin:0px; padding:0px;}
 
 .popup {text-align:center;}
 
+.Portrait {width:800px; height:1150px; }
+
 .scrolly {overflow-y:scroll;}
 .show {display: inline;}
-
+.svgwrapper { margin: 15px; border: 2px; border-color: black;}
 .small {font-size: 0.750em;}
 
 .subhead {color: #330077;}
 
 .table1 td {vertical-align:top;}
+
+table.photo {border:0;}
 
 .timeline {font-size: 0.750em;}
 
@@ -172,7 +207,7 @@ ul li {margin:0px; padding:0px;}
 
 #menu {margin:-2px 0px 0px 0px; padding:0;list-style:none;text-align:center;}
 #menu li {display:inline; margin:0px; }
-#menu li a {display:inline-block; height:30px; line-height:30px; padding:0px 10px; float:center; background:#495557; color:#F6EAA2;text-decoration:none; font-weight:normal;border-top: 3px solid #F6EAA2;border-bottom: 1px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;}
+#menu li a {display:inline-block; height:30px; line-height:30px; padding:0px 5px; float:center; background:#495557; color:#F6EAA2;text-decoration:none; font-weight:normal;border-top: 3px solid #F6EAA2;border-bottom: 1px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;}
 #menu li a:hover {background: #F6F6F2 url(images/arrow.gif) no-repeat center bottom; color:#9C4252;}
 #menu li a:active, a:focus { outline-style: none; -moz-outline-style:none; }
 
@@ -180,14 +215,17 @@ ul li {margin:0px; padding:0px;}
 
 .widthlarge {width: 250px;}
 
-.widthpaddedsmall {width: 115px;}
+.widthpaddedsmall {width: 125px;}
 
-.widthpaddedlarge {width: 265px;}
+.widthpaddedlarge {width: 275px;}
 
 .widthsmall {width: 100px;}
 
-.charttext { border: none; position: relative; left: -3px; top: -3px; padding: 1px 5px;}
-.chartbox {display: inline; margin: 0px; position: relative; background: #666;}
+.chartblock {line-height: 10px;  white-space: nowrap; width:95%; direction:ltr; }
+
+.charttext {display: inline; margin: 0px; border: none; padding: 0px; position: relative; left: -3px; top: -5px; padding: 1px 5px;}
+.chartbox {display: inline; margin: 0px; border: none; padding: 0px; position: relative; top: -8px; ; background: #666; line-height: 0.9em}
+.chartdates {display: inline; margin: 0px; border: none; padding: 0px; position: relative; top: -10px;}
 .chart img { margin: 0px; border: 0px; padding: 0px; vertical-align: middle; }
 .m {background: LavenderBlush;}
 .f {background: LightCyan;}
@@ -246,6 +284,12 @@ ul li {margin:0px; padding:0px;}
 
 /* end clearfix */
 
+/* FancyBox: Override to display navigation arrows permanently and move them outside the image area */
+
+#fancybox-left-ico, #fancybox-left:hover span { left: -20px; }
+#fancybox-right-ico, #fancybox-right:hover span { right: -20px;
+left: auto; }
+
 /*
 Explorer Tree 1.4
 =================
@@ -264,6 +308,7 @@ USA.
 ul.xT, ul.xT ul, ul.xT li { margin: 0px; padding: 0px; text-indent:0px; }
 ul.xT li { list-style-position: inside; cursor: pointer; }
 ul.xT ul { padding-left: 14px; } /* sublist indentation */
+ul.xT ul.xT-h, ul.xT ul.xT-n { padding-left: 21px; } /* sublist indentation V="2013.07.30±" */
 /* Set the bullet images */
 ul.xT li { list-style-image: url(images/space.gif);}
 ul.xT li.xT-i5 { padding-left:5px;}
@@ -280,6 +325,10 @@ ul.xT li.xT-o ul, ul.xT li.xT2-o ul, ul.xT li.xT3-o ul { display: block; }
 ul.xT li.xT-c ul, ul.xT li.xT2-c ul, ul.xT li.xT3-c ul { display: none; }
 ul.xT ul.xT-n li.xT-n {cursor: default;}
 ul.XT li.xT-h { color: #330077;}
+
+/* Override fancybox css to display navigation arrows permanently and move them outside the image area */
+#fancybox-left-ico, #fancybox-left:hover span { left: -20px; }
+#fancybox-right-ico, #fancybox-right:hover span { right: -20px;left: auto; }
 
 /* Default theme */
 	
