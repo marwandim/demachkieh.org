@@ -1,0 +1,2472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+<title></title>
+<meta http-equiv="Content-Language" content="en"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../style.css" type="text/css"/>
+<script type='text/javascript' language="JavaScript" src="../scripts/jquery.min.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/hammer.min.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/svg-pan-zoom.min.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/script.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/svg.js"></script>
+<script type='text/javascript' language="JavaScript">
+//<![CDATA[
+        $(function () {
+			$(window).resize(doResize);
+		});
+        showPopUpFrame();
+		// the only postMessage we get is one to reload popup,htm. current dir is genomaps so need to look in parent dir.
+		$.receiveMessage(function(e){
+			window.location.assign('../'+e.data);
+		});
+//]]>      
+</script>
+
+</head>
+<body class="gno-popup" style="overflow:hidden;">
+<div class="floatright" style="display: inline;">
+	<img src="../images/maximize.gif" class="control24" name="togglePopUp" id="togglePopUp" onclick="javascript:togglePopUpFrame(this.name, '../');" title="Click to enlarge/reduce the GenoMap image" alt="Click to enlarge/reduce the GenoMap image"/>
+	<img src="../images/close.gif" class="control24" onclick="hideGenoMapFrame(event);" title="Hide this GenoMap frame" alt="Hide this GenoMap frame"/>
+</div>
+<h4 style="margin:5px;"><img src="../images/svg.gif" alt=""/> Family Subtree Diagram : khalil omar</h4>
+
+<svg id="svgCanvas" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	font-family="Arial"
+	width="100%"
+	height="87%"
+	zoomAndPan="disable"
+	onload="svgInit({File:'genomap0.svg', Bounds:[-2417,-331,1967,371],ZoomExtent:false,ExpandFrame:false});"
+	preserveAspectRatio="xMidYMid meet"  xml:space="preserve" 
+	style="background-color:white;fill:none;stroke: black;stroke-width:3px;font-weight:normal;font-size:10px;text-anchor:middle;stroke-linecap:round;stroke-linejoin:round;">
+<!--	<title>Family Subtree Diagram : khalil omar</title> -->
+        <defs>
+<g id='readme' display='none'><text>
+PLEASE NOTE: If you do not see a GRAPHIC IMAGE of a family tree here but are seeing this text
+instead then it is most probably because the web server is not correctly configured to serve svg
+pages correctly. 
+
+see http://developer.mozilla.org/en/docs/SVG:Server_Configuration for information on how to
+correctly configure a web server for svg files.
+<!-- This comment serves as marker text added post version 2011.06.08 to force SVG/PDF generation once only 
+     to overcome missing picture bug-->
+</text></g>
+          <marker id="startarrowblack" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="0" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke-width:1px;">
+                    <line x1="3" y1="0" x2="0" y2="3"/> 
+                    <line x1="3" y1="6" x2="0" y2="3"/> 
+		</g>
+          </marker> 
+          <marker id="endarrowblack" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="3" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke-width:1px;">
+                    <line x2="3" y2="3" x1="0" y1="0"/> 
+                    <line x2="3" y2="3" x1="0" y1="6"/> 
+		</g>
+          </marker> 
+          <marker id="endarrowblue" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="3" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke:blue; stroke-width:1px;">
+                    <line x2="3" y2="3" x1="0" y1="0"/> 
+                    <line x2="3" y2="3" x1="0" y1="6"/> 
+		</g>
+          </marker> 
+          <marker id="endarrowred" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="3" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke:red; stroke-width:1px;">
+                    <line x2="3" y2="3" x1="0" y1="0"/> 
+                    <line x2="3" y2="3" x1="0" y1="6"/> 
+		</g>
+          </marker> 
+          <marker id="bar" viewBox="0 0 12 22" markerWidth="6" markerHeight="6" orient="auto" refX="6" refY="11" markerUnits="strokeWidth"> 
+		<g style="stroke:red; stroke-width:3px;">
+                    <line x1="1" y1="1" x2="1" y2="20"/> 
+                    <line x1="10" y1="0" x2="10" y2="20"/> 
+		</g>
+          </marker> 
+          <marker id="barcircle" viewBox="0 0 14 24" markerWidth="7" markerHeight="7" orient="auto" refX="7" refY="12" markerUnits="strokeWidth"> 
+		<g style="stroke:green; stroke-width:3px;">
+                    <line x1="1" y1="1" x2="1" y2="20"/> 
+                    <line x1="15" y1="0" x2="15" y2="20"/> 
+                    <circle cx="7.5" cy="10" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="circlegreen"  viewBox="1 1 12 12" markerWidth="6" markerHeight="6" orient="auto" refX="6" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:green; stroke-width:2px; fill:white;">
+                    <circle cx="6" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="circleblack"  viewBox="1 1 12 12" markerWidth="6" markerHeight="6" orient="auto" refX="6" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px; fill:white;">
+                    <circle cx="6" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="linkgreen"  viewBox="0 0 18 12" markerWidth="9" markerHeight="9" orient="auto" refX="6" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:green; stroke-width:2px; fill:none;">
+                    <circle cx="6" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="12" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="6" cy="6" r="5"/> 
+                    <circle cx="12" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="linkblack"  viewBox="0 0 18 12" markerWidth="9" markerHeight="9" orient="auto" refX="9" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px; fill:none;">
+                    <circle cx="6" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="12" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="6" cy="6" r="5"/> 
+                    <circle cx="12" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="cross"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5"> 
+		<g style="stroke:red; stroke-width:2px;">
+                    <line x1="0" y1="0" x2="10" y2="10"/> 
+                    <line x1="10" y1="0" x2="0" y2="10"/> 
+		</g>
+          </marker> 
+          <marker id="crossboxred"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:red; stroke-width:2px;">
+                    <rect x1="0" y1="0" width="10" height="10" style="fill:white;stroke:none;"/> 
+                    <line x1="0" y1="0" x2="10" y2="10"/> 
+                    <line x1="10" y1="0" x2="0" y2="10"/> 
+		    <polyline points="0,0,10,0,10,10,0,10,0,0"/>
+		</g>
+          </marker> 
+          <marker id="crossboxblack"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px;">
+                    <rect x1="0" y1="0" width="10" height="10" style="fill:white;stroke:none;"/> 
+                    <line x1="0" y1="0" x2="10" y2="10"/> 
+                    <line x1="10" y1="0" x2="0" y2="10"/> 
+		    <polyline points="0,0,10,0,10,10,0,10,0,0"/>
+		</g>
+          </marker> 
+          <marker id="box"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px;">
+                    <rect x1="0" y1="0" width="10" height="10" style="fill:white;stroke:none;"/> 
+                    <text x="5" y="8" style="fill:black;stroke:none;font-size:8px;">?</text>
+		    <polyline points="0,0,10,0,10,10,0,10,0,0"/>
+		</g>
+          </marker> 
+          <marker id="diamondred"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5"> 
+		<g style="stroke:red; stroke-width:2px; fill:white;">
+                    <path d="M0,5 L5,10 L10,5 L5,0 L0,5"/> 
+		</g>
+          </marker> 
+         <marker id="query"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px;">
+		</g>
+          </marker> 
+	  <g id='slash'>
+		<path d='m5, -5 l-10,10'/>
+	  </g>
+	  <g id='backslash'>
+		<path d='m-5,-5 l10,10'/>
+	  </g>
+	  <g id='crossed'>
+		<path d='m-5,-5 l10,10 m0,-10 l-10,10'/>
+	  </g>
+	  <g id='square'>
+	  <path d='m0,0 l-9,0 l0,-9 l9,0 l0,9 z'/>
+	  </g>
+	  <g id='triangle'>
+	  <path d='m0,0 l-9,0 l9,-9 l0,9 z'/>
+	  </g>
+	  <g id='segment'>
+	  <path d='m0,0 l-9,0 a 9,9 0 0,1 9,-9 l0,9 z'/>
+	  </g>
+	  <g id='rect'>
+	  <path d='m0,0 l-15,0 l0,-15 l15,0 l0,15 z'/>
+	  </g>
+	  <g id='houseM'>
+	  <path d='m-6,6 l0,-8 l6,-4 l6,4 l0,8 l-12,0 z'/>
+	  </g>
+	  <g id='houseX'>
+	  <path d='m-9,9 l0,-12 l9,-6 l9,6 l0,12 l-18,0 z'/>
+	  </g>
+	  <g id='houseL'>
+	  <path d='m-7.5,7.5 l0,-10 l7.5,-5 l7.5,5 l0,10 l-15,0 z'/>
+	  </g>
+	  <g id='houseS'>
+	  <path d='m-5.5,5.5 l0,-7 l6,-3.75 l5.5,3.75 l0,7 l-11,0 z'/>
+	  </g>
+	  <g id='houseT'>
+	  <path d='m-5,5 l0,-6.5 l5,-3.75 l5,3.75 l0,6.5 l-10,0 z'/>
+	  </g>
+		<path id="dir_arrow" style="stroke: lightgrey;fill:url(#rad1);stroke-width:1px;" d="m8,0 l-8,-8 l-8 8 h4 v8 h8 v-8 z"/>
+		<g id="arrowN" viewBox="-40,-40,40,40">
+			<use xlink:href="#dir_arrow"/>
+		</g>
+		<g id="arrowE">
+			<use xlink:href="#dir_arrow" transform="rotate(90)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowS">
+			<use xlink:href="#dir_arrow" transform="rotate(180)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowW">
+			<use xlink:href="#dir_arrow" transform="rotate(270)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowNE">
+			<use xlink:href="#dir_arrow" transform="rotate(45)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowSE">
+			<use xlink:href="#dir_arrow" transform="rotate(135)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowSW">
+			<use xlink:href="#dir_arrow" transform="rotate(225)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowNW">
+			<use xlink:href="#dir_arrow" transform="rotate(-45)" viewBox="-40,-40,40,40"/>
+		</g>
+		<radialGradient id = "rad1" cx = "50%" cy = "50%" r = "50%" fx="30%" fy="30%">
+			<stop stop-color = "limegreen" offset = "20%"/>
+			<stop stop-color = "greenyellow" offset = "100%"/>
+		</radialGradient>	
+<clipPath id="clip1"><path id="path1" d="M4 4 L0 -6 -4 4 z"/></clipPath>
+<clipPath id="clip2"><path id="path2" d="M6 6 L0 -9 -6 6 z"/></clipPath>
+<clipPath id="clip3"><path id="path3" d="M9 9 L0 -13.5 -9 9 z"/></clipPath>
+<clipPath id="clip4"><path id="path4" d="M12 12 L0 -18 -12 12 z"/></clipPath>
+<clipPath id="clip5"><path id="path5" d="M16 16 L0 -24 -16 16 z"/></clipPath>
+<clipPath id="clip6"><path id="path6" d="M24 24 L0 -36 -24 24 z"/></clipPath>
+<clipPath id="clip7"><path id="path7" d="M36 36 L0 -54 -36 36 z"/></clipPath>
+<clipPath id="clip8"><path id="path8" d="M72 72 L0 -108 -72 72 z"/></clipPath>
+
+	</defs>
+	<g id="viewport" style="pointer-events: visible;"> <!-- 2017.07.01 pointer-events: visble so that tooltips (<title>) are displayed over shapes with fill:none; -->
+	   <rect x="0" y="0" width="4384" height="702" style="fill:white; opacity:0"/>
+<g><title>Parent</title>
+<path d="M37 86  L37 26" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M67 86  L67 136" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M127 86  L127 146" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M197 86  L197 136" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M197 196  L197 136" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M217 196  L217 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M217 306  L217 246" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M237 306  L237 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M237 496  L237 356" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M197 496  L197 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M267 496  L267 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M337 496  L337 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M407 496  L407 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M447 306  L447 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M517 306  L517 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M597 306  L597 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M667 306  L667 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M667 496  L667 356" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M637 496  L637 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M707 496  L707 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M777 496  L777 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M867 306  L867 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M937 306  L937 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1017 86 1017 116 L1017 136" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1017 196  L1017 136" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1047 196  L1047 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1137 86  L1137 136" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1137 196  L1137 136" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1157 196  L1157 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1157 306  L1157 246" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1157 306  L1157 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1157 416  L1157 356" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1057 416  L1057 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1137 416  L1137 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1367 306  L1367 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1367 416  L1367 356" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1347 416  L1347 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1417 416  L1417 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1477 416  L1477 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1537 416  L1537 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1567 306  L1567 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1587 196  L1587 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1647 196  L1647 306" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1697 196  L1697 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1757 196  L1757 326" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1817 196  L1817 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1877 196  L1877 266" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1977 86  L1977 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1977 466  L1977 366" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1887 466  L1887 536" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1967 466  L1967 536" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2037 466  L2037 536" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2117 466  L2117 536" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2187 466  L2187 536" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2217 86  L2217 136" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2217 196  L2217 136" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2177 196  L2177 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2247 196  L2247 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2247 306  L2247 246" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2267 306  L2267 346" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2327 306  L2327 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2407 306  L2407 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2427 196  L2427 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2487 86  L2487 136" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2487 196  L2487 136" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2507 196  L2507 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2507 446  L2507 366" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2347 446  L2347 506" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2447 446  L2447 516" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2637 446  L2637 496" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2677 196  L2677 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2677 326  L2677 246" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2707 326  L2707 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2807 326  L2807 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2867 326  L2867 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2837 196  L2837 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2907 86  L2907 136" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2907 196  L2907 136" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2927 196  L2927 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2927 306  L2927 246" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2947 306  L2947 406" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2947 486  L2947 406" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2917 486  L2917 556" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2987 486  L2987 556" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3057 486  L3057 556" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3127 486  L3127 556" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3207 306  L3207 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M3207 496  L3207 356" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3217 496  L3217 556" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3287 496  L3287 556" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3357 496  L3357 556" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3377 306  L3377 386" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3447 306  L3447 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3517 306  L3517 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3567 196  L3567 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3637 196  L3637 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M3637 306  L3637 246" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3657 306  L3657 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M3657 416  L3657 356" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3677 416  L3677 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3777 306  L3777 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3847 306  L3847 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3897 306  L3897 366" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3967 306  L3967 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4037 196  L4037 246" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M4037 306  L4037 246" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4057 306  L4057 456" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M4057 546  L4057 456" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4027 546  L4027 606" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4107 546  L4107 606" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4187 546  L4187 606" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4257 546 4257 566 L4257 606" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4327 546  L4327 606" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M4347 306  L4347 356" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M467 496  L467 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M517 496  L517 566" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1207 416  L1207 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1597 416  L1597 466" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2447 576  L2447 516" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2377 576  L2377 626" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2447 576  L2447 626" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2527 576  L2527 626" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2637 556  L2637 496" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2667 556  L2667 606" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2707 426  L2707 366" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2737 426  L2737 476" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2807 426  L2807 476" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2187 606  L2187 536" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2187 606  L2187 641" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2262 606  L2262 641" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2872 426  L2872 476" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<a xlink:href='../family-khalilOmarDemachkieh-fam00114.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (nine children)'><title>Marriage (nine children)</title>
+<line x1="37" y1="86" x2="3057" y2="86" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-chaficKhalilDemachkieh-fam00115.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (a child)'><title>Marriage (a child)</title>
+<line x1="197" y1="196" x2="357" y2="196" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-mohamadChaficDemachkieh-fam00116.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (seven children)'><title>Marriage (seven children)</title>
+<line x1="217" y1="306" x2="957" y2="306" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-chaficMohamadDemachkieh-fam00117.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (six children)'><title>Marriage (six children)</title>
+<line x1="177" y1="496" x2="517" y2="496" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-ibrahimMohamadDemachkieh-fam00118.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="627" y1="496" x2="817" y2="496" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-jamilKhalilDemachkieh-fam00119.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (a child)'><title>Marriage (a child)</title>
+<line x1="1017" y1="196" x2="1047" y2="196" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-saadeddineKhalilDemachkieh-fam00120.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (seven children)'><title>Marriage (seven children)</title>
+<line x1="1137" y1="196" x2="1877" y2="196" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-mohamadSaadeddineDemachkieh-fam00121.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="1157" y1="306" x2="1567" y2="306" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-saadeddineMohamadDemachkieh-fam00122.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="1057" y1="416" x2="1227" y2="416" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-wissamMohamadDemachkieh-fam00123.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (five children)'><title>Marriage (five children)</title>
+<line x1="1347" y1="416" x2="1597" y2="416" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-ahmadKhalilDemachkieh-fam00124.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (five children)'><title>Marriage (five children)</title>
+<line x1="1887" y1="466" x2="2197" y2="466" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-mohamadKhalilDemachkieh-fam00125.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="2177" y1="196" x2="2427" y2="196" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-fouadMohamadDemachkieh-fam00126.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="2247" y1="306" x2="2407" y2="306" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-najibKhalilDemachkieh-fam00127.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="2487" y1="196" x2="2837" y2="196" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-adnanNajibDemachkieh-fam00128.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="2347" y1="446" x2="2637" y2="446" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-mounirNajibDemachkieh-fam00129.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="2667" y1="326" x2="2877" y2="326" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-omarKhalilDemachkieh-fam00130.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (four children)'><title>Marriage (four children)</title>
+<line x1="2907" y1="196" x2="4047" y2="196" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-khalilOmarDemachkieh-fam00131.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (five children)'><title>Marriage (five children)</title>
+<line x1="2927" y1="306" x2="3517" y2="306" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-omarKhalilDemachkieh-fam00132.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (four children)'><title>Marriage (four children)</title>
+<line x1="2917" y1="486" x2="3157" y2="486" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-assemKhalilDemachkieh-fam00133.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (three children)'><title>Marriage (three children)</title>
+<line x1="3207" y1="496" x2="3367" y2="496" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-samiOmarDemachkieh-fam00134.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (five children)'><title>Marriage (five children)</title>
+<line x1="3637" y1="306" x2="3967" y2="306" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-abdallahSamiDemachkieh-fam00135.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (a child)'><title>Marriage (a child)</title>
+<line x1="3657" y1="416" x2="3737" y2="416" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-mustafaOmarDemachkieh-fam00136.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (two children)'><title>Marriage (two children)</title>
+<line x1="4037" y1="306" x2="4347" y2="306" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-jamilMustafaDemachkieh-fam00137.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='Marriage (five children)'><title>Marriage (five children)</title>
+<line x1="4027" y1="546" x2="4327" y2="546" style=" cursor:pointer;fill:none;stroke: black;stroke-width:3px;"/>
+</a>
+<a xlink:href='../Demachkieh-khalilOmar-ind00409.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="7" y="38" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="37" y="36">
+<tspan x="38.6666666666667" y="50" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="38.6666666666667" y="64" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="38.6666666666667" y="78" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="28" y="17" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="28" y="17" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-amnehKhalil-ind00410.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="37" y="148" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="67" y="146">
+<tspan x="68.6666666666667" y="160" style="stroke:none;fill: black;text-anchor:middle;">amneh</tspan>
+<tspan x="68.6666666666667" y="174" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="68.6666666666667" y="188" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="67" cy="136" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="67" cy="136" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-nafissehKhalil-ind00411.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="97" y="158" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="127" y="156">
+<tspan x="128.666666666667" y="170" style="stroke:none;fill: black;text-anchor:middle;">nafisseh</tspan>
+<tspan x="128.666666666667" y="184" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="128.666666666667" y="198" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="127" cy="146" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="127" cy="146" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-chaficKhalil-ind00412.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="167" y="148" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="197" y="146">
+<tspan x="198.666666666667" y="160" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="198.666666666667" y="174" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="198.666666666667" y="188" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="188" y="127" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="188" y="127" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadChafic-ind00413.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="187" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="217" y="256">
+<tspan x="218.666666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="218.666666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="218.666666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="208" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="208" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-chaficMohamad-ind00414.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="207" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="237" y="366">
+<tspan x="238.666666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="238.666666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="238.666666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="228" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="228" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-fatimaChafic-ind00415.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="167" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="197" y="576">
+<tspan x="198.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">fatima</tspan>
+<tspan x="198.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="198.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="197" cy="566" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="197" cy="566" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mariamChafic-ind00416.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="237" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="267" y="576">
+<tspan x="268.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">mariam</tspan>
+<tspan x="268.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="268.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="267" cy="566" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="267" cy="566" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-aichaChafic-ind00417.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="307" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="337" y="576">
+<tspan x="338.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">aicha</tspan>
+<tspan x="338.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="338.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="337" cy="566" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="337" cy="566" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadChafic-ind00418.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="377" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="407" y="576">
+<tspan x="408.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="408.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="408.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="398" y="557" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="398" y="557" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-wahibaMohamad-ind00419.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="417" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="447" y="376">
+<tspan x="448.666666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">wahiba</tspan>
+<tspan x="448.666666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="448.666666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="447" cy="366" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="447" cy="366" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-nahidaMohamad-ind00420.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="487" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="517" y="376">
+<tspan x="518.666666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">nahida</tspan>
+<tspan x="518.666666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="518.666666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="517" cy="366" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="517" cy="366" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-amalMohamad-ind00421.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="567" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="597" y="376">
+<tspan x="598.666666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">amal</tspan>
+<tspan x="598.666666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="598.666666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="597" cy="366" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="597" cy="366" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-ibrahimMohamad-ind00422.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="637" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="667" y="366">
+<tspan x="668.666666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">ibrahim</tspan>
+<tspan x="668.666666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="668.666666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="658" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="658" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-chirineIbrahim-ind00423.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="607" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="637" y="576">
+<tspan x="638.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">chirine</tspan>
+<tspan x="638.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">ibrahim</tspan>
+<tspan x="638.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="637" cy="566" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="637" cy="566" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-chaficIbrahim-ind00424.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="677" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="707" y="576">
+<tspan x="708.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="708.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">ibrahim</tspan>
+<tspan x="708.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="698" y="557" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="698" y="557" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadIbrahim-ind00425.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="747" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="777" y="576">
+<tspan x="778.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="778.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">ibrahim</tspan>
+<tspan x="778.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="768" y="557" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="768" y="557" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-bilalMohamad-ind00426.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="837" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="867" y="366">
+<tspan x="868.666666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">bilal</tspan>
+<tspan x="868.666666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="868.666666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="858" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="858" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-monaMohamad-ind00427.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="907" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="937" y="366">
+<tspan x="938.666666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">mona</tspan>
+<tspan x="938.666666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="938.666666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="937" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="937" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-jamilKhalil-ind00428.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="987" y="148" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1017" y="146">
+<tspan x="1018.66666666667" y="160" style="stroke:none;fill: black;text-anchor:middle;">jamil</tspan>
+<tspan x="1018.66666666667" y="174" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="1018.66666666667" y="188" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="1008" y="127" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1008" y="127" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-wadadJamil-ind00429.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1017" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1047" y="256">
+<tspan x="1048.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">wadad</tspan>
+<tspan x="1048.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">jamil</tspan>
+<tspan x="1048.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1047" cy="246" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1047" cy="246" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-saadeddineKhalil-ind00430.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1107" y="148" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1137" y="146">
+<tspan x="1138.66666666667" y="160" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1138.66666666667" y="174" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="1138.66666666667" y="188" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="1128" y="127" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1128" y="127" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadSaadeddine-ind00431.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1127" y="220" height="14px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="1157" y="217.5">
+<tspan x="1159" dy="14" style="stroke:none;fill:#000000;">1935 - 2015</tspan>
+</text>
+<rect x="1127" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1157" y="256">
+<tspan x="1158.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="1158.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1158.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="1148" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1148" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+<path d="M1148 237 l4.5 4.5 m9 9 l4.5 4.5 m-18 0 l4.5 -4.5 m9 -9 l4.5 -4.5" style="stroke: #000000;stroke-width:1px;"/>
+<text style="stroke:#FFFFFF;stroke-width:1px;fill:none;font-size:5px;text-anchor:middle;" x="1157" y="249">79</text>
+<text style="stroke:none;stroke-width:1px;fill:#000000;font-size:5px;text-anchor:middle;" x="1157" y="249">79</text>
+</g>
+</a>
+<a xlink:href='../Demachkieh-saadeddineMohamad-ind00432.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1127" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1157" y="366">
+<tspan x="1158.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1158.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="1158.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="1148" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1148" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadSaadeddine-ind00433.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1027" y="440" height="14px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="1057" y="437.5">
+<tspan x="1059" dy="14" style="stroke:none;fill:#000000;">1988 - 2011</tspan>
+</text>
+<rect x="1027" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1057" y="476">
+<tspan x="1058.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="1058.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1058.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="1048" y="457" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1048" y="457" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+<path d="M1048 457 l4.5 4.5 m9 9 l4.5 4.5 m-18 0 l4.5 -4.5 m9 -9 l4.5 -4.5" style="stroke: #000000;stroke-width:1px;"/>
+<text style="stroke:#FFFFFF;stroke-width:1px;fill:none;font-size:5px;text-anchor:middle;" x="1057" y="469">22</text>
+<text style="stroke:none;stroke-width:1px;fill:#000000;font-size:5px;text-anchor:middle;" x="1057" y="469">22</text>
+</g>
+</a>
+<a xlink:href='../Demachkieh-dimaSaadeddine-ind00434.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1107" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1137" y="476">
+<tspan x="1138.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">dima</tspan>
+<tspan x="1138.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1138.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1137" cy="466" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1137" cy="466" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-wissamMohamad-ind00435.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1337" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1367" y="366">
+<tspan x="1368.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">wissam</tspan>
+<tspan x="1368.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="1368.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="1358" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1358" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-stephanieWissam-ind00436.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1317" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1347" y="476">
+<tspan x="1348.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">stephanie</tspan>
+<tspan x="1348.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">wissam</tspan>
+<tspan x="1348.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1347" cy="466" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1347" cy="466" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-yasmineWissam-ind00437.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1387" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1417" y="476">
+<tspan x="1418.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">yasmine</tspan>
+<tspan x="1418.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">wissam</tspan>
+<tspan x="1418.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1417" cy="466" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1417" cy="466" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-chirineWissam-ind00438.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1447" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1477" y="476">
+<tspan x="1478.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">chirine</tspan>
+<tspan x="1478.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">wissam</tspan>
+<tspan x="1478.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1477" cy="466" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1477" cy="466" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-linaWissam-ind00439.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1507" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1537" y="476">
+<tspan x="1538.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">lina</tspan>
+<tspan x="1538.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">wissam</tspan>
+<tspan x="1538.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1537" cy="466" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1537" cy="466" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mayssouneMohamad-ind00440.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1537" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1567" y="366">
+<tspan x="1568.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">mayssoune</tspan>
+<tspan x="1568.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="1568.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1567" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1567" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-nouhalSaadeddine-ind00441.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1557" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1587" y="256">
+<tspan x="1588.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">nouhal</tspan>
+<tspan x="1588.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1588.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1587" cy="246" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1587" cy="246" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-hafizaSaadeddine-ind00442.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1617" y="318" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1647" y="316">
+<tspan x="1648.66666666667" y="330" style="stroke:none;fill: black;text-anchor:middle;">hafiza</tspan>
+<tspan x="1648.66666666667" y="344" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1648.66666666667" y="358" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1647" cy="306" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1647" cy="306" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-nadiaSaadeddine-ind00443.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1667" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1697" y="256">
+<tspan x="1698.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">nadia</tspan>
+<tspan x="1698.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1698.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1697" cy="246" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1697" cy="246" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-ihsaneSaadeddine-ind00444.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1727" y="338" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1757" y="336">
+<tspan x="1758.66666666667" y="350" style="stroke:none;fill: black;text-anchor:middle;">ihsane</tspan>
+<tspan x="1758.66666666667" y="364" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1758.66666666667" y="378" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1757" cy="326" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1757" cy="326" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-zouhoureSaadeddine-ind00445.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1787" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1817" y="376">
+<tspan x="1818.66666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">zouhoure</tspan>
+<tspan x="1818.66666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1818.66666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1817" cy="366" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1817" cy="366" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mouyassarSaadeddine-ind00446.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1847" y="278" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1877" y="276">
+<tspan x="1878.66666666667" y="290" style="stroke:none;fill: black;text-anchor:middle;">mouyassar</tspan>
+<tspan x="1878.66666666667" y="304" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1878.66666666667" y="318" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1877" cy="266" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1877" cy="266" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-ahmadKhalil-ind00447.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1947" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1977" y="376">
+<tspan x="1978.66666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="1978.66666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="1978.66666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="1968" y="357" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1968" y="357" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-nihmetAhmad-ind00448.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1857" y="548" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1887" y="546">
+<tspan x="1888.66666666667" y="560" style="stroke:none;fill: black;text-anchor:middle;">nihmet</tspan>
+<tspan x="1888.66666666667" y="574" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="1888.66666666667" y="588" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1887" cy="536" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1887" cy="536" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-fayzaAhmad-ind00449.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1937" y="548" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1967" y="546">
+<tspan x="1968.66666666667" y="560" style="stroke:none;fill: black;text-anchor:middle;">fayza</tspan>
+<tspan x="1968.66666666667" y="574" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="1968.66666666667" y="588" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1967" cy="536" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1967" cy="536" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-lailaAhmad-ind00450.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2007" y="548" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2037" y="546">
+<tspan x="2038.66666666667" y="560" style="stroke:none;fill: black;text-anchor:middle;">laila</tspan>
+<tspan x="2038.66666666667" y="574" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="2038.66666666667" y="588" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2037" cy="536" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2037" cy="536" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-amalAhmad-ind00451.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2087" y="548" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2117" y="546">
+<tspan x="2118.66666666667" y="560" style="stroke:none;fill: black;text-anchor:middle;">amal</tspan>
+<tspan x="2118.66666666667" y="574" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="2118.66666666667" y="588" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2117" cy="536" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2117" cy="536" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-kamalAhmad-ind00452.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2157" y="548" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2187" y="546">
+<tspan x="2188.66666666667" y="560" style="stroke:none;fill: black;text-anchor:middle;">kamal</tspan>
+<tspan x="2188.66666666667" y="574" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="2188.66666666667" y="588" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2178" y="527" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2178" y="527" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadKhalil-ind00453.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2187" y="148" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2217" y="146">
+<tspan x="2218.66666666667" y="160" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="2218.66666666667" y="174" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="2218.66666666667" y="188" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2208" y="127" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2208" y="127" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-fardauceMohamad-ind00454.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2147" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2177" y="256">
+<tspan x="2178.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">fardauce</tspan>
+<tspan x="2178.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="2178.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2177" cy="246" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2177" cy="246" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-fouadMohamad-ind00455.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2217" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2247" y="256">
+<tspan x="2248.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">fouad</tspan>
+<tspan x="2248.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="2248.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2238" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2238" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-sabihaFouad-ind00456.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2237" y="358" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2267" y="356">
+<tspan x="2268.66666666667" y="370" style="stroke:none;fill: black;text-anchor:middle;">sabiha</tspan>
+<tspan x="2268.66666666667" y="384" style="stroke:none;fill: black;text-anchor:middle;">fouad</tspan>
+<tspan x="2268.66666666667" y="398" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2267" cy="346" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2267" cy="346" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadFouad-ind00457.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2297" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2327" y="366">
+<tspan x="2328.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="2328.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">fouad</tspan>
+<tspan x="2328.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2318" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2318" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-hananeFouad-ind00458.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2377" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2407" y="366">
+<tspan x="2408.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">hanane</tspan>
+<tspan x="2408.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">fouad</tspan>
+<tspan x="2408.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2407" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2407" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-faridMohamad-ind00459.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2397" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2427" y="256">
+<tspan x="2428.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">farid</tspan>
+<tspan x="2428.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="2428.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2418" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2418" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-najibKhalil-ind00460.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2457" y="148" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2487" y="146">
+<tspan x="2488.66666666667" y="160" style="stroke:none;fill: black;text-anchor:middle;">najib</tspan>
+<tspan x="2488.66666666667" y="174" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="2488.66666666667" y="188" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2478" y="127" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2478" y="127" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-adnanNajib-ind00461.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2477" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2507" y="376">
+<tspan x="2508.66666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">adnan</tspan>
+<tspan x="2508.66666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">najib</tspan>
+<tspan x="2508.66666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2507" cy="366" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2507" cy="366" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-ghideAdnan-ind00462.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2317" y="518" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2347" y="516">
+<tspan x="2348.66666666667" y="530" style="stroke:none;fill: black;text-anchor:middle;">ghide</tspan>
+<tspan x="2348.66666666667" y="544" style="stroke:none;fill: black;text-anchor:middle;">adnan</tspan>
+<tspan x="2348.66666666667" y="558" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2347" cy="506" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2347" cy="506" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-rabihAdnan-ind00463.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2417" y="528" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2447" y="526">
+<tspan x="2448.66666666667" y="540" style="stroke:none;fill: black;text-anchor:middle;">rabih</tspan>
+<tspan x="2448.66666666667" y="554" style="stroke:none;fill: black;text-anchor:middle;">adnan</tspan>
+<tspan x="2448.66666666667" y="568" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2438" y="507" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2438" y="507" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-zahiAdnan-ind00464.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2607" y="508" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2637" y="506">
+<tspan x="2638.66666666667" y="520" style="stroke:none;fill: black;text-anchor:middle;">zahi</tspan>
+<tspan x="2638.66666666667" y="534" style="stroke:none;fill: black;text-anchor:middle;">adnan</tspan>
+<tspan x="2638.66666666667" y="548" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2628" y="487" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2628" y="487" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mounirNajib-ind00465.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2660.5" y="220" height="14px" width="33px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="2677" y="217.5">
+<tspan x="2679" dy="14" style="stroke:none;fill:#000000;">D. yes</tspan>
+</text>
+<rect x="2647" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2677" y="256">
+<tspan x="2678.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">mounir</tspan>
+<tspan x="2678.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">najib</tspan>
+<tspan x="2678.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2668" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2668" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+<path d="M2668 237 L2686 255 m-18 0 L2686 237" style="stroke: #000000;stroke-width:1px;"/>
+<text style="stroke:#FFFFFF;stroke-width:1px;fill:none;font-size:5px;text-anchor:middle;" x="2677" y="249"></text>
+<text style="stroke:none;stroke-width:1px;fill:#000000;font-size:5px;text-anchor:middle;" x="2677" y="249"></text>
+</g>
+</a>
+<a xlink:href='../Demachkieh-najibMounir-ind00466.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2677" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2707" y="376">
+<tspan x="2708.66666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">najib</tspan>
+<tspan x="2708.66666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">mounir</tspan>
+<tspan x="2708.66666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2698" y="357" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2698" y="357" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-randaMounir-ind00467.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2777" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2807" y="366">
+<tspan x="2808.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">randa</tspan>
+<tspan x="2808.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mounir</tspan>
+<tspan x="2808.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2807" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2807" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-linaMounir-ind00468.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2837" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2867" y="366">
+<tspan x="2868.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">lina</tspan>
+<tspan x="2868.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mounir</tspan>
+<tspan x="2868.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2867" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2867" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-salwaNajib-ind00469.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2807" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2837" y="256">
+<tspan x="2838.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">salwa</tspan>
+<tspan x="2838.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">najib</tspan>
+<tspan x="2838.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2837" cy="246" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2837" cy="246" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-omarKhalil-ind00470.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2877" y="148" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2907" y="146">
+<tspan x="2908.66666666667" y="160" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="2908.66666666667" y="174" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="2908.66666666667" y="188" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2898" y="127" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2898" y="127" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-khalilOmar-ind00471.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2907.5" y="220" height="14px" width="39px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="2927" y="217.5">
+<tspan x="2929" dy="14" style="stroke:none;fill:#000000;">D. 1997</tspan>
+</text>
+<rect x="2897" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2927" y="256">
+<tspan x="2928.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="2928.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="2928.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2918" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2918" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+<path d="M2918 237 L2936 255 m-18 0 L2936 237" style="stroke: #000000;stroke-width:1px;"/>
+<text style="stroke:#FFFFFF;stroke-width:1px;fill:none;font-size:5px;text-anchor:middle;" x="2927" y="249"></text>
+<text style="stroke:none;stroke-width:1px;fill:#000000;font-size:5px;text-anchor:middle;" x="2927" y="249"></text>
+</g>
+</a>
+<a xlink:href='../Demachkieh-omarKhalil-ind00472.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2917" y="418" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2947" y="416">
+<tspan x="2948.66666666667" y="430" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="2948.66666666667" y="444" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="2948.66666666667" y="458" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2938" y="397" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2938" y="397" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-danaOmar-ind00473.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2887" y="568" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2917" y="566">
+<tspan x="2918.66666666667" y="580" style="stroke:none;fill: black;text-anchor:middle;">dana</tspan>
+<tspan x="2918.66666666667" y="594" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="2918.66666666667" y="608" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2917" cy="556" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2917" cy="556" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-walidOmar-ind00474.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2957" y="568" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2987" y="566">
+<tspan x="2988.66666666667" y="580" style="stroke:none;fill: black;text-anchor:middle;">walid</tspan>
+<tspan x="2988.66666666667" y="594" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="2988.66666666667" y="608" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2978" y="547" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2978" y="547" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-ahmadOmar-ind00475.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3027" y="568" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3057" y="566">
+<tspan x="3058.66666666667" y="580" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="3058.66666666667" y="594" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="3058.66666666667" y="608" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3048" y="547" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3048" y="547" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-ziadOmar-ind00476.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3097" y="568" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3127" y="566">
+<tspan x="3128.66666666667" y="580" style="stroke:none;fill: black;text-anchor:middle;">ziad</tspan>
+<tspan x="3128.66666666667" y="594" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="3128.66666666667" y="608" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3118" y="547" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3118" y="547" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-assemKhalil-ind00477.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3177" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3207" y="366">
+<tspan x="3208.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">assem</tspan>
+<tspan x="3208.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="3208.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3198" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3198" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-isabellaAssem-ind00478.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3187" y="568" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3217" y="566">
+<tspan x="3218.66666666667" y="580" style="stroke:none;fill: black;text-anchor:middle;">isabella</tspan>
+<tspan x="3218.66666666667" y="594" style="stroke:none;fill: black;text-anchor:middle;">assem</tspan>
+<tspan x="3218.66666666667" y="608" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="3217" cy="556" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3217" cy="556" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-aichaAssem-ind00479.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3257" y="568" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3287" y="566">
+<tspan x="3288.66666666667" y="580" style="stroke:none;fill: black;text-anchor:middle;">aicha</tspan>
+<tspan x="3288.66666666667" y="594" style="stroke:none;fill: black;text-anchor:middle;">assem</tspan>
+<tspan x="3288.66666666667" y="608" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="3287" cy="556" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3287" cy="556" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-peterAssem-ind00480.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3327" y="568" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3357" y="566">
+<tspan x="3358.66666666667" y="580" style="stroke:none;fill: black;text-anchor:middle;">peter</tspan>
+<tspan x="3358.66666666667" y="594" style="stroke:none;fill: black;text-anchor:middle;">assem</tspan>
+<tspan x="3358.66666666667" y="608" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3348" y="547" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3348" y="547" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-yisrKhalil-ind00481.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3347" y="398" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3377" y="396">
+<tspan x="3378.66666666667" y="410" style="stroke:none;fill: black;text-anchor:middle;">yisr</tspan>
+<tspan x="3378.66666666667" y="424" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="3378.66666666667" y="438" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="3377" cy="386" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3377" cy="386" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-imaneKhalil-ind00482.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3427.5" y="330" height="14px" width="39px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="3447" y="327.5">
+<tspan x="3449" dy="14" style="stroke:none;fill:#000000;">D. 1998</tspan>
+</text>
+<rect x="3417" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3447" y="366">
+<tspan x="3448.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">imane</tspan>
+<tspan x="3448.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="3448.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="3447" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3447" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+<path d="M3438 347 L3456 365 m-18 0 L3456 347" style="stroke: #000000;stroke-width:1px;"/>
+<text style="stroke:#FFFFFF;stroke-width:1px;fill:none;font-size:5px;text-anchor:middle;" x="3447" y="359"></text>
+<text style="stroke:none;stroke-width:1px;fill:#000000;font-size:5px;text-anchor:middle;" x="3447" y="359"></text>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohamadKhalil-ind00483.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3487" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3517" y="366">
+<tspan x="3518.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">mohamad</tspan>
+<tspan x="3518.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">khalil</tspan>
+<tspan x="3518.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3508" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3508" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-massaraOmar-ind00484.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3537" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3567" y="256">
+<tspan x="3568.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">massara</tspan>
+<tspan x="3568.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="3568.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="3567" cy="246" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3567" cy="246" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-samiOmar-ind00485.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3607" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3637" y="256">
+<tspan x="3638.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">sami</tspan>
+<tspan x="3638.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="3638.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3628" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3628" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-abdallahSami-ind00486.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3627" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3657" y="366">
+<tspan x="3658.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">abdallah</tspan>
+<tspan x="3658.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">sami</tspan>
+<tspan x="3658.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3648" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3648" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-osmanAbdallah-ind00487.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3647" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3677" y="476">
+<tspan x="3678.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">osman</tspan>
+<tspan x="3678.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">abdallah</tspan>
+<tspan x="3678.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3668" y="457" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3668" y="457" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-bilalSami-ind00488.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3757.5" y="330" height="14px" width="39px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="3777" y="327.5">
+<tspan x="3779" dy="14" style="stroke:none;fill:#000000;">D. 2019</tspan>
+</text>
+<rect x="3747" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3777" y="366">
+<tspan x="3778.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">bilal</tspan>
+<tspan x="3778.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">sami</tspan>
+<tspan x="3778.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3768" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3768" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+<path d="M3768 347 L3786 365 m-18 0 L3786 347" style="stroke: #000000;stroke-width:1px;"/>
+<text style="stroke:#FFFFFF;stroke-width:1px;fill:none;font-size:5px;text-anchor:middle;" x="3777" y="359"></text>
+<text style="stroke:none;stroke-width:1px;fill:#000000;font-size:5px;text-anchor:middle;" x="3777" y="359"></text>
+</g>
+</a>
+<a xlink:href='../Demachkieh-saidSami-ind00489.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3817" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3847" y="366">
+<tspan x="3848.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">said</tspan>
+<tspan x="3848.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">sami</tspan>
+<tspan x="3848.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="3838" y="347" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3838" y="347" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-linaSami-ind00490.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3867" y="378" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3897" y="376">
+<tspan x="3898.66666666667" y="390" style="stroke:none;fill: black;text-anchor:middle;">lina</tspan>
+<tspan x="3898.66666666667" y="404" style="stroke:none;fill: black;text-anchor:middle;">sami</tspan>
+<tspan x="3898.66666666667" y="418" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="3897" cy="366" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3897" cy="366" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-samiaSami-ind00491.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3937" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3967" y="366">
+<tspan x="3968.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">samia</tspan>
+<tspan x="3968.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">sami</tspan>
+<tspan x="3968.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="3967" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3967" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mustafaOmar-ind00492.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="4007" y="258" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4037" y="256">
+<tspan x="4038.66666666667" y="270" style="stroke:none;fill: black;text-anchor:middle;">mustafa</tspan>
+<tspan x="4038.66666666667" y="284" style="stroke:none;fill: black;text-anchor:middle;">omar</tspan>
+<tspan x="4038.66666666667" y="298" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="4028" y="237" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="4028" y="237" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-jamilMustafa-ind00493.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="4027" y="468" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4057" y="466">
+<tspan x="4058.66666666667" y="480" style="stroke:none;fill: black;text-anchor:middle;">jamil</tspan>
+<tspan x="4058.66666666667" y="494" style="stroke:none;fill: black;text-anchor:middle;">mustafa</tspan>
+<tspan x="4058.66666666667" y="508" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="4048" y="447" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="4048" y="447" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mustafaJamil-ind00494.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3997" y="618" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4027" y="616">
+<tspan x="4028.66666666667" y="630" style="stroke:none;fill: black;text-anchor:middle;">mustafa</tspan>
+<tspan x="4028.66666666667" y="644" style="stroke:none;fill: black;text-anchor:middle;">jamil</tspan>
+<tspan x="4028.66666666667" y="658" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="4018" y="597" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="4018" y="597" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-amandaJamil-ind00495.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="4077" y="618" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4107" y="616">
+<tspan x="4108.66666666667" y="630" style="stroke:none;fill: black;text-anchor:middle;">amanda</tspan>
+<tspan x="4108.66666666667" y="644" style="stroke:none;fill: black;text-anchor:middle;">jamil</tspan>
+<tspan x="4108.66666666667" y="658" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="4107" cy="606" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="4107" cy="606" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mariaJamil-ind00496.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="4157" y="618" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4187" y="616">
+<tspan x="4188.66666666667" y="630" style="stroke:none;fill: black;text-anchor:middle;">maria</tspan>
+<tspan x="4188.66666666667" y="644" style="stroke:none;fill: black;text-anchor:middle;">jamil</tspan>
+<tspan x="4188.66666666667" y="658" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="4187" cy="606" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="4187" cy="606" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mohd-aliJamil-ind00497.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="4227" y="618" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4257" y="616">
+<tspan x="4258.66666666667" y="630" style="stroke:none;fill: black;text-anchor:middle;">moh&#39;d-</tspan>
+<tspan x="4258.66666666667" y="644" style="stroke:none;fill: black;text-anchor:middle;">ali jamil</tspan>
+<tspan x="4258.66666666667" y="658" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="4248" y="597" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="4248" y="597" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-karimJamil-ind00498.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="4297" y="618" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4327" y="616">
+<tspan x="4328.66666666667" y="630" style="stroke:none;fill: black;text-anchor:middle;">karim</tspan>
+<tspan x="4328.66666666667" y="644" style="stroke:none;fill: black;text-anchor:middle;">jamil</tspan>
+<tspan x="4328.66666666667" y="658" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="4318" y="597" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="4318" y="597" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-dinaMustafa-ind00499.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="4317" y="368" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="4347" y="366">
+<tspan x="4348.66666666667" y="380" style="stroke:none;fill: black;text-anchor:middle;">dina</tspan>
+<tspan x="4348.66666666667" y="394" style="stroke:none;fill: black;text-anchor:middle;">mustafa</tspan>
+<tspan x="4348.66666666667" y="408" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="4347" cy="356" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="4347" cy="356" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../family-rabihAdnanDemachkieh-fam00327.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(three children)'><title>&#32;(three children)</title>
+<line x1="2377" y1="576" x2="2547" y2="576" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-zahiAdnanDemachkieh-fam00328.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="2637" y1="556" x2="2687" y2="556" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-najibMounirDemachkieh-fam00329.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(three children)'><title>&#32;(three children)</title>
+<line x1="2707" y1="426" x2="2872" y2="426" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-kamalAhmadDemachkieh-fam00353.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="2187" y1="606" x2="2267" y2="606" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../Demachkieh-adnanChafic-ind01191.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="437" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="467" y="576">
+<tspan x="468.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">adnan</tspan>
+<tspan x="468.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="468.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="458" y="557" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="458" y="557" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-ahmadChafic-ind01192.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="487" y="578" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="517" y="576">
+<tspan x="518.666666666667" y="590" style="stroke:none;fill: black;text-anchor:middle;">ahmad</tspan>
+<tspan x="518.666666666667" y="604" style="stroke:none;fill: black;text-anchor:middle;">chafic</tspan>
+<tspan x="518.666666666667" y="618" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="508" y="557" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="508" y="557" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-joudeSaadeddine-ind01214.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1177" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1207" y="476">
+<tspan x="1208.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">joude</tspan>
+<tspan x="1208.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">saadeddine</tspan>
+<tspan x="1208.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1207" cy="466" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1207" cy="466" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-cindyWissam-ind01215.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1567" y="478" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1597" y="476">
+<tspan x="1598.66666666667" y="490" style="stroke:none;fill: black;text-anchor:middle;">cindy</tspan>
+<tspan x="1598.66666666667" y="504" style="stroke:none;fill: black;text-anchor:middle;">wissam</tspan>
+<tspan x="1598.66666666667" y="518" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="1597" cy="466" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1597" cy="466" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-adnanRabih-ind01216.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2347" y="638" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2377" y="636">
+<tspan x="2378.66666666667" y="650" style="stroke:none;fill: black;text-anchor:middle;">adnan</tspan>
+<tspan x="2378.66666666667" y="664" style="stroke:none;fill: black;text-anchor:middle;">rabih</tspan>
+<tspan x="2378.66666666667" y="678" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2368" y="617" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2368" y="617" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-tamaraRabih-ind01217.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2417" y="638" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2447" y="636">
+<tspan x="2448.66666666667" y="650" style="stroke:none;fill: black;text-anchor:middle;">tamara</tspan>
+<tspan x="2448.66666666667" y="664" style="stroke:none;fill: black;text-anchor:middle;">rabih</tspan>
+<tspan x="2448.66666666667" y="678" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2447" cy="626" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2447" cy="626" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-yasmineRabih-ind01218.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2497" y="638" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2527" y="636">
+<tspan x="2528.66666666667" y="650" style="stroke:none;fill: black;text-anchor:middle;">yasmine</tspan>
+<tspan x="2528.66666666667" y="664" style="stroke:none;fill: black;text-anchor:middle;">rabih</tspan>
+<tspan x="2528.66666666667" y="678" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2527" cy="626" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2527" cy="626" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-janaZahi-ind01219.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2637" y="618" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2667" y="616">
+<tspan x="2668.66666666667" y="630" style="stroke:none;fill: black;text-anchor:middle;">jana</tspan>
+<tspan x="2668.66666666667" y="644" style="stroke:none;fill: black;text-anchor:middle;">zahi</tspan>
+<tspan x="2668.66666666667" y="658" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2667" cy="606" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2667" cy="606" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-mounirNajib-ind01220.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2724" y="450" height="14px" width="26px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="2737" y="447.5">
+<tspan x="2739" dy="14" style="stroke:none;fill:#000000;">2006</tspan>
+</text>
+<rect x="2707" y="488" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2737" y="486">
+<tspan x="2738.66666666667" y="500" style="stroke:none;fill: black;text-anchor:middle;">mounir</tspan>
+<tspan x="2738.66666666667" y="514" style="stroke:none;fill: black;text-anchor:middle;">najib</tspan>
+<tspan x="2738.66666666667" y="528" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2728" y="467" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2728" y="467" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-monaNajib-ind01221.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2794" y="450" height="14px" width="26px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="2807" y="447.5">
+<tspan x="2809" dy="14" style="stroke:none;fill:#000000;">2009</tspan>
+</text>
+<rect x="2777" y="488" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2807" y="486">
+<tspan x="2808.66666666667" y="500" style="stroke:none;fill: black;text-anchor:middle;">mona</tspan>
+<tspan x="2808.66666666667" y="514" style="stroke:none;fill: black;text-anchor:middle;">najib</tspan>
+<tspan x="2808.66666666667" y="528" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2807" cy="476" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2807" cy="476" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-karimKamal-ind01273.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2157" y="653" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2187" y="651">
+<tspan x="2188.66666666667" y="665" style="stroke:none;fill: black;text-anchor:middle;">karim</tspan>
+<tspan x="2188.66666666667" y="679" style="stroke:none;fill: black;text-anchor:middle;">kamal</tspan>
+<tspan x="2188.66666666667" y="693" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2178" y="632" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2178" y="632" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../Demachkieh-nahidaKamal-ind01274.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2232" y="653" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2262" y="651">
+<tspan x="2263.66666666667" y="665" style="stroke:none;fill: black;text-anchor:middle;">nahida</tspan>
+<tspan x="2263.66666666667" y="679" style="stroke:none;fill: black;text-anchor:middle;">kamal</tspan>
+<tspan x="2263.66666666667" y="693" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<circle cx="2262" cy="641" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2262" cy="641" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../Demachkieh-MohamadNajib-ind01278.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2859" y="450" height="14px" width="26px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;text-anchor:middle;" x="2872" y="447.5">
+<tspan x="2874" dy="14" style="stroke:none;fill:#000000;">2012</tspan>
+</text>
+<rect x="2842" y="488" height="42px" width="60px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2872" y="486">
+<tspan x="2873.66666666667" y="500" style="stroke:none;fill: black;text-anchor:middle;">Mohamad</tspan>
+<tspan x="2873.66666666667" y="514" style="stroke:none;fill: black;text-anchor:middle;">Najib</tspan>
+<tspan x="2873.66666666667" y="528" style="stroke:none;fill: black;text-anchor:middle;">Demachkieh</tspan>
+</text>
+<g>
+<rect x="2863" y="467" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2863" y="467" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+
+	<circle id="highlight" cx="0" cy="0" r="50" style="stroke-width:3px;fill:none;opacity:0.3;" visibility="hidden" pointer-events="none">
+		<animate attributeName="r" values="10;50" dur="5s" repeatCount="indefinite" />
+		<animate attributeName="stroke" values="fuchsia;fuchsia;white;fuchsia;fuchsia" dur="1s" repeatCount="indefinite" />
+	</circle>
+</g>
+	<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="65"
+   height="112"
+   x="10"
+   y="10"
+   id="controls">
+  <defs
+     id="defs2820">
+    <filter
+       x="-0.25"
+       y="-0.25"
+       width="1.5"
+       height="1.5"
+       color-interpolation-filters="sRGB"
+       id="filter3696">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="2.000000"
+         in="SourceAlpha"
+         id="feGaussianBlur3698" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 "
+         type="matrix"
+         result="bluralpha"
+         id="feColorMatrix3700" />
+      <feOffset
+         result="offsetBlur"
+         dy="4.000000"
+         dx="4.000000"
+         in="bluralpha"
+         id="feOffset3702" />
+      <feMerge
+         result="fbSourceGraphic"
+         id="feMerge3704">
+        <feMergeNode
+           in="offsetBlur"
+           id="feMergeNode3706" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode3708" />
+      </feMerge>
+      <feColorMatrix
+         id="feColorMatrix4144"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         in="fbSourceGraphic"
+         result="fbSourceGraphicAlpha" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="1.000000"
+         in="fbSourceGraphicAlpha"
+         id="feGaussianBlur4146" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 "
+         type="matrix"
+         result="bluralpha"
+         id="feColorMatrix4148" />
+      <feOffset
+         result="offsetBlur"
+         dy="0.100000"
+         dx="0.100000"
+         in="bluralpha"
+         id="feOffset4150" />
+      <feMerge
+         result="fbSourceGraphic"
+         id="feMerge4152">
+        <feMergeNode
+           in="offsetBlur"
+           id="feMergeNode4154" />
+        <feMergeNode
+           in="fbSourceGraphic"
+           id="feMergeNode4156" />
+      </feMerge>
+      <feColorMatrix
+         id="feColorMatrix4186"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         in="fbSourceGraphic"
+         result="fbSourceGraphicAlpha" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4.000000"
+         in="fbSourceGraphicAlpha"
+         id="feGaussianBlur4188" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 "
+         type="matrix"
+         result="bluralpha"
+         id="feColorMatrix4190" />
+      <feOffset
+         result="offsetBlur"
+         dy="0.100000"
+         dx="2.000000"
+         in="bluralpha"
+         id="feOffset4192" />
+      <feMerge
+         id="feMerge4194">
+        <feMergeNode
+           in="offsetBlur"
+           id="feMergeNode4196" />
+        <feMergeNode
+           in="fbSourceGraphic"
+           id="feMergeNode4198" />
+      </feMerge>
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter4226">
+      <feGaussianBlur
+         id="feGaussianBlur4228"
+         stdDeviation="0.27510791" />
+    </filter>
+  </defs>
+  <g style="stroke:#B39B14">
+  <path
+     d="m 68.275423,4.9512706 a 51.336864,51.076271 0 1 1 -102.673729,0 51.336864,51.076271 0 1 1 102.673729,0 z"
+     transform="matrix(0.4959168,0,0,0.49844699,23.681542,29.646234)"
+     id="path3694"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:0.99963737;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3696)" />
+  <path
+     d="m 18.58418,27.739188 0.01309,-0.0027 -4.169491,3.84375 3.974046,4.039195 -2.084745,1.954449 -5.993644,-6.123941 6.254237,-5.863347 2.006502,2.152605 z"
+     id="path2836"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 35.645184,18.817952 0.0027,0.01309 -3.84375,-4.169491 -4.039195,3.974046 -1.954449,-2.084745 6.123941,-5.993645 5.863347,6.254238 -2.152605,2.006502 z"
+     id="path2836-1"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 27.778817,44.475469 -0.0027,-0.01309 3.84375,4.169491 4.039195,-3.974046 1.954449,2.084745 -6.123941,5.993644 -5.863347,-6.254237 2.152605,-2.006502 z"
+     id="path2836-4"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 44.637113,35.877315 -0.01309,0.0027 4.169491,-3.84375 -3.974046,-4.039195 2.084745,-1.954449 5.993644,6.123941 -6.254237,5.863347 -2.006502,-2.152605 z"
+     id="path2836-1-4"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 35.871081,37.288902 1.19637,-1.794555 1.26283,-2.25981 0.79758,-3.655575 -1.1299,-1.595161 -1.3293,0.996976 -0.79758,2.25981 0.0665,-4.519621 -1.92748,0.13293 -0.33233,3.788506 -0.0665,-4.386691 -1.92749,-0.06647 0.0665,3.921436 -1.3293,-1.06344 0.0665,-1.728091 -2.25981,-0.199395 -0.46525,2.126881 2.19334,2.459205 -2.92446,-0.66465 -0.13293,2.193345 1.39577,1.129905 1.1299,1.46223 1.66163,1.46223"
+     id="path4200"
+     style="fill:none;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.99415205;stroke-dasharray:none;filter:url(#filter4226)" />
+  <g
+     onclick="panZoom.zoomIn();"
+     id="ZoomIn">
+    <path
+       d="m 41.540844,75.846165 -0.0897,14.985927 -17.58828,-0.08974"
+       id="path4245"
+       style="fill:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 23.683364,75.935901 0.0897,13.99883 17.22933,-0.08974 -0.17947,-13.909094"
+       id="path4232"
+       style="fill:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 185.4845,16.219238 a 9.2428179,4.8457489 0 0 1 -18.48493,0.05967"
+       transform="matrix(0.9140012,0,0,-0.98675774,-128.87679,91.594199)"
+       id="path4241"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.23615646;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 32.230414,76.991732 0.0238,7.46195"
+       id="path4249"
+       style="fill:#ffffff;stroke-width:1.98008847;stroke-opacity:1" />
+    <path
+       d="m 28.363214,80.612923 7.74993,0 -7.74993,0 z"
+       id="path4251"
+       style="fill:#ffffff;stroke-width:1.84633887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <g
+     transform="translate(2.3022537,3.699402)"
+     onclick="panZoom.zoomOut();"
+     id="ZoomOut">
+    <path
+       d="M 39.320482,89.514025 39.180261,102.27412"
+       id="path4338"
+       style="fill:#ffffff;;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 21.484491,102.34319 0.0897,-13.998827 17.22933,0.08974 -0.17947,13.909097"
+       id="path4232-2"
+       style="fill:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 185.4845,16.219238 a 9.2428179,4.8457489 0 0 1 -18.48493,0.05967"
+       transform="matrix(0.9140012,0,0,0.98675774,-130.59886,86.683287)"
+       id="path4241-4-1"
+       style="fill:#ffffff;stroke-width:1.23615646;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.87134507;stroke-dasharray:none" />
+    <path
+       d="m 185.4845,16.219238 a 9.2428179,4.8457489 0 0 1 -18.48493,0.05967"
+       transform="matrix(0.9140012,0,0,0.98675774,-131.05531,86.167363)"
+       id="path4241-4"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.23615646;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 25.802333,97.053049 7.74993,0 -7.74993,0 z"
+       id="path4251-5"
+       style="fill:#ffffff;stroke-width:1.84633887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="8.5363598"
+     y="25.281897"
+     id="PanLeft"
+     onclick="panZoom.panBy({x:getInnerWidth()/10,y:0})"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="24.525877"
+     y="9.6399784"
+     id="PanUp"
+     onclick="panZoom.panBy({x:0,y:getInnerHeight()/10})"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="40.051929"
+     y="24.934298"
+     id="PanRight"
+     onclick="panZoom.panBy({x:-getInnerWidth()/10,y:0})"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="23.830681"
+     y="41.155548"
+     id="PanDown"
+     onclick="panZoom.panBy({x:0,y:-getInnerHeight()/10});"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+</g>
+</svg>
+	<g id="GenoPro" x="60" y="20" opacity='0.7' style="font-size:8px; stroke:none; text-anchor:middle; fill:darkblue" background-color="white">
+		<a xlink:href='http://www.genopro.com/' target='_blank'>
+			<text cursor="pointer">
+				<tspan dy="8" x="45">Created using GenoPro®</tspan>
+			</text>
+			<title>Click for details.</title>
+	  </a>
+  </g>
+
+</svg>
+
+<div class="clear" style="height:1%;"></div>
+<noscript>
+<embed src="genomap0.svg" id="svgEmbed" height="88%" width="100%" type="image/svg+xml" border="2" pluginspage='http://www.adobe.com/svg/viewer/install/' />
+</noscript>
+</body>
+</html>
+
