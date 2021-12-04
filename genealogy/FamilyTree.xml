@@ -2,10 +2,10 @@
 <GenoPro>
   <Software>GenoPro
     <Name>GenoPro® - Picture Your Family Tree!(TM)</Name>
-    <Version>3.0.1.3</Version>
+    <Version>3.1.0.1</Version>
     <Address>http://www.genopro.com</Address>
   </Software>
-  <Date>1 Nov 2021</Date>
+  <Date>3 Dec 2021</Date>
 
 <Global DisplayPictures="Y">
   <Name>
@@ -35,7 +35,7 @@
 </Global>
 <GenoMaps>
 <GenoMap Name="GenoMap1" Zoom="50" Position="-4822,1135" BoundaryRect="-26547,2882,16903,-611">
-  <Selection>ind01126</Selection>
+  <Selection>ind01547</Selection>
   <Print Scale="100" DimensionPaper="5x5"/>
 </GenoMap>
 </GenoMaps>
@@ -99,6 +99,10 @@
   </Name>
   <Position z="120" BoundaryRect="-26547,1782,-26473,1689">-26510,1750</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
 </Individual>
 <Individual ID="ind00007">
   <Name>bahira ihsan Demachkieh
@@ -601,7 +605,7 @@
     <Middle>saadeddine</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-23112,1762,-23038,1669">-23075,1730</Position>
+  <Position z="120" BoundaryRect="-23392,1772,-23318,1679">-23355,1740</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00069">
@@ -611,7 +615,7 @@
     <Middle>saadeddine</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-22807,1782,-22733,1689">-22770,1750</Position>
+  <Position z="120" BoundaryRect="-23067,1782,-22993,1689">-23030,1750</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00070">
@@ -785,6 +789,9 @@
   </Name>
   <Position z="120" BoundaryRect="-21737,1782,-21663,1689">-21700,1750</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>18 Feb 1955</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind00087">
   <Name>dalal abdel-kader Demachkieh
@@ -795,6 +802,9 @@
   </Name>
   <Position z="120" BoundaryRect="-21767,1642,-21693,1549">-21730,1610</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>1 Jan 1981</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind00088">
   <Name>rafic abdel-kader Demachkieh
@@ -805,6 +815,9 @@
   </Name>
   <Position z="120" BoundaryRect="-21707,1642,-21633,1549">-21670,1610</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>14 May 1986</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind00089">
   <Name>omar abdel-kader Demachkieh
@@ -815,6 +828,9 @@
   </Name>
   <Position z="120" BoundaryRect="-21627,1642,-21553,1549">-21590,1610</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>31 Dec 1989</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind00090">
   <Name>moh&#39;d-salim rafic Demachkieh
@@ -895,16 +911,6 @@
   </Name>
   <Position z="120" BoundaryRect="-21127,1782,-21053,1689">-21090,1750</Position>
   <Gender>M</Gender>
-</Individual>
-<Individual ID="ind00098">
-  <Name>rafica rafic Demachkieh
-    <Display>rafica rafic Demachkieh</Display>
-    <First>rafica</First>
-    <Middle>rafic</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position z="120" BoundaryRect="-21057,1782,-20983,1689">-21020,1750</Position>
-  <Gender>F</Gender>
 </Individual>
 <Individual ID="ind00099">
   <Name>bilal rafic Demachkieh
@@ -1104,7 +1110,7 @@
     <Middle>moh&#39;d-samir</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-19872,1777,-19798,1684">-19835,1745</Position>
+  <Position z="120" BoundaryRect="-19862,1747,-19788,1654">-19825,1715</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind00119">
@@ -1346,6 +1352,13 @@
   </Name>
   <Position z="120" BoundaryRect="-18252,1927,-18178,1834">-18215,1895</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>1949</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>9 May 2019</Date>
+  </Death>
 </Individual>
 <Individual ID="ind00143">
   <Name>nabih moh&#39;d-rabih Demachkieh
@@ -1458,13 +1471,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00154">
-  <Name>samir nader Demachkieh
-    <Display>samir nader Demachkieh</Display>
-    <First>samir</First>
+  <Name>mohamad-samir nader Demachkieh
+    <Display>mohamad-samir nader Demachkieh</Display>
+    <First>mohamad-samir</First>
     <Middle>nader</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-17772,1567,-17698,1474">-17735,1535</Position>
+  <Position z="120" BoundaryRect="-17781,1567,-17689,1474">-17735,1535</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00155">
@@ -1554,7 +1567,7 @@
     <Middle>saffouh</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-17022,1792,-16948,1699">-16985,1760</Position>
+  <Position z="120" BoundaryRect="-17017,1797,-16943,1704">-16980,1765</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind00165">
@@ -1588,13 +1601,13 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind00168">
-  <Name>mouhanna ahmad Demachkieh
-    <Display>mouhanna ahmad Demachkieh</Display>
-    <First>mouhanna</First>
+  <Name>mohamad-mouhanna ahmad Demachkieh
+    <Display>mohamad-mouhanna ahmad Demachkieh</Display>
+    <First>mohamad-mouhanna</First>
     <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-16927,1922,-16853,1829">-16890,1890</Position>
+  <Position z="120" BoundaryRect="-16948,1922,-16832,1829">-16890,1890</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00169">
@@ -1608,13 +1621,13 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind00170">
-  <Name>nizar ahmad Demachkieh
-    <Display>nizar ahmad Demachkieh</Display>
-    <First>nizar</First>
+  <Name>mohamad-nizar ahmad Demachkieh
+    <Display>mohamad-nizar ahmad Demachkieh</Display>
+    <First>mohamad-nizar</First>
     <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-16017,1927,-15943,1834">-15980,1895</Position>
+  <Position z="120" BoundaryRect="-16025,1927,-15935,1834">-15980,1895</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00172">
@@ -1628,13 +1641,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00173">
-  <Name>wael ahmad Demachkieh
-    <Display>wael ahmad Demachkieh</Display>
-    <First>wael</First>
+  <Name>mohamad-wael ahmad Demachkieh
+    <Display>mohamad-wael ahmad Demachkieh</Display>
+    <First>mohamad-wael</First>
     <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-13702,1862,-13628,1769">-13665,1830</Position>
+  <Position z="120" BoundaryRect="-13710,1862,-13620,1769">-13665,1830</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00174">
@@ -3455,7 +3468,7 @@
     <Middle>abdel-hafiz</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-11807,-48,-11733,-141">-11770,-80</Position>
+  <Position z="120" BoundaryRect="-11907,-53,-11833,-146">-11870,-85</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind00372">
@@ -3465,7 +3478,7 @@
     <Middle>zouheir</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-11667,62,-11593,-31">-11630,30</Position>
+  <Position z="120" BoundaryRect="-11652,-123,-11578,-216">-11615,-155</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00373">
@@ -3485,7 +3498,7 @@
     <Middle>samir</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-11547,62,-11473,-31">-11510,30</Position>
+  <Position z="120" BoundaryRect="-11587,-28,-11513,-121">-11550,-60</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00375">
@@ -5183,14 +5196,14 @@
   <Comment>1.1.1.</Comment>
 </Individual>
 <Individual ID="ind00585">
-  <Name>cheikh hussein abdel-wahab Demachkieh
-    <Display>hussein abdel-wahab Demachkieh</Display>
-    <First>hussein</First>
+  <Name>cheikh Hussein abdel-wahab Demachkieh
+    <Display>Hussein abdel-wahab Demachkieh</Display>
+    <First>Hussein</First>
     <Middle>abdel-wahab</Middle>
     <Last>Demachkieh</Last>
     <Title>cheikh</Title>
   </Name>
-  <Position z="120" BoundaryRect="-6570,2502,-6490,2409">-6530,2470</Position>
+  <Position z="120" BoundaryRect="-6570,2497,-6490,2404">-6530,2465</Position>
   <Gender>M</Gender>
   <IsDead>Y</IsDead>
   <Comment>1.1.2</Comment>
@@ -6238,7 +6251,7 @@
     <Middle>abdel-kader</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-3861,2142,-3779,2049">-3820,2110</Position>
+  <Position z="120" BoundaryRect="-3861,2157,-3779,2064">-3820,2125</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.01.01.</Comment>
 </Individual>
@@ -6847,7 +6860,7 @@
     <Middle>hassane</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-587,1392,-513,1299">-550,1360</Position>
+  <Position z="120" BoundaryRect="-587,1277,-513,1184">-550,1245</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.01.02.01.05</Comment>
 </Individual>
@@ -6981,6 +6994,10 @@
   </Name>
   <Position z="120" BoundaryRect="-297,1942,-223,1849">-260,1910</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>12 Nov 2021</Date>
+  </Death>
   <Comment>1.1.2.11.02.01.03.02.</Comment>
 </Individual>
 <Individual ID="ind00763">
@@ -7061,24 +7078,24 @@
   <Comment>1.1.2.11.02.01.04.01.01.</Comment>
 </Individual>
 <Individual ID="ind00770">
-  <Name>elisa nazih Demachkieh
-    <Display>elisa nazih Demachkieh</Display>
-    <First>elisa</First>
+  <Name>elisa-maria nazih Demachkieh
+    <Display>elisa-maria nazih Demachkieh</Display>
+    <First>elisa-maria</First>
     <Middle>nazih</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="53,1752,127,1659">90,1720</Position>
+  <Position z="120" BoundaryRect="48,1742,122,1649">85,1710</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.01.04.01.02.</Comment>
 </Individual>
 <Individual ID="ind00771">
-  <Name>kathia nazih Demachkieh
-    <Display>kathia nazih Demachkieh</Display>
-    <First>kathia</First>
+  <Name>kathia-helena nazih Demachkieh
+    <Display>kathia-helena nazih Demachkieh</Display>
+    <First>kathia-helena</First>
     <Middle>nazih</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="123,1752,197,1659">160,1720</Position>
+  <Position z="120" BoundaryRect="120,1752,200,1659">160,1720</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.01.04.01.03.</Comment>
 </Individual>
@@ -7105,13 +7122,13 @@
   <Comment>1.1.2.11.02.01.04.03.</Comment>
 </Individual>
 <Individual ID="ind00774">
-  <Name>lou&#39;lou&#39;a usama Demachkieh
-    <Display>lou&#39;lou&#39;a usama Demachkieh</Display>
-    <First>lou&#39;lou&#39;a</First>
+  <Name>lou&#39;lou&#39;a, لؤلؤة usama Demachkieh
+    <Display>lou&#39;lou&#39;a, لؤلؤة usama Demachkieh</Display>
+    <First>lou&#39;lou&#39;a, لؤلؤة</First>
     <Middle>usama</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="233,1672,307,1579">270,1640</Position>
+  <Position z="120" BoundaryRect="231,1672,308,1579">270,1640</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.01.04.03.01.</Comment>
 </Individual>
@@ -7898,6 +7915,13 @@
   </Name>
   <Position z="120" BoundaryRect="3363,1932,3437,1839">3400,1900</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>20 Oct 1967</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>8 Nov 1976</Date>
+  </Death>
   <Comment>1.1.2.11.02.05.04.08</Comment>
 </Individual>
 <Individual ID="ind00854">
@@ -8167,9 +8191,10 @@
   <Comment>1.1.2.11.02.06.03.03.</Comment>
 </Individual>
 <Individual ID="ind00879">
-  <Name>hiba rayan Demachkieh
-    <Display>hiba rayan Demachkieh</Display>
-    <First>hiba rayan</First>
+  <Name>hiba-rayan ahmad Demachkieh
+    <Display>hiba-rayan ahmad Demachkieh</Display>
+    <First>hiba-rayan</First>
+    <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
   <Position z="120" BoundaryRect="-4992,1267,-4918,1174">-4955,1235</Position>
@@ -8177,12 +8202,13 @@
   <Comment>1.1.2.10.07.02.04.01.</Comment>
 </Individual>
 <Individual ID="ind00880">
-  <Name>nour barihan Demachkieh
-    <Display>nour barihan Demachkieh</Display>
-    <First>nour barihan</First>
+  <Name>nour-barihan ahmad Demachkieh
+    <Display>nour-barihan ahmad Demachkieh</Display>
+    <First>nour-barihan</First>
+    <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-5079,1267,-5002,1174">-5040,1235</Position>
+  <Position z="120" BoundaryRect="-5079,1267,-5001,1174">-5040,1235</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.10.07.02.04.02</Comment>
 </Individual>
@@ -8206,6 +8232,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1420,1972,-1340,1879">-1380,1940</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>25 Nov 1945</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.</Comment>
 </Individual>
 <Individual ID="ind00883">
@@ -8217,6 +8246,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1350,2042,-1270,1949">-1310,2010</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>1942</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.02.</Comment>
 </Individual>
 <Individual ID="ind00884">
@@ -8243,6 +8275,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1185,2042,-1105,1949">-1145,2010</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>1 May 1957</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.04.</Comment>
 </Individual>
 <Individual ID="ind00886">
@@ -8254,6 +8289,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1562,1602,-1488,1509">-1525,1570</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>3 Sep 1967</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.01</Comment>
 </Individual>
 <Individual ID="ind00887">
@@ -8265,6 +8303,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1457,1582,-1383,1489">-1420,1550</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>4 Oct 1968</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.02.</Comment>
 </Individual>
 <Individual ID="ind00890">
@@ -8276,6 +8317,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1317,1402,-1243,1309">-1280,1370</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>11 Feb 1970</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.03.</Comment>
 </Individual>
 <Individual ID="ind00892">
@@ -8287,6 +8331,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1267,1497,-1193,1404">-1230,1465</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>8 Jan 1977</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.04.</Comment>
 </Individual>
 <Individual ID="ind00893">
@@ -8298,6 +8345,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1177,1582,-1103,1489">-1140,1550</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>2 Jan 1980</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.05.</Comment>
 </Individual>
 <Individual ID="ind00894">
@@ -8309,6 +8359,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1107,1582,-1033,1489">-1070,1550</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>24 Apr 1981</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.06.</Comment>
 </Individual>
 <Individual ID="ind00895">
@@ -8320,6 +8373,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1032,1322,-958,1229">-995,1290</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>12 Feb 1983</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.01.07</Comment>
 </Individual>
 <Individual ID="ind00896">
@@ -8364,6 +8420,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1100,2052,-1020,1959">-1060,2020</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>7 Jan 1967</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.05.</Comment>
 </Individual>
 <Individual ID="ind00900">
@@ -8375,17 +8434,23 @@
   </Name>
   <Position z="120" BoundaryRect="-1087,1902,-1013,1809">-1050,1870</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>4 Jan 1988</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.05.01.&#10;&#32;</Comment>
 </Individual>
 <Individual ID="ind00901">
-  <Name>mohamad omar Demachkieh
-    <Display>mohamad omar Demachkieh</Display>
-    <First>mohamad</First>
+  <Name>mohamad-mounir omar Demachkieh
+    <Display>mohamad-mounir omar Demachkieh</Display>
+    <First>mohamad-mounir</First>
     <Middle>omar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-1017,1902,-943,1809">-980,1870</Position>
+  <Position z="120" BoundaryRect="-1029,1902,-931,1809">-980,1870</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>9 May 1993</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.05.02.&#10;</Comment>
 </Individual>
 <Individual ID="ind00902">
@@ -8397,6 +8462,9 @@
   </Name>
   <Position z="120" BoundaryRect="-947,1902,-873,1809">-910,1870</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>9 May 1993</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.05.03.</Comment>
 </Individual>
 <Individual ID="ind00903">
@@ -8408,6 +8476,9 @@
   </Name>
   <Position z="120" BoundaryRect="-1050,2012,-970,1919">-1010,1980</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>9 Jul 1951</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.06.</Comment>
 </Individual>
 <Individual ID="ind00904">
@@ -8419,6 +8490,9 @@
   </Name>
   <Position z="120" BoundaryRect="-970,2052,-890,1959">-930,2020</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>20 Oct 1963</Date>
+  </Birth>
   <Comment>1.1.2.11.01.04.07.</Comment>
 </Individual>
 <Individual ID="ind00905">
@@ -8586,7 +8660,7 @@
     <Middle>abdel-rahman</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="5179,2012,5261,1919">5220,1980</Position>
+  <Position z="120" BoundaryRect="5229,2002,5311,1909">5270,1970</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.06.07.</Comment>
 </Individual>
@@ -8597,7 +8671,7 @@
     <Middle>ziad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="5118,1462,5192,1369">5155,1430</Position>
+  <Position z="120" BoundaryRect="5113,1362,5187,1269">5150,1330</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.06.07.01.</Comment>
 </Individual>
@@ -8608,7 +8682,7 @@
     <Middle>ziad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="5193,1532,5267,1439">5230,1500</Position>
+  <Position z="120" BoundaryRect="5193,1132,5267,1039">5230,1100</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.06.07.02.</Comment>
 </Individual>
@@ -8878,6 +8952,9 @@
   </Name>
   <Position z="120" BoundaryRect="6073,1892,6147,1799">6110,1860</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>1 Jan 1950</Date>
+  </Birth>
   <Comment>1.1.2.11.02.08.02.01.</Comment>
 </Individual>
 <Individual ID="ind00946">
@@ -8887,8 +8964,11 @@
     <Middle>nabil</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="6093,1332,6167,1239">6130,1300</Position>
+  <Position z="120" BoundaryRect="6058,1182,6132,1089">6095,1150</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>27 Aug 1972</Date>
+  </Birth>
   <Comment>1.1.2.11.02.08.02.01.01.</Comment>
 </Individual>
 <Individual ID="ind00948">
@@ -8898,8 +8978,11 @@
     <Middle>nabil</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="6173,1432,6247,1339">6210,1400</Position>
+  <Position z="120" BoundaryRect="6098,1432,6172,1339">6135,1400</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>5 Apr 1975</Date>
+  </Birth>
   <Comment>1.1.2.11.02.08.02.01.02.</Comment>
 </Individual>
 <Individual ID="ind00949">
@@ -8909,7 +8992,7 @@
     <Middle>nabil</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="6223,1532,6297,1439">6260,1500</Position>
+  <Position z="120" BoundaryRect="6148,522,6222,429">6185,490</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.08.02.01.03.</Comment>
 </Individual>
@@ -8920,7 +9003,7 @@
     <Middle>nabil</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="6273,1662,6347,1569">6310,1630</Position>
+  <Position z="120" BoundaryRect="6203,747,6277,654">6240,715</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.08.02.01.04.</Comment>
 </Individual>
@@ -9130,7 +9213,7 @@
     <Middle>mohamad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7143,1582,7217,1489">7180,1550</Position>
+  <Position z="120" BoundaryRect="7153,1147,7227,1054">7190,1115</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.08.04.01.01.</Comment>
 </Individual>
@@ -9141,7 +9224,7 @@
     <Middle>mohamad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7213,1582,7287,1489">7250,1550</Position>
+  <Position z="120" BoundaryRect="7218,1147,7292,1054">7255,1115</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.08.04.01.02.</Comment>
 </Individual>
@@ -9152,7 +9235,7 @@
     <Middle>mohamad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7293,1582,7367,1489">7330,1550</Position>
+  <Position z="120" BoundaryRect="7298,1142,7372,1049">7335,1110</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.08.04.01.03.</Comment>
 </Individual>
@@ -9185,7 +9268,7 @@
     <Middle>zakaria</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7433,1762,7507,1669">7470,1730</Position>
+  <Position z="120" BoundaryRect="7418,1122,7492,1029">7455,1090</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.08.04.04.</Comment>
 </Individual>
@@ -9196,7 +9279,7 @@
     <Middle>issam</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7443,1632,7517,1539">7480,1600</Position>
+  <Position z="120" BoundaryRect="7413,897,7487,804">7450,865</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.08.04.04.01.</Comment>
 </Individual>
@@ -9207,7 +9290,7 @@
     <Middle>issam</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7513,1632,7587,1539">7550,1600</Position>
+  <Position z="120" BoundaryRect="7458,972,7532,879">7495,940</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.08.04.04.02.</Comment>
 </Individual>
@@ -9218,7 +9301,7 @@
     <Middle>issam</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7583,1632,7657,1539">7620,1600</Position>
+  <Position z="120" BoundaryRect="7508,897,7582,804">7545,865</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.08.04.04.03.</Comment>
 </Individual>
@@ -9229,7 +9312,7 @@
     <Middle>zakaria</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7513,1892,7587,1799">7550,1860</Position>
+  <Position z="120" BoundaryRect="7468,1882,7542,1789">7505,1850</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.08.04.05.</Comment>
 </Individual>
@@ -9240,7 +9323,7 @@
     <Middle>zakaria</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7598,1807,7672,1714">7635,1775</Position>
+  <Position z="120" BoundaryRect="7523,1802,7597,1709">7560,1770</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.08.04.06.</Comment>
 </Individual>
@@ -9251,7 +9334,7 @@
     <Middle>zakaria</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="7653,1902,7727,1809">7690,1870</Position>
+  <Position z="120" BoundaryRect="7618,1892,7692,1799">7655,1860</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.08.04.07.</Comment>
 </Individual>
@@ -9295,7 +9378,7 @@
     <Middle>akram</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="8003,1632,8077,1539">8040,1600</Position>
+  <Position z="120" BoundaryRect="7983,1632,8057,1539">8020,1600</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.02.08.05.02.</Comment>
 </Individual>
@@ -9911,6 +9994,10 @@
   </Name>
   <Position z="120" BoundaryRect="11263,1732,11337,1639">11300,1700</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>death</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.02.03.01.</Comment>
 </Individual>
 <Individual ID="ind01043">
@@ -9999,6 +10086,10 @@
   </Name>
   <Position z="120" BoundaryRect="11723,1532,11797,1439">11760,1500</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.02.05.02.</Comment>
 </Individual>
 <Individual ID="ind01051">
@@ -10147,6 +10238,13 @@
   </Name>
   <Position z="120" BoundaryRect="12243,1712,12317,1619">12280,1680</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>8 Nov 1954</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>29 Dec 2011</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.04.01.</Comment>
 </Individual>
 <Individual ID="ind01064">
@@ -10245,6 +10343,13 @@
   </Name>
   <Position z="120" BoundaryRect="12773,1722,12847,1629">12810,1690</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>8 Feb 1958</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>26 May 2013</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.04.03.</Comment>
 </Individual>
 <Individual ID="ind01073">
@@ -10581,6 +10686,13 @@
   </Name>
   <Position z="120" BoundaryRect="14303,1882,14377,1789">14340,1850</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>10 Feb 1954</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>26 Oct 1986</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.05.07.</Comment>
 </Individual>
 <Individual ID="ind01103">
@@ -10592,6 +10704,13 @@
   </Name>
   <Position z="120" BoundaryRect="14373,1902,14447,1809">14410,1870</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>27 Feb 1955</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>21 Aug 1955</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.05.08.</Comment>
 </Individual>
 <Individual ID="ind01104">
@@ -10678,7 +10797,7 @@
     <Middle>kamal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="14713,1902,14787,1809">14750,1870</Position>
+  <Position z="120" BoundaryRect="14653,1887,14727,1794">14690,1855</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.06.11.01.02.</Comment>
 </Individual>
@@ -10711,7 +10830,7 @@
     <Middle>kamal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="14783,1872,14857,1779">14820,1840</Position>
+  <Position z="120" BoundaryRect="14713,1877,14787,1784">14750,1845</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.06.11.01.03.</Comment>
 </Individual>
@@ -10722,7 +10841,7 @@
     <Middle>kamal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="14853,1892,14927,1799">14890,1860</Position>
+  <Position z="120" BoundaryRect="14778,1892,14852,1799">14815,1860</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.06.11.01.04.</Comment>
 </Individual>
@@ -10733,7 +10852,7 @@
     <Middle>kamal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="14923,1862,14997,1769">14960,1830</Position>
+  <Position z="120" BoundaryRect="14843,1882,14917,1789">14880,1850</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.06.11.01.05.</Comment>
 </Individual>
@@ -10744,7 +10863,7 @@
     <Middle>kamal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="14973,1782,15047,1689">15010,1750</Position>
+  <Position z="120" BoundaryRect="14913,1892,14987,1799">14950,1860</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.06.11.01.06.</Comment>
 </Individual>
@@ -10755,7 +10874,7 @@
     <Middle>kamal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="15033,1702,15107,1609">15070,1670</Position>
+  <Position z="120" BoundaryRect="14978,1882,15052,1789">15015,1850</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.06.11.01.07.</Comment>
 </Individual>
@@ -10766,7 +10885,7 @@
     <Middle>kamal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="15073,1862,15147,1769">15110,1830</Position>
+  <Position z="120" BoundaryRect="15043,1887,15117,1794">15080,1855</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.06.11.01.08.</Comment>
 </Individual>
@@ -10777,7 +10896,7 @@
     <Middle>abdel-ghani</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="15123,2012,15197,1919">15160,1980</Position>
+  <Position z="120" BoundaryRect="15173,2002,15247,1909">15210,1970</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.06.11.02.</Comment>
 </Individual>
@@ -10935,7 +11054,7 @@
     <Middle>izzat</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="16183,1862,16257,1769">16220,1830</Position>
+  <Position z="120" BoundaryRect="16108,1877,16182,1784">16145,1845</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.06.11.02.06.</Comment>
 </Individual>
@@ -10946,7 +11065,7 @@
     <Middle>izzat</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="16243,1882,16317,1789">16280,1850</Position>
+  <Position z="120" BoundaryRect="16178,1877,16252,1784">16215,1845</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.06.11.02.07.</Comment>
 </Individual>
@@ -10957,7 +11076,7 @@
     <Middle>izzat</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="16293,1832,16367,1739">16330,1800</Position>
+  <Position z="120" BoundaryRect="16238,1877,16312,1784">16275,1845</Position>
   <Gender>F</Gender>
   <Comment>1.1.2.11.06.11.02.08.</Comment>
 </Individual>
@@ -11472,6 +11591,9 @@
   </Name>
   <Position BoundaryRect="-1507,1472,-1433,1379">-1470,1440</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>24 Aug 1993</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind01144">
   <Name>karim ahmad Demachkieh
@@ -11482,6 +11604,9 @@
   </Name>
   <Position BoundaryRect="-1457,1442,-1383,1349">-1420,1410</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>16 Sep 1996</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind01145">
   <Name>saleh-ali mahmoud Demachkieh
@@ -11492,6 +11617,9 @@
   </Name>
   <Position BoundaryRect="-1377,1287,-1303,1194">-1340,1255</Position>
   <Gender>M</Gender>
+  <Birth>
+    <Date>27 Apr 1994</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind01146">
   <Name>mohamad hassane Demachkieh
@@ -11514,9 +11642,9 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01148">
-  <Name>yasmine bilal Demachkieh
-    <Display>yasmine bilal Demachkieh</Display>
-    <First>yasmine</First>
+  <Name>yasmina bilal Demachkieh
+    <Display>yasmina bilal Demachkieh</Display>
+    <First>yasmina</First>
     <Middle>bilal</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -11561,8 +11689,11 @@
     <Middle>muhieddine</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="6103,1182,6177,1089">6140,1150</Position>
+  <Position BoundaryRect="5958,1022,6032,929">5995,990</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>29 Mar 1995</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind01153">
   <Name>mohamad mounir Demachkieh
@@ -11685,13 +11816,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01165">
-  <Name>hassane mukhtar Demachkieh
-    <Display>hassane mukhtar Demachkieh</Display>
-    <First>hassane</First>
+  <Name>ihsan (connu Hassane) mukhtar Demachkieh
+    <Display>ihsan (connu Hassane) mukhtar Demachkieh</Display>
+    <First>ihsan (connu Hassane)</First>
     <Middle>mukhtar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4422,1747,-4348,1654">-4385,1715</Position>
+  <Position BoundaryRect="-4430,1672,-4301,1579">-4365,1640</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01166">
@@ -11701,7 +11832,7 @@
     <Middle>mukhtar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4362,1762,-4288,1669">-4325,1730</Position>
+  <Position BoundaryRect="-4367,1762,-4293,1669">-4330,1730</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01167">
@@ -11711,7 +11842,7 @@
     <Middle>mukhtar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4322,1762,-4248,1669">-4285,1730</Position>
+  <Position BoundaryRect="-4317,1722,-4243,1629">-4280,1690</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01168">
@@ -11892,7 +12023,7 @@
     <Middle>amjad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-22842,1522,-22768,1429">-22805,1490</Position>
+  <Position BoundaryRect="-23037,1522,-22963,1429">-23000,1490</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01186">
@@ -12331,20 +12462,20 @@
     <Middle>rabih</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-562,1287,-488,1194">-525,1255</Position>
+  <Position BoundaryRect="-567,1122,-493,1029">-530,1090</Position>
   <Gender>F</Gender>
   <Birth>
     <Date>29 Jul 2012</Date>
   </Birth>
 </Individual>
 <Individual ID="ind01230">
-  <Name>sima abdel-rahman Demachkieh
-    <Display>sima abdel-rahman Demachkieh</Display>
+  <Name>sima nadim Demachkieh
+    <Display>sima nadim Demachkieh</Display>
     <First>sima</First>
-    <Middle>abdel-rahman</Middle>
+    <Middle>nadim</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-20266,1597,-20184,1504">-20225,1565</Position>
+  <Position BoundaryRect="-20262,1597,-20188,1504">-20225,1565</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01231">
@@ -12459,9 +12590,9 @@
   </Birth>
 </Individual>
 <Individual ID="ind01241">
-  <Name>alaa mohamad Demachkieh
-    <Display>alaa mohamad Demachkieh</Display>
-    <First>alaa</First>
+  <Name>alaa - آلاء mohamad Demachkieh
+    <Display>alaa - آلاء mohamad Demachkieh</Display>
+    <First>alaa - آلاء</First>
     <Middle>mohamad</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -12633,6 +12764,9 @@
   </Name>
   <Position BoundaryRect="-887,1902,-813,1809">-850,1870</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>10 Nov 1999</Date>
+  </Birth>
 </Individual>
 <Individual ID="ind01259">
   <Name>muhieddine mahmoud Demachkieh
@@ -12675,9 +12809,9 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01263">
-  <Name>sonia mohamad Demachkieh
-    <Display>sonia mohamad Demachkieh</Display>
-    <First>sonia</First>
+  <Name>sofia mohamad Demachkieh
+    <Display>sofia mohamad Demachkieh</Display>
+    <First>sofia</First>
     <Middle>mohamad</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -12903,10 +13037,10 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01284">
-  <Name>Lara Ahmad Demachkieh
-    <Display>Lara Ahmad Demachkieh</Display>
+  <Name>Lara ahmad Demachkieh
+    <Display>Lara ahmad Demachkieh</Display>
     <First>Lara</First>
-    <Middle>Ahmad</Middle>
+    <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
   <Position BoundaryRect="8338,1727,8412,1634">8375,1695</Position>
@@ -12960,16 +13094,6 @@
   <Birth>
     <Date>30 Oct 2018</Date>
   </Birth>
-</Individual>
-<Individual ID="ind01289">
-  <Name>joulie noureddine Demachkieh
-    <Display>joulie noureddine Demachkieh</Display>
-    <First>joulie</First>
-    <Middle>noureddine</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="-17087,1642,-17013,1549">-17050,1610</Position>
-  <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01290">
   <Name>diala aghiad Demachkieh
@@ -13059,6 +13183,10 @@
   </Name>
   <Position BoundaryRect="11203,1762,11277,1669">11240,1730</Position>
   <Gender>F</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>death</Date>
+  </Death>
 </Individual>
 <Individual ID="ind01299">
   <Name>lynn nabil Demachkieh
@@ -13216,7 +13344,7 @@
     <Middle>amjad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-22707,1522,-22633,1429">-22670,1490</Position>
+  <Position BoundaryRect="-22922,1522,-22848,1429">-22885,1490</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01314">
@@ -13256,7 +13384,7 @@
     <Middle>abdel-kader</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7623,1712,7697,1619">7660,1680</Position>
+  <Position BoundaryRect="7533,1482,7607,1389">7570,1450</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01318">
@@ -13266,7 +13394,7 @@
     <Middle>abdel-kader</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7683,1697,7757,1604">7720,1665</Position>
+  <Position BoundaryRect="7598,1482,7672,1389">7635,1450</Position>
   <Gender>F</Gender>
   <Birth>
     <Date>1 Jan 1998</Date>
@@ -13279,7 +13407,7 @@
     <Middle>abdel-kader</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7733,1612,7807,1519">7770,1580</Position>
+  <Position BoundaryRect="7653,1447,7727,1354">7690,1415</Position>
   <Gender>M</Gender>
   <Birth>
     <Date>25 Dec 2002</Date>
@@ -13292,7 +13420,7 @@
     <Middle>abdel-kader</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7788,1697,7862,1604">7825,1665</Position>
+  <Position BoundaryRect="7768,1442,7842,1349">7805,1410</Position>
   <Gender>M</Gender>
   <Birth>
     <Date>1 Feb 2005</Date>
@@ -13305,7 +13433,7 @@
     <Middle>abdel-kader</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7853,1697,7927,1604">7890,1665</Position>
+  <Position BoundaryRect="7823,1507,7897,1414">7860,1475</Position>
   <Gender>F</Gender>
   <Birth>
     <Date>22 Nov 2007</Date>
@@ -13318,7 +13446,7 @@
     <Middle>zakaria</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7873,1897,7947,1804">7910,1865</Position>
+  <Position BoundaryRect="7823,1892,7897,1799">7860,1860</Position>
   <Gender>F</Gender>
   <Birth>
     <Date>15 Jan 1961</Date>
@@ -13331,7 +13459,7 @@
     <Middle>jamil</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4547,1642,-4473,1549">-4510,1610</Position>
+  <Position BoundaryRect="-4592,1647,-4518,1554">-4555,1615</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01324">
@@ -13341,7 +13469,7 @@
     <Middle>jamil</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4487,1637,-4413,1544">-4450,1605</Position>
+  <Position BoundaryRect="-4542,1637,-4468,1544">-4505,1605</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01325">
@@ -13351,27 +13479,7 @@
     <Middle>jamil</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4422,1637,-4348,1544">-4385,1605</Position>
-  <Gender>F</Gender>
-</Individual>
-<Individual ID="ind01326">
-  <Name>ahmad jamil Demachkieh
-    <Display>ahmad jamil Demachkieh</Display>
-    <First>ahmad</First>
-    <Middle>jamil</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="-4357,1637,-4283,1544">-4320,1605</Position>
-  <Gender>M</Gender>
-</Individual>
-<Individual ID="ind01327">
-  <Name>aya jamil Demachkieh
-    <Display>aya jamil Demachkieh</Display>
-    <First>aya</First>
-    <Middle>jamil</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="-4292,1637,-4218,1544">-4255,1605</Position>
+  <Position BoundaryRect="-4487,1652,-4413,1559">-4450,1620</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01328">
@@ -13393,36 +13501,6 @@
   </Name>
   <Position BoundaryRect="-23337,1602,-23263,1509">-23300,1570</Position>
   <Gender>M</Gender>
-</Individual>
-<Individual ID="ind01330">
-  <Name>amjad ayman Demachkieh
-    <Display>amjad ayman Demachkieh</Display>
-    <First>amjad</First>
-    <Middle>ayman</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="-23207,1602,-23133,1509">-23170,1570</Position>
-  <Gender>M</Gender>
-</Individual>
-<Individual ID="ind01331">
-  <Name>amr ayman Demachkieh
-    <Display>amr ayman Demachkieh</Display>
-    <First>amr</First>
-    <Middle>ayman</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="-23067,1607,-22993,1514">-23030,1575</Position>
-  <Gender>M</Gender>
-</Individual>
-<Individual ID="ind01332">
-  <Name>jida ayman Demachkieh
-    <Display>jida ayman Demachkieh</Display>
-    <First>jida</First>
-    <Middle>ayman</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="-22972,1632,-22898,1539">-22935,1600</Position>
-  <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01334">
   <Name>sarah walid Demachkieh
@@ -13474,7 +13552,7 @@
     <Middle>tarek</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4277,1837,-4203,1744">-4240,1805</Position>
+  <Position BoundaryRect="-4277,1822,-4203,1729">-4240,1790</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01339">
@@ -13484,7 +13562,7 @@
     <Middle>tarek</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-4212,1837,-4138,1744">-4175,1805</Position>
+  <Position BoundaryRect="-4212,1817,-4138,1724">-4175,1785</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01340">
@@ -13808,43 +13886,43 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01372">
-  <Name>moh&#39;d-nader samir Demachkieh
-    <Display>moh&#39;d-nader samir Demachkieh</Display>
+  <Name>moh&#39;d-nader mohamad-samir Demachkieh
+    <Display>moh&#39;d-nader mohamad-samir Demachkieh</Display>
     <First>moh&#39;d-nader</First>
-    <Middle>samir</Middle>
+    <Middle>mohamad-samir</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-17998,1467,-17922,1374">-17960,1435</Position>
+  <Position BoundaryRect="-18006,1467,-17914,1374">-17960,1435</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01373">
-  <Name>mohamad samir Demachkieh
-    <Display>mohamad samir Demachkieh</Display>
+  <Name>mohamad mohamad-samir Demachkieh
+    <Display>mohamad mohamad-samir Demachkieh</Display>
     <First>mohamad</First>
-    <Middle>samir</Middle>
+    <Middle>mohamad-samir</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-17902,1462,-17828,1369">-17865,1430</Position>
+  <Position BoundaryRect="-17911,1462,-17819,1369">-17865,1430</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01374">
-  <Name>razan&#32; samir Demachkieh
-    <Display>razan&#32; samir Demachkieh</Display>
+  <Name>razan&#32; mohamad-samir Demachkieh
+    <Display>razan&#32; mohamad-samir Demachkieh</Display>
     <First>razan&#32;</First>
-    <Middle>samir</Middle>
+    <Middle>mohamad-samir</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-17822,1462,-17748,1369">-17785,1430</Position>
+  <Position BoundaryRect="-17831,1462,-17739,1369">-17785,1430</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01375">
-  <Name>rawan&#32; samir Demachkieh
-    <Display>rawan&#32; samir Demachkieh</Display>
+  <Name>rawan&#32; mohamad-samir Demachkieh
+    <Display>rawan&#32; mohamad-samir Demachkieh</Display>
     <First>rawan&#32;</First>
-    <Middle>samir</Middle>
+    <Middle>mohamad-samir</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-17732,1462,-17658,1369">-17695,1430</Position>
+  <Position BoundaryRect="-17741,1462,-17649,1369">-17695,1430</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01376">
@@ -14038,13 +14116,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01395">
-  <Name>ahmad mouhanna Demachkieh
-    <Display>ahmad mouhanna Demachkieh</Display>
+  <Name>ahmad mohamad-mouhanna Demachkieh
+    <Display>ahmad mohamad-mouhanna Demachkieh</Display>
     <First>ahmad</First>
-    <Middle>mouhanna</Middle>
+    <Middle>mohamad-mouhanna</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-16762,1837,-16688,1744">-16725,1805</Position>
+  <Position BoundaryRect="-16783,1837,-16667,1744">-16725,1805</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01396">
@@ -14098,13 +14176,13 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01401">
-  <Name>ihab mouhanna Demachkieh
-    <Display>ihab mouhanna Demachkieh</Display>
+  <Name>ihab mohamad-mouhanna Demachkieh
+    <Display>ihab mohamad-mouhanna Demachkieh</Display>
     <First>ihab</First>
-    <Middle>mouhanna</Middle>
+    <Middle>mohamad-mouhanna</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-16412,1822,-16338,1729">-16375,1790</Position>
+  <Position BoundaryRect="-16433,1822,-16317,1729">-16375,1790</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01402">
@@ -14138,13 +14216,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01405">
-  <Name>mazin nizar Demachkieh
-    <Display>mazin nizar Demachkieh</Display>
+  <Name>mazin mohamad-nizar Demachkieh
+    <Display>mazin mohamad-nizar Demachkieh</Display>
     <First>mazin</First>
-    <Middle>nizar</Middle>
+    <Middle>mohamad-nizar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-15937,1827,-15863,1734">-15900,1795</Position>
+  <Position BoundaryRect="-15945,1827,-15855,1734">-15900,1795</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01407">
@@ -14168,9 +14246,9 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01409">
-  <Name>bilsan mazin Demachkieh
-    <Display>bilsan mazin Demachkieh</Display>
-    <First>bilsan</First>
+  <Name>bailasan mazin Demachkieh
+    <Display>bailasan mazin Demachkieh</Display>
+    <First>bailasan</First>
     <Middle>mazin</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -14178,23 +14256,23 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01410">
-  <Name>sahar-sham nizar Demachkieh
-    <Display>sahar-sham nizar Demachkieh</Display>
+  <Name>sahar-sham mazin Demachkieh
+    <Display>sahar-sham mazin Demachkieh</Display>
     <First>sahar-sham</First>
-    <Middle>nizar</Middle>
+    <Middle>mazin</Middle>
     <Last>Demachkieh</Last>
   </Name>
   <Position BoundaryRect="-15772,1692,-15698,1599">-15735,1660</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01411">
-  <Name>omar nizar Demachkieh
-    <Display>omar nizar Demachkieh</Display>
+  <Name>omar mohamad-nizar Demachkieh
+    <Display>omar mohamad-nizar Demachkieh</Display>
     <First>omar</First>
-    <Middle>nizar</Middle>
+    <Middle>mohamad-nizar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-15647,1817,-15573,1724">-15610,1785</Position>
+  <Position BoundaryRect="-15655,1817,-15565,1724">-15610,1785</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01412">
@@ -14218,13 +14296,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01414">
-  <Name>zaid nizar Demachkieh
-    <Display>zaid nizar Demachkieh</Display>
+  <Name>zaid mohamad-nizar Demachkieh
+    <Display>zaid mohamad-nizar Demachkieh</Display>
     <First>zaid</First>
-    <Middle>nizar</Middle>
+    <Middle>mohamad-nizar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-15412,1817,-15338,1724">-15375,1785</Position>
+  <Position BoundaryRect="-15420,1817,-15330,1724">-15375,1785</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01415">
@@ -14248,13 +14326,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01417">
-  <Name>yazan nizar Demachkieh
-    <Display>yazan nizar Demachkieh</Display>
+  <Name>yazan mohamad-nizar Demachkieh
+    <Display>yazan mohamad-nizar Demachkieh</Display>
     <First>yazan</First>
-    <Middle>nizar</Middle>
+    <Middle>mohamad-nizar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-15152,1787,-15078,1694">-15115,1755</Position>
+  <Position BoundaryRect="-15160,1787,-15070,1694">-15115,1755</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01418">
@@ -14278,23 +14356,23 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01420">
-  <Name>reem nizar Demachkieh
-    <Display>reem nizar Demachkieh</Display>
+  <Name>reem mohamad-nizar Demachkieh
+    <Display>reem mohamad-nizar Demachkieh</Display>
     <First>reem</First>
-    <Middle>nizar</Middle>
+    <Middle>mohamad-nizar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-14982,1777,-14908,1684">-14945,1745</Position>
+  <Position BoundaryRect="-14990,1777,-14900,1684">-14945,1745</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01421">
-  <Name>souad nizar Demachkieh
-    <Display>souad nizar Demachkieh</Display>
+  <Name>souad mohamad-nizar Demachkieh
+    <Display>souad mohamad-nizar Demachkieh</Display>
     <First>souad</First>
-    <Middle>nizar</Middle>
+    <Middle>mohamad-nizar</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-14917,1777,-14843,1684">-14880,1745</Position>
+  <Position BoundaryRect="-14925,1777,-14835,1684">-14880,1745</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01422">
@@ -14328,53 +14406,53 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01425">
-  <Name>moh&#39;d-khalid moh&#39;d-riad Demachkieh
-    <Display>moh&#39;d-khalid moh&#39;d-riad Demachkieh</Display>
-    <First>moh&#39;d-khalid</First>
+  <Name>moh&#39;d-khaled moh&#39;d-riad Demachkieh
+    <Display>moh&#39;d-khaled moh&#39;d-riad Demachkieh</Display>
+    <First>moh&#39;d-khaled</First>
     <Middle>moh&#39;d-riad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-14478,1807,-14403,1714">-14440,1775</Position>
+  <Position BoundaryRect="-14480,1807,-14401,1714">-14440,1775</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01426">
-  <Name>yasmin moh&#39;d-khalid Demachkieh
-    <Display>yasmin moh&#39;d-khalid Demachkieh</Display>
+  <Name>yasmin moh&#39;d-khaled Demachkieh
+    <Display>yasmin moh&#39;d-khaled Demachkieh</Display>
     <First>yasmin</First>
-    <Middle>moh&#39;d-khalid</Middle>
+    <Middle>moh&#39;d-khaled</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-14648,1657,-14573,1564">-14610,1625</Position>
+  <Position BoundaryRect="-14650,1657,-14571,1564">-14610,1625</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01427">
-  <Name>mariam moh&#39;d-khalid Demachkieh
-    <Display>mariam moh&#39;d-khalid Demachkieh</Display>
+  <Name>mariam moh&#39;d-khaled Demachkieh
+    <Display>mariam moh&#39;d-khaled Demachkieh</Display>
     <First>mariam</First>
-    <Middle>moh&#39;d-khalid</Middle>
+    <Middle>moh&#39;d-khaled</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-14548,1657,-14473,1564">-14510,1625</Position>
+  <Position BoundaryRect="-14550,1657,-14471,1564">-14510,1625</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01428">
-  <Name>amira moh&#39;d-khalid Demachkieh
-    <Display>amira moh&#39;d-khalid Demachkieh</Display>
+  <Name>amira moh&#39;d-khaled Demachkieh
+    <Display>amira moh&#39;d-khaled Demachkieh</Display>
     <First>amira</First>
-    <Middle>moh&#39;d-khalid</Middle>
+    <Middle>moh&#39;d-khaled</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-14458,1662,-14383,1569">-14420,1630</Position>
+  <Position BoundaryRect="-14460,1662,-14381,1569">-14420,1630</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01429">
-  <Name>abdul-karim moh&#39;d-khalid Demachkieh
-    <Display>abdul-karim moh&#39;d-khalid Demachkieh</Display>
+  <Name>abdul-karim moh&#39;d-khaled Demachkieh
+    <Display>abdul-karim moh&#39;d-khaled Demachkieh</Display>
     <First>abdul-karim</First>
-    <Middle>moh&#39;d-khalid</Middle>
+    <Middle>moh&#39;d-khaled</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="-14338,1662,-14263,1569">-14300,1630</Position>
+  <Position BoundaryRect="-14340,1662,-14261,1569">-14300,1630</Position>
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01430">
@@ -14455,16 +14533,6 @@
   <Birth>
     <Date>28 Apr 2019</Date>
   </Birth>
-</Individual>
-<Individual ID="ind01437">
-  <Name>sara ayman Demachkieh
-    <Display>sara ayman Demachkieh</Display>
-    <First>sara</First>
-    <Middle>ayman</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="-22907,1567,-22833,1474">-22870,1535</Position>
-  <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01439">
   <Name>khaled wa;id Demachkieh
@@ -14676,7 +14744,7 @@
     <Middle>bilal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7668,1792,7742,1699">7705,1760</Position>
+  <Position BoundaryRect="7663,1757,7737,1664">7700,1725</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01457">
@@ -14686,7 +14754,7 @@
     <Middle>bilal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7708,1792,7782,1699">7745,1760</Position>
+  <Position BoundaryRect="7718,1767,7792,1674">7755,1735</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01458">
@@ -14696,17 +14764,7 @@
     <Middle>bilal</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="7748,1792,7822,1699">7785,1760</Position>
-  <Gender>F</Gender>
-</Individual>
-<Individual ID="ind01459">
-  <Name>rose bilal Demachkieh
-    <Display>rose bilal Demachkieh</Display>
-    <First>rose</First>
-    <Middle>bilal</Middle>
-    <Last>Demachkieh</Last>
-  </Name>
-  <Position BoundaryRect="7798,1792,7872,1699">7835,1760</Position>
+  <Position BoundaryRect="7758,1697,7832,1604">7795,1665</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01460">
@@ -15360,6 +15418,362 @@
   </Name>
   <Position BoundaryRect="6412,1232,6508,1139">6460,1200</Position>
   <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01518">
+  <Name>rafica rafic Demachkieh
+    <Display>rafica rafic Demachkieh</Display>
+    <First>rafica</First>
+    <Middle>rafic</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-21057,1777,-20983,1684">-21020,1745</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>1964</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>1964</Date>
+  </Death>
+</Individual>
+<Individual ID="ind01519">
+  <Name>ahmad ihsan (connu Hassane) Demachkieh
+    <Display>ahmad ihsan (connu Hassane) Demachkieh</Display>
+    <First>ahmad</First>
+    <Middle>ihsan (connu Hassane)</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-4395,1557,-4295,1464">-4345,1525</Position>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind01520">
+  <Name>aya ihsan (connu Hassane) Demachkieh
+    <Display>aya ihsan (connu Hassane) Demachkieh</Display>
+    <First>aya</First>
+    <Middle>ihsan (connu Hassane)</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-4315,1557,-4215,1464">-4265,1525</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01521">
+  <Name>nabil muhieddine Demachkieh
+    <Display>nabil muhieddine Demachkieh</Display>
+    <First>nabil</First>
+    <Middle>muhieddine</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6038,1022,6112,929">6075,990</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>28 Apr 1999</Date>
+  </Birth>
+  <Comment>added 11 11 2021, no. 1437</Comment>
+</Individual>
+<Individual ID="ind01522">
+  <Name>lynn mohamad Demachkieh
+    <Display>lynn mohamad Demachkieh</Display>
+    <First>lynn</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6093,1057,6167,964">6130,1025</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>8 Aug 2003</Date>
+  </Birth>
+  <Comment>added 11 11 2021 (no. 1438)</Comment>
+</Individual>
+<Individual ID="ind01523">
+  <Name>lea mohamad Demachkieh
+    <Display>lea mohamad Demachkieh</Display>
+    <First>lea</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6133,1022,6207,929">6170,990</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>2 Oct 2006</Date>
+  </Birth>
+  <Comment>added 2021 11 11 (1439</Comment>
+</Individual>
+<Individual ID="ind01524">
+  <Name>karen nabil Demachkieh
+    <Display>karen nabil Demachkieh</Display>
+    <First>karen</First>
+    <Middle>nabil</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6248,1782,6322,1689">6285,1750</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>20 Mar 2003</Date>
+  </Birth>
+  <Comment>added 2021 11 11- no. 1436</Comment>
+</Individual>
+<Individual ID="ind01525">
+  <Name>kamar wassim Demachkieh
+    <Display>kamar wassim Demachkieh</Display>
+    <First>kamar</First>
+    <Middle>wassim</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6088,407,6162,314">6125,375</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>26 Jun 2003</Date>
+  </Birth>
+  <Comment>added 11 11 2021 no.&#32;</Comment>
+</Individual>
+<Individual ID="ind01526">
+  <Name>maysa wassim Demachkieh
+    <Display>maysa wassim Demachkieh</Display>
+    <First>maysa</First>
+    <Middle>wassim</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6143,407,6217,314">6180,375</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>15 May 2006</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01527">
+  <Name>majd wassim Demachkieh
+    <Display>majd wassim Demachkieh</Display>
+    <First>majd</First>
+    <Middle>wassim</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6203,407,6277,314">6240,375</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>30 Jan 2019</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01528">
+  <Name>naya ahmad Demachkieh
+    <Display>naya ahmad Demachkieh</Display>
+    <First>naya</First>
+    <Middle>ahmad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="6228,642,6302,549">6265,610</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>11 May 2016</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01529">
+  <Name>ziad mohamad Demachkieh
+    <Display>ziad mohamad Demachkieh</Display>
+    <First>ziad</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="5058,1257,5132,1164">5095,1225</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>22 Sep 2016</Date>
+  </Birth>
+  <Comment>added 2021 11 11</Comment>
+</Individual>
+<Individual ID="ind01530">
+  <Name>mariam mohamad Demachkieh
+    <Display>mariam mohamad Demachkieh</Display>
+    <First>mariam</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="5113,1257,5187,1164">5150,1225</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>20 Nov 2018</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01531">
+  <Name>mohamad&#32; tarek Demachkieh
+    <Display>mohamad&#32; tarek Demachkieh</Display>
+    <First>mohamad&#32;</First>
+    <Middle>tarek</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="5218,1027,5292,934">5255,995</Position>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind01532">
+  <Name>mohamad rab Demachkieh
+    <Display>mohamad rab Demachkieh</Display>
+    <First>mohamad</First>
+    <Middle>rab</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-502,1122,-428,1029">-465,1090</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>14 Nov 2014</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01533">
+  <Name>joury rabih Demachkieh
+    <Display>joury rabih Demachkieh</Display>
+    <First>joury</First>
+    <Middle>rabih</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-452,1122,-378,1029">-415,1090</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>23 Nov 2017</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01534">
+  <Name>rose zakaria Demachkieh
+    <Display>rose zakaria Demachkieh</Display>
+    <First>rose</First>
+    <Middle>zakaria</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="7163,1022,7237,929">7200,990</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01535">
+  <Name>aida kamal Demachkieh
+    <Display>aida kamal Demachkieh</Display>
+    <First>aida</First>
+    <Middle>kamal</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="15088,1847,15162,1754">15125,1815</Position>
+  <Gender>F</Gender>
+  <Comment>added 2021 11 14</Comment>
+</Individual>
+<Individual ID="ind01536">
+  <Name>joulie noureddine Demachkieh
+    <Display>joulie noureddine Demachkieh</Display>
+    <First>joulie</First>
+    <Middle>noureddine</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-17057,1622,-16983,1529">-17020,1590</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01537">
+  <Name>hamza mohamad Demachkieh
+    <Display>hamza mohamad Demachkieh</Display>
+    <First>hamza</First>
+    <Middle>mohamad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-19862,132,-19788,39">-19825,100</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>16 Jul 2021</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01538">
+  <Name>sabine abdel-hafiz Demachkieh
+    <Display>sabine abdel-hafiz Demachkieh</Display>
+    <First>sabine</First>
+    <Middle>abdel-hafiz</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-11792,-48,-11718,-141">-11755,-80</Position>
+  <Gender>F</Gender>
+  <Comment>added 2021 11 16</Comment>
+</Individual>
+<Individual ID="ind01539">
+  <Name>karim bassam Demachkieh
+    <Display>karim bassam Demachkieh</Display>
+    <First>karim</First>
+    <Middle>bassam</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-11717,-228,-11643,-321">-11680,-260</Position>
+  <Gender>M</Gender>
+  <Comment>added 16 11 2021</Comment>
+</Individual>
+<Individual ID="ind01540">
+  <Name>tim bassam Demachkieh
+    <Display>tim bassam Demachkieh</Display>
+    <First>tim</First>
+    <Middle>bassam</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-11627,-228,-11553,-321">-11590,-260</Position>
+  <Gender>M</Gender>
+</Individual>
+<Individual ID="ind01541">
+  <Name>kira bassam Demachkieh
+    <Display>kira bassam Demachkieh</Display>
+    <First>kira</First>
+    <Middle>bassam</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-11562,-133,-11488,-226">-11525,-165</Position>
+  <Gender>F</Gender>
+  <Comment>added 16 11 2021</Comment>
+</Individual>
+<Individual ID="ind01542">
+  <Name>alicha bassam Demachkieh
+    <Display>alicha bassam Demachkieh</Display>
+    <First>alicha</First>
+    <Middle>bassam</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-11492,-133,-11418,-226">-11455,-165</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01543">
+  <Name>jida yazan Demachkieh
+    <Display>jida yazan Demachkieh</Display>
+    <First>jida</First>
+    <Middle>yazan</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-23312,1497,-23238,1404">-23275,1465</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01544">
+  <Name>sara yazan Demachkieh
+    <Display>sara yazan Demachkieh</Display>
+    <First>sara</First>
+    <Middle>yazan</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-23262,1497,-23188,1404">-23225,1465</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01545">
+  <Name>feya amjad Demachkieh
+    <Display>feya amjad Demachkieh</Display>
+    <First>feya</First>
+    <Middle>amjad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-22817,1612,-22743,1519">-22780,1580</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01546">
+  <Name>gheya - غيا amr Demachkieh
+    <Display>gheya - غيا amr Demachkieh</Display>
+    <First>gheya - غيا</First>
+    <Middle>amr</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-22897,1417,-22823,1324">-22860,1385</Position>
+  <Gender>F</Gender>
+</Individual>
+<Individual ID="ind01547">
+  <Name>amjad amr Demachkieh
+    <Display>amjad amr Demachkieh</Display>
+    <First>amjad</First>
+    <Middle>amr</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="-22827,1417,-22753,1324">-22790,1385</Position>
+  <Gender>M</Gender>
 </Individual>
 </Individuals>
 <Families>
@@ -16439,19 +16853,19 @@
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00103">
-  <Position z="110">-11810,80
+  <Position z="110">-11750,80
     <Top>
-      <Left>-11810,80</Left>
-      <Right>-11630,80</Right>
+      <Left>-11800,80</Left>
+      <Right>-11615,80</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00104">
-  <Position z="110">-11790,-30
+  <Position z="110">-11790,-40
     <Top>
-      <Left>-11790,-30</Left>
-      <Right>-11710,-30</Right>
+      <Left>-11870,-40</Left>
+      <Right>-11745,-40</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -16459,7 +16873,7 @@
 <Family ID="fam00105">
   <Position z="110">-11500,80
     <Top>
-      <Left>-11530,80</Left>
+      <Left>-11550,80</Left>
       <Right>-11360,80</Right>
     </Top>
   </Position>
@@ -17073,10 +17487,10 @@
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00173">
-  <Position z="110">-4855,1960
+  <Position z="110">-4855,1950
     <Top>
-      <Left>-4900,1960</Left>
-      <Right>-4810,1960</Right>
+      <Left>-4895,1950</Left>
+      <Right>-4810,1950</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -17292,7 +17706,7 @@
   <Position z="110">-360,1835
     <Top>
       <Left>-530,1835</Left>
-      <Right>-275,1835</Right>
+      <Right>-300,1835</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -17478,10 +17892,10 @@
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00227">
-  <Position z="110">4150,2020
+  <Position z="110">3500,2020
     <Top>
       <Left>3450,2020</Left>
-      <Right>5220,2020</Right>
+      <Right>5270,2020</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -17595,9 +18009,9 @@
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00242">
-  <Position z="110">5220,1770
+  <Position z="110">5275,1770
     <Top>
-      <Left>5155,1770</Left>
+      <Left>5150,1770</Left>
       <Right>5440,1770</Right>
     </Top>
   </Position>
@@ -17651,8 +18065,8 @@
 <Family ID="fam00248">
   <Position z="110">6210,1800
     <Top>
-      <Left>6110,1800</Left>
-      <Right>6310,1800</Right>
+      <Left>6095,1800</Left>
+      <Right>6285,1800</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -17679,25 +18093,25 @@
   <Position z="110">7260,1915
     <Top>
       <Left>7190,1915</Left>
-      <Right>7910,1915</Right>
+      <Right>7860,1915</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00253">
-  <Position z="110">7210,1620
+  <Position z="110">7270,1620
     <Top>
-      <Left>7180,1620</Left>
-      <Right>7350,1620</Right>
+      <Left>7190,1620</Left>
+      <Right>7335,1620</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00254">
-  <Position z="110">7500,1660
+  <Position z="110">7500,1015
     <Top>
-      <Left>7470,1660</Left>
-      <Right>7620,1660</Right>
+      <Left>7450,1015</Left>
+      <Right>7555,1015</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -17706,7 +18120,7 @@
   <Position z="110">7950,1680
     <Top>
       <Left>7950,1680</Left>
-      <Right>8050,1680</Right>
+      <Right>8020,1680</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -17958,7 +18372,7 @@
   <Position z="110">14650,1900
     <Top>
       <Left>14620,1900</Left>
-      <Right>15110,1900</Right>
+      <Right>15125,1900</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -17973,10 +18387,10 @@
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00286">
-  <Position z="110">15150,1900
+  <Position z="110">15270,1900
     <Top>
-      <Left>15150,1900</Left>
-      <Right>16330,1900</Right>
+      <Left>15180,1900</Left>
+      <Right>16275,1900</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -18088,7 +18502,7 @@
   <Position z="110">-17140,1800
     <Top>
       <Left>-17155,1800</Left>
-      <Right>-16985,1800</Right>
+      <Right>-16980,1800</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -18179,10 +18593,10 @@
   </Position>
 </Family>
 <Family ID="fam00308">
-  <Position>6130,1200
+  <Position>6050,1095
     <Top>
-      <Left>6130,1200</Left>
-      <Right>6210,1200</Right>
+      <Left>5995,1095</Left>
+      <Right>6110,1095</Right>
     </Top>
   </Position>
 </Family>
@@ -18218,7 +18632,7 @@
   <Position>-4350,1785
     <Top>
       <Left>-4455,1785</Left>
-      <Right>-4285,1785</Right>
+      <Right>-4270,1785</Right>
     </Top>
   </Position>
 </Family>
@@ -18255,10 +18669,10 @@
   </Position>
 </Family>
 <Family ID="fam00317">
-  <Position>-22720,1650
+  <Position>-22940,1650
     <Top>
-      <Left>-22805,1650</Left>
-      <Right>-22670,1650</Right>
+      <Left>-23030,1650</Left>
+      <Right>-22780,1650</Right>
     </Top>
   </Position>
 </Family>
@@ -18287,10 +18701,10 @@
   </Position>
 </Family>
 <Family ID="fam00321">
-  <Position>805,1355
+  <Position>770,1355
     <Top>
       <Left>755,1355</Left>
-      <Right>855,1355</Right>
+      <Right>785,1355</Right>
     </Top>
   </Position>
 </Family>
@@ -18375,10 +18789,10 @@
   </Position>
 </Family>
 <Family ID="fam00331">
-  <Position>-545,1305
+  <Position>-540,1160
     <Top>
-      <Left>-545,1305</Left>
-      <Right>-525,1305</Right>
+      <Left>-550,1160</Left>
+      <Right>-415,1160</Right>
     </Top>
   </Position>
 </Family>
@@ -18447,10 +18861,10 @@
   </Position>
 </Family>
 <Family ID="fam00341">
-  <Position>-810,1295
+  <Position>-840,1270
     <Top>
-      <Left>-865,1295</Left>
-      <Right>-765,1295</Right>
+      <Left>-865,1270</Left>
+      <Right>-815,1270</Right>
     </Top>
   </Position>
 </Family>
@@ -18590,14 +19004,6 @@
     </Top>
   </Position>
 </Family>
-<Family ID="fam00359">
-  <Position>-17045,1590
-    <Top>
-      <Left>-17050,1590</Left>
-      <Right>-16945,1590</Right>
-    </Top>
-  </Position>
-</Family>
 <Family ID="fam00360">
   <Position>-22550,1675
     <Top>
@@ -18610,7 +19016,7 @@
   <Position>15870,1545
     <Top>
       <Left>15870,1545</Left>
-      <Right>15990,1545</Right>
+      <Right>15920,1545</Right>
     </Top>
   </Position>
 </Family>
@@ -18671,26 +19077,26 @@
   </Position>
 </Family>
 <Family ID="fam00369">
-  <Position>7690,1720
+  <Position>7635,1520
     <Top>
-      <Left>7635,1720</Left>
-      <Right>7890,1720</Right>
+      <Left>7560,1520</Left>
+      <Right>7860,1520</Right>
     </Top>
   </Position>
 </Family>
 <Family ID="fam00370">
-  <Position>-4405,1650
+  <Position>-4490,1650
     <Top>
-      <Left>-4510,1650</Left>
-      <Right>-4255,1650</Right>
+      <Left>-4555,1650</Left>
+      <Right>-4430,1650</Right>
     </Top>
   </Position>
 </Family>
 <Family ID="fam00371">
-  <Position>-23070,1655
+  <Position>-23290,1655
     <Top>
       <Left>-23445,1655</Left>
-      <Right>-22870,1655</Right>
+      <Right>-23255,1655</Right>
     </Top>
   </Position>
 </Family>
@@ -18703,10 +19109,10 @@
   </Position>
 </Family>
 <Family ID="fam00373">
-  <Position>-4285,1845
+  <Position>-4285,1830
     <Top>
-      <Left>-4285,1845</Left>
-      <Right>-4175,1845</Right>
+      <Left>-4285,1830</Left>
+      <Right>-4175,1830</Right>
     </Top>
   </Position>
 </Family>
@@ -18818,7 +19224,7 @@
   <Position>-17580,1700
     <Top>
       <Left>-17655,1700</Left>
-      <Right>-17515,1700</Right>
+      <Right>-17540,1700</Right>
     </Top>
   </Position>
 </Family>
@@ -19023,10 +19429,10 @@
   </Position>
 </Family>
 <Family ID="fam00413">
-  <Position>7775,1810
+  <Position>7775,1780
     <Top>
-      <Left>7705,1810</Left>
-      <Right>7875,1810</Right>
+      <Left>7700,1780</Left>
+      <Right>7795,1780</Right>
     </Top>
   </Position>
 </Family>
@@ -19211,6 +19617,110 @@
     <Top>
       <Left>6325,1240</Left>
       <Right>6470,1240</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00437">
+  <Position>-4315,1575
+    <Top>
+      <Left>-4365,1575</Left>
+      <Right>-4265,1575</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00438">
+  <Position>6150,1345
+    <Top>
+      <Left>6130,1345</Left>
+      <Right>6175,1345</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00439">
+  <Position>6185,435
+    <Top>
+      <Left>6125,435</Left>
+      <Right>6285,435</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00440">
+  <Position>6240,660
+    <Top>
+      <Left>6240,660</Left>
+      <Right>6290,660</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00441">
+  <Position>5150,1275
+    <Top>
+      <Left>5095,1275</Left>
+      <Right>5175,1275</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00442">
+  <Position>5230,1045
+    <Top>
+      <Left>5230,1045</Left>
+      <Right>5280,1045</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00443">
+  <Position>7255,1040
+    <Top>
+      <Left>7200,1040</Left>
+      <Right>7270,1040</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00359">
+  <Position>-17030,1640
+    <Top>
+      <Left>-17045,1640</Left>
+      <Right>-17020,1640</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00445">
+  <Position>-19825,105
+    <Top>
+      <Left>-19825,105</Left>
+      <Right>-19825,105</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00446">
+  <Position>-11615,-210
+    <Top>
+      <Left>-11680,-210</Left>
+      <Right>-11580,-210</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00447">
+  <Position>-11550,-115
+    <Top>
+      <Left>-11550,-115</Left>
+      <Right>-11450,-115</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00448">
+  <Position>-23300,1510
+    <Top>
+      <Left>-23300,1510</Left>
+      <Right>-23155,1510</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00449">
+  <Position>-22885,1435
+    <Top>
+      <Left>-22885,1435</Left>
+      <Right>-22785,1435</Right>
     </Top>
   </Position>
 </Family>
@@ -19523,9 +20033,6 @@
   <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Biological" Family="fam00022" Individual="ind00097">
-  <Position z="100"/>
-</PedigreeLink>
-<PedigreeLink PedigreeLink="Biological" Family="fam00022" Individual="ind00098">
   <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Biological" Family="fam00022" Individual="ind00099">
@@ -22135,9 +22642,7 @@
   <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Biological" Family="fam00182" Individual="ind00881">
-  <Position z="100">
-    <Points>-1370,2080</Points>
-  </Position>
+  <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Parent" Family="fam00233" Individual="ind00881">
   <Position z="100"/>
@@ -22212,9 +22717,7 @@
   <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Biological" Family="fam00182" Individual="ind00905">
-  <Position z="100">
-    <Points>-890,2100</Points>
-  </Position>
+  <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Biological" Family="fam00227" Individual="ind00906">
   <Position z="100"/>
@@ -23014,9 +23517,7 @@
   <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Biological" Family="fam00286" Individual="ind00548">
-  <Position z="100">
-    <Points>15540,1880</Points>
-  </Position>
+  <Position z="100"/>
 </PedigreeLink>
 <PedigreeLink PedigreeLink="Parent" Family="fam00288" Individual="ind00548">
   <Position z="100"/>
@@ -23447,8 +23948,6 @@
 <PedigreeLink PedigreeLink="Biological" Family="fam00251" Individual="ind01287"/>
 <PedigreeLink PedigreeLink="Parent" Family="fam00358" Individual="ind00192"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00358" Individual="ind01288"/>
-<PedigreeLink PedigreeLink="Parent" Family="fam00359" Individual="ind00163"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00359" Individual="ind01289"/>
 <PedigreeLink PedigreeLink="Parent" Family="fam00360" Individual="ind00070"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00360" Individual="ind01290"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00360" Individual="ind01291"/>
@@ -23495,14 +23994,9 @@
 <PedigreeLink PedigreeLink="Biological" Family="fam00370" Individual="ind01323"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00370" Individual="ind01324"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00370" Individual="ind01325"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00370" Individual="ind01326"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00370" Individual="ind01327"/>
 <PedigreeLink PedigreeLink="Parent" Family="fam00371" Individual="ind00068"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00371" Individual="ind01328"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00371" Individual="ind01329"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00371" Individual="ind01330"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00371" Individual="ind01331"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00371" Individual="ind01332"/>
 <PedigreeLink PedigreeLink="Parent" Family="fam00372" Individual="ind00074"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00372" Individual="ind01334"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00372" Individual="ind01335"/>
@@ -23639,7 +24133,6 @@
 <PedigreeLink PedigreeLink="Biological" Family="fam00405" Individual="ind01434"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00405" Individual="ind01435"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00405" Individual="ind01436"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00371" Individual="ind01437"/>
 <PedigreeLink PedigreeLink="Parent" Family="fam00406" Individual="ind00215"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00406" Individual="ind01439"/>
 <PedigreeLink PedigreeLink="Parent" Family="fam00407" Individual="ind00789"/>
@@ -23668,7 +24161,6 @@
 <PedigreeLink PedigreeLink="Biological" Family="fam00413" Individual="ind01456"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00413" Individual="ind01457"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00413" Individual="ind01458"/>
-<PedigreeLink PedigreeLink="Biological" Family="fam00413" Individual="ind01459"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00180" Individual="ind01460"/>
 <PedigreeLink PedigreeLink="Parent" Family="fam00414" Individual="ind01460"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00414" Individual="ind01461"/>
@@ -23750,5 +24242,48 @@
 <PedigreeLink PedigreeLink="Biological" Family="fam00436" Individual="ind01515"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00436" Individual="ind01516"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00436" Individual="ind01517"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00022" Individual="ind01518"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00437" Individual="ind01165"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00437" Individual="ind01519"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00437" Individual="ind01520"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00308" Individual="ind01521"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00438" Individual="ind00948"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00438" Individual="ind01522"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00438" Individual="ind01523"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00248" Individual="ind01524"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00439" Individual="ind00949"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00439" Individual="ind01525"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00439" Individual="ind01526"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00439" Individual="ind01527"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00440" Individual="ind00950"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00440" Individual="ind01528"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00441" Individual="ind00920"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00441" Individual="ind01529"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00441" Individual="ind01530"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00442" Individual="ind00921"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00442" Individual="ind01531"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00331" Individual="ind01532"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00331" Individual="ind01533"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00443" Individual="ind00970"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00443" Individual="ind01534"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00284" Individual="ind01535"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00359" Individual="ind00163"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00359" Individual="ind01536"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00445" Individual="ind00216"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00445" Individual="ind01537"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00104" Individual="ind01538"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00446" Individual="ind00372"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00446" Individual="ind01539"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00446" Individual="ind01540"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00447" Individual="ind00374"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00447" Individual="ind01541"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00447" Individual="ind01542"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00448" Individual="ind01329"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00448" Individual="ind01543"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00448" Individual="ind01544"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00317" Individual="ind01545"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00449" Individual="ind01313"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00449" Individual="ind01546"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00449" Individual="ind01547"/>
 </PedigreeLinks>
 </GenoPro>

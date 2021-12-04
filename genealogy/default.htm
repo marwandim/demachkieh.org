@@ -3,10 +3,11 @@
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html  xmlns='http://www.w3.org/1999/xhtml'>
 <head>
+<meta name="robots" content="noindex, nofollow"/>
 <meta http-equiv="Content-Language" content="en"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>My Ancestors and Relatives</title>
-<meta name="description" content="Summary report of My Ancestors and Relatives containing 1434 individuals and 413 families. This report describes the genealogy and ancestry of families&nbsp;Demachkieh." />
+<meta name="description" content="Summary report of My Ancestors and Relatives containing 1455 individuals and 425 families. This report describes the genealogy and ancestry of families&nbsp;Demachkieh." />
 <meta name="keywords" content="Family Report, Genealogy Report, Family Tree, Family Search" />
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="shortcut icon" href="favicon.ico?" />
@@ -20,6 +21,9 @@ var basepath, setRhs = "*,65%", minRhs="0,*", setLower="30%,*", saveLower, minLo
 
 
 basepath = window.location.pathname;
+
+
+// if (window.location.protocol == 'file:') alert('Reports viewed locally via the \'file\' protocol may not work correctly in some browsers due to frameset issues. Consider using a local web server instead.\n e.g. Web Server for Chrome');
 
 if (!maxPopups) {
 	if (window.location.search.indexOf('max=true') >= 0) {
@@ -44,7 +48,7 @@ var actions = {
 					},
 	hidePopup : 	function(msg) {
 						document.getElementById('rhs').rows="*,0";
-						$.postMessage((msg ? msg :'popup.htm'),window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
+						$.postMessage('page='+(msg ? msg :'popup.htm'),window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
 					},
 	maxPopup : 		function() {
 						if (frameLower.cols != "0,*") saveLower = frameLower.cols;
@@ -57,9 +61,9 @@ var actions = {
 						popupToggleState = 'restored';
 					},
 	openPopup : 	function(popup) {
-						$.postMessage('popup.htm',window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
+						$.postMessage('page=popup.htm',window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
 						actions.showPopup();
-						$.postMessage(popup,window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
+						$.postMessage('page='+popup,window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
 					},
 	showHome :		function() {
 						window.location = 'default.htm' + (maxPopups ? '?max=true' : '');
@@ -84,8 +88,7 @@ var actions = {
 						if (popup) actions.openPopup(popup);
 					},
 	showTOC :		function(toc) {
-						$.postMessage(toc+(toc.indexOf('?')>0 ? ',' : '?' ) + 'close='+ (maxPopups ? 'Y' : 'N' ), window.location.protocol == 'file:' ? '*' : window.location.href, window.frames["toc"]);
-						//window.frames["toc"].location.assign(toc+(toc.indexOf('?')>0 ? ',' : '?' ) + 'close='+ (maxPopups ? 'Y' : 'N' ));
+						$.postMessage('page='+toc+(toc.indexOf('?')>0 ? ',' : '?' ) + 'close='+ (maxPopups ? 'Y' : 'N' ), window.location.protocol == 'file:' ? '*' : window.location.href, window.frames["toc"]);
 						document.getElementById('lower').cols = saveLower;
 					}
 	}
@@ -93,12 +96,12 @@ var actions = {
 $.receiveMessage(function(e){
 	// console.log('receiveMessage', e.data); //debug
 
-	var parts =e.data.split('=');
+	var parts =typeof e.data == 'string' ? e.data.split('=') : '';
 	var msg = (parts.length > 1 ? e.data.substr(parts[0].length+1) : null);
-	if (parts[0] in actions) {
+	if ((e.origin == "null" || e.origin == location.origin) && parts[0] in actions) {
 		actions[parts[0]](msg);
 	} else {
-		alert('missing action for '+parts[0]);
+		console.log('default.htm@$.receiveMessage: no action taken for message \''+e.data + '\' from '+e.origin);
 	}
 });
 
@@ -152,8 +155,8 @@ $(function () {
     <noframes>
       <body>    
          <p id="noframes">
-This <b>genealogy report</b> is about <i>My Ancestors and Relatives</i>.It contains 1434 individuals and 413 families from the family tree. <br /></p><ul>
-<li><a href='toc_individuals.htm#Demachkieh'>Find the Demachkieh family and its 1434 ancestors.</a>.</li>
+This <b>genealogy report</b> is about <i>My Ancestors and Relatives</i>.It contains 1455 individuals and 425 families from the family tree. <br /></p><ul>
+<li><a href='toc_individuals.htm#Demachkieh'>Find the Demachkieh family and its 1455 ancestors.</a>.</li>
 </ul><p>
 You may also search for the following family names:
 .<br /><br />Copyright © 1998-2011 GenoPro Inc. All rights reserved. Download GenoPro from <a href='http://www.genopro.com/'>http://www.genopro.com/</a>

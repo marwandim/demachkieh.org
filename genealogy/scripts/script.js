@@ -37,7 +37,10 @@ function PageInit(forceframes, title,tree, fCacheToggles) {
 			fileName = location.pathname.substring(beginFileName + 1);
  		}	
 		
-		if (forceframes) mytop.location = 'default.htm?page=' + fileName;
+		if (forceframes) {
+			mytop.location = 'default.htm?page=' + fileName;
+			return;
+		}
 	}
 	showLastModified();
 	if (title && i > 1) $.postMessage('title='+title, window.location.protocol == 'file:' ? '*' : window.location.href, mytop);
@@ -1740,9 +1743,14 @@ function waitForSvgLoad(info, counter) {
 	};
 })(jQuery);
 
-// set a default when frame receive a 'postMessage' message is to switch to the URL in the message
+// set a default when frame receive a 'postMessage' message is to log the message
 // some pages will override this e.g. default.htm
 		$.receiveMessage(function(e){
-			window.location.assign(e.data);
+			var parts =typeof e.data == 'string' ? e.data.split('=') : '';
+			var href = (parts.length > 1 ? e.data.substr(parts[0].length+1) : null);
+			if ((e.origin == "null" || e.origin == location.origin) && parts[0]=='page' && /\w\.htm(\?.*)?/.test(href)) {
+				window.location.assign(href);
+			} else {
+				console.log(window.location.href+'@$.receiveMessage: no action taken for message \''+e.data + '\' from '+e.origin);
+			}
 		});
-
