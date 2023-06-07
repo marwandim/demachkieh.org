@@ -4,7 +4,7 @@
 2 VERS 3.1.0.1
 2 CORP GenoPro
 2 ADDR http://www.genopro.com
-1 DATE 8 APR 2023
+1 DATE 7 JUN 2023
 1 CHAR UTF-8
 1 GEDC
 2 VERS 5.5
@@ -48,7 +48,7 @@
 1 ZOOM 50
 1 POSITION -4822,1135
 1 BOUNDARYRECT -26547,2882,16903,-611
-1 SELECTION ind00279
+1 SELECTION ind01061
 1 PRINT 
 2 SCALE 100
 2 DIMENSIONPAPER 5x5
@@ -3094,9 +3094,9 @@
 1 SEX F
 1 FAMC @fam00072@
 0 @ind00279@ INDI
-1 NAME khadijé mohamad /Demachkieh/
-2 DISPLAY khadijé mohamad Demachkieh
-2 GIVN khadijé
+1 NAME khadija mohamad /Demachkieh/
+2 DISPLAY khadija mohamad Demachkieh
+2 GIVN khadija
 2 MIDDLE mohamad
 2 SURN Demachkieh
 1 POSITION -16120,140
@@ -5918,9 +5918,9 @@
 1 FAMS @fam00152@
 1 FAMC @fam00154@
 0 @ind00585@ INDI
-1 NAME Hussein abdel-wahab /Demachkieh/
-2 DISPLAY Hussein abdel-wahab Demachkieh
-2 GIVN Hussein
+1 NAME hussein abdel-wahab /Demachkieh/
+2 DISPLAY hussein abdel-wahab Demachkieh
+2 GIVN hussein
 2 MIDDLE abdel-wahab
 2 SURN Demachkieh
 2 NPFX cheikh
@@ -11522,6 +11522,9 @@
 2 Z 120
 2 BOUNDARYRECT 12143,1992,12217,1899
 1 SEX M
+1 DEAT Y
+2 DATE 1982
+1 ISDEAD Y
 1 NOTE 1.1.2.11.06.10.03.
 1 FAMC @fam00265@
 0 @ind01062@ INDI
@@ -12773,12 +12776,13 @@
 1 FAMC @fam00005@
 1 FAMS @fam00324@
 0 @ind01117@ INDI
-1 NAME cheikh-ahmad /Demachkieh/
-2 DISPLAY cheikh-ahmad Demachkieh
-2 GIVN cheikh-ahmad
+1 NAME ahmad /Demachkieh/
+2 DISPLAY ahmad Demachkieh
+2 GIVN ahmad
 2 SURN Demachkieh
+2 NPFX cheikh
 1 POSITION -12430,2850
-2 BOUNDARYRECT -12472,2882,-12389,2789
+2 BOUNDARYRECT -12467,2882,-12393,2803
 1 SEX M
 1 DEAT Y
 1 ISDEAD Y

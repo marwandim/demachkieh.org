@@ -5,7 +5,7 @@
     <Version>3.1.0.1</Version>
     <Address>http://www.genopro.com</Address>
   </Software>
-  <Date>8 Apr 2023</Date>
+  <Date>7 Jun 2023</Date>
 
 <Global DisplayPictures="Y">
   <Name>
@@ -35,7 +35,7 @@
 </Global>
 <GenoMaps>
 <GenoMap Name="GenoMap1" Zoom="50" Position="-4822,1135" BoundaryRect="-26547,2882,16903,-611">
-  <Selection>ind00279</Selection>
+  <Selection>ind01061</Selection>
   <Print Scale="100" DimensionPaper="5x5"/>
 </GenoMap>
 </GenoMaps>
@@ -2724,9 +2724,9 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind00279">
-  <Name>khadijé mohamad Demachkieh
-    <Display>khadijé mohamad Demachkieh</Display>
-    <First>khadijé</First>
+  <Name>khadija mohamad Demachkieh
+    <Display>khadija mohamad Demachkieh</Display>
+    <First>khadija</First>
     <Middle>mohamad</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -5226,9 +5226,9 @@
   <Comment>1.1.1.</Comment>
 </Individual>
 <Individual ID="ind00585">
-  <Name>cheikh Hussein abdel-wahab Demachkieh
-    <Display>Hussein abdel-wahab Demachkieh</Display>
-    <First>Hussein</First>
+  <Name>cheikh hussein abdel-wahab Demachkieh
+    <Display>hussein abdel-wahab Demachkieh</Display>
+    <First>hussein</First>
     <Middle>abdel-wahab</Middle>
     <Last>Demachkieh</Last>
     <Title>cheikh</Title>
@@ -10253,6 +10253,10 @@
   </Name>
   <Position z="120" BoundaryRect="12143,1992,12217,1899">12180,1960</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>1982</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.03.</Comment>
 </Individual>
 <Individual ID="ind01062">
@@ -11380,12 +11384,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01117">
-  <Name>cheikh-ahmad Demachkieh
-    <Display>cheikh-ahmad Demachkieh</Display>
-    <First>cheikh-ahmad</First>
+  <Name>cheikh ahmad Demachkieh
+    <Display>ahmad Demachkieh</Display>
+    <First>ahmad</First>
     <Last>Demachkieh</Last>
+    <Title>cheikh</Title>
   </Name>
-  <Position BoundaryRect="-12472,2882,-12389,2789">-12430,2850</Position>
+  <Position BoundaryRect="-12467,2882,-12393,2803">-12430,2850</Position>
   <Gender>M</Gender>
   <IsDead>Y</IsDead>
 </Individual>
