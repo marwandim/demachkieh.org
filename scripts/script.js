@@ -9,12 +9,20 @@ $(document).ready(function(){
 	// Figure out what html file is calling it
 	if($( "#membersName" ).length)
 	{
-		slides = 215;
-		mask = '9[9]';
-		file = 'membersName';
+		if($('body').attr('class') === 'arabic') {
+			
+			slides = 27;
+			mask = '9[9]';
+			file = 'membersNameAR';
+		} else {
+			
+			slides = 47;
+			mask = '9[9]';
+			file = 'membersNameEN';
+		}
 	} else if ($( "#membersNumber" ).length)
 	{
-		slides =780;
+		slides =528;
 		mask = '9[9][9]';
 		file = 'membersNumber';
 	}  else if ($( "#policyUpdate" ).length)
