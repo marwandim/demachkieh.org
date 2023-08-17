@@ -11,7 +11,7 @@ $(document).ready(function(){
 	{
 		if($('body').attr('class') === 'arabic') {
 			
-			slides = 27;
+			slides = 47;
 			mask = '9[9]';
 			file = 'membersNameAR';
 		} else { 
