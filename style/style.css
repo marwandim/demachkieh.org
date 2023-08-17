@@ -450,6 +450,11 @@ p a:hover {
 	padding: 45px 30px 25px 20px;
 	width: 1000px;
 }
+
+#body div div div div#content div.fullpage h3 a {
+	color: #daec18;
+}
+
 #body2 div div div div#content div.fullpage {
 	background: url(../images/bg-content.png) repeat;
 	border-radius: 15px;
