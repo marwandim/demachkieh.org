@@ -14,7 +14,7 @@ $(document).ready(function(){
 			slides = 27;
 			mask = '9[9]';
 			file = 'membersNameAR';
-		} else {
+		} else { 
 			
 			slides = 47;
 			mask = '9[9]';
