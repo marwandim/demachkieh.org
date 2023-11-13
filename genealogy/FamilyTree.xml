@@ -5,7 +5,7 @@
     <Version>3.1.0.1</Version>
     <Address>http://www.genopro.com</Address>
   </Software>
-  <Date>9 Jun 2023</Date>
+  <Date>13 Nov 2023</Date>
 
 <Global DisplayPictures="Y">
   <Name>
@@ -34,8 +34,8 @@
   <ActiveGenoMap>GenoMap1</ActiveGenoMap>
 </Global>
 <GenoMaps>
-<GenoMap Name="GenoMap1" Zoom="50" Position="-2395,556" BoundaryRect="-26514,2854,21723,-1741">
-  <Selection>ind00909</Selection>
+<GenoMap Name="GenoMap1" Zoom="50" Position="-2,5" BoundaryRect="-21727,1752,21723,-1741">
+  <Selection>ind01047</Selection>
   <Print Scale="100" DimensionPaper="5x5"/>
 </GenoMap>
 </GenoMaps>
@@ -2021,6 +2021,10 @@
   </Name>
   <Position z="120" BoundaryRect="-15067,-518,-14993,-611">-15030,-550</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
 </Individual>
 <Individual ID="ind00210">
   <Name>abdel-rahman aref Demachkieh
@@ -2031,6 +2035,10 @@
   </Name>
   <Position z="120" BoundaryRect="-15316,-728,-15234,-821">-15275,-760</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
 </Individual>
 <Individual ID="ind00211">
   <Name>laila abdel-rahman Demachkieh
@@ -3630,6 +3638,10 @@
   </Name>
   <Position z="120" BoundaryRect="-6137,-958,-6063,-1051">-6100,-990</Position>
   <Gender>F</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>yes</Date>
+  </Death>
 </Individual>
 <Individual ID="ind00385">
   <Name>zahira abdel-hafiz Demachkieh
@@ -3680,6 +3692,10 @@
   </Name>
   <Position z="120" BoundaryRect="-5737,-968,-5663,-1061">-5700,-1000</Position>
   <Gender>F</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>15 Jun 2023</Date>
+  </Death>
 </Individual>
 <Individual ID="ind00390">
   <Name>mustafa mahmoud Demachkieh
@@ -9779,7 +9795,7 @@
     <Middle>abdel-hadi</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="14613,752,14687,659">14650,720</Position>
+  <Position z="120" BoundaryRect="14738,747,14812,654">14775,715</Position>
   <Gender>M</Gender>
   <Comment>1.1.2.11.02.09.09.04.</Comment>
 </Individual>
@@ -10193,6 +10209,13 @@
   </Name>
   <Position z="120" BoundaryRect="16183,752,16257,659">16220,720</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>1934</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>30 Oct 2023</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.02.04.</Comment>
 </Individual>
 <Individual ID="ind01048">
@@ -10616,6 +10639,10 @@
   </Name>
   <Position z="120" BoundaryRect="18143,882,18217,789">18180,850</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>yes</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.05.</Comment>
 </Individual>
 <Individual ID="ind01083">
@@ -10911,6 +10938,10 @@
   </Name>
   <Position z="120" BoundaryRect="19333,862,19407,769">19370,830</Position>
   <Gender>F</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>yes</Date>
+  </Death>
   <Comment>1.1.2.11.06.10.06.</Comment>
 </Individual>
 <Individual ID="ind01108">
@@ -11478,12 +11509,13 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind00583">
-  <Name>abdel-wahab Demachkieh
-    <Display>abdel-wahab Demachkieh</Display>
+  <Name>abdel-wahab ahmad (cheikh) Demachkieh
+    <Display>abdel-wahab ahmad (cheikh) Demachkieh</Display>
     <First>abdel-wahab</First>
+    <Middle>ahmad (cheikh)</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position z="120" BoundaryRect="-1890,1532,-1810,1439">-1850,1500</Position>
+  <Position z="120" BoundaryRect="-1895,1532,-1805,1439">-1850,1500</Position>
   <Gender>M</Gender>
   <IsDead>Y</IsDead>
   <Comment>1.1</Comment>
@@ -12873,7 +12905,7 @@
     <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="13573,567,13647,474">13610,535</Position>
+  <Position BoundaryRect="13528,567,13602,474">13565,535</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01254">
@@ -12883,7 +12915,7 @@
     <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="13638,567,13712,474">13675,535</Position>
+  <Position BoundaryRect="13588,542,13662,449">13625,510</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01255">
@@ -12893,7 +12925,7 @@
     <Middle>ahmad</Middle>
     <Last>Demachkieh</Last>
   </Name>
-  <Position BoundaryRect="13708,567,13782,474">13745,535</Position>
+  <Position BoundaryRect="13648,567,13722,474">13685,535</Position>
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01256">
@@ -14097,9 +14129,9 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01377">
-  <Name>abdul-rahman salim Demachkieh
-    <Display>abdul-rahman salim Demachkieh</Display>
-    <First>abdul-rahman</First>
+  <Name>abdel-rahman salim Demachkieh
+    <Display>abdel-rahman salim Demachkieh</Display>
+    <First>abdel-rahman</First>
     <Middle>salim</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -14467,9 +14499,9 @@
   <Gender>M</Gender>
 </Individual>
 <Individual ID="ind01415">
-  <Name>abdul-rahman zaid Demachkieh
-    <Display>abdul-rahman zaid Demachkieh</Display>
-    <First>abdul-rahman</First>
+  <Name>abdel-rahman zaid Demachkieh
+    <Display>abdel-rahman zaid Demachkieh</Display>
+    <First>abdel-rahman</First>
     <Middle>zaid</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -14607,9 +14639,9 @@
   <Gender>F</Gender>
 </Individual>
 <Individual ID="ind01429">
-  <Name>abdul-karim moh&#39;d-khaled Demachkieh
-    <Display>abdul-karim moh&#39;d-khaled Demachkieh</Display>
-    <First>abdul-karim</First>
+  <Name>abdel-karim moh&#39;d-khaled Demachkieh
+    <Display>abdel-karim moh&#39;d-khaled Demachkieh</Display>
+    <First>abdel-karim</First>
     <Middle>moh&#39;d-khaled</Middle>
     <Last>Demachkieh</Last>
   </Name>
@@ -15958,6 +15990,45 @@
   </Name>
   <Position BoundaryRect="5303,57,5377,-36">5340,25</Position>
   <Gender>M</Gender>
+</Individual>
+<Individual ID="ind01550">
+  <Name>taha mohamad-kheir Demachkieh
+    <Display>taha mohamad-kheir Demachkieh</Display>
+    <First>taha</First>
+    <Middle>mohamad-kheir</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="5380,62,5469,-31">5425,30</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>21 Mar 2023</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01551">
+  <Name>rakan tarek Demachkieh
+    <Display>rakan tarek Demachkieh</Display>
+    <First>rakan</First>
+    <Middle>tarek</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="14763,642,14837,549">14800,610</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>3 Jul 2023</Date>
+  </Birth>
+</Individual>
+<Individual ID="ind01552">
+  <Name>celine ahmad Demachkieh
+    <Display>celine ahmad Demachkieh</Display>
+    <First>celine</First>
+    <Middle>ahmad</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="13713,567,13787,474">13750,535</Position>
+  <Gender>F</Gender>
+  <Birth>
+    <Date>2015</Date>
+  </Birth>
 </Individual>
 </Individuals>
 <Families>
@@ -18355,10 +18426,10 @@
   <Relation>Marriage</Relation>
 </Family>
 <Family ID="fam00262">
-  <Position z="110">14370,780
+  <Position z="110">14510,780
     <Top>
-      <Left>14245,780</Left>
-      <Right>14650,780</Right>
+      <Left>14250,780</Left>
+      <Right>14775,780</Right>
     </Top>
   </Position>
   <Relation>Marriage</Relation>
@@ -19079,8 +19150,8 @@
 <Family ID="fam00345">
   <Position>13585,585
     <Top>
-      <Left>13585,585</Left>
-      <Right>13765,585</Right>
+      <Left>13565,585</Left>
+      <Right>13750,585</Right>
     </Top>
   </Position>
 </Family>
@@ -19608,7 +19679,7 @@
   <Position>5290,150
     <Top>
       <Left>5245,150</Left>
-      <Right>5340,150</Right>
+      <Right>5425,150</Right>
     </Top>
   </Position>
 </Family>
@@ -19905,6 +19976,14 @@
     <Top>
       <Left>-18065,305</Left>
       <Right>-17965,305</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00450">
+  <Position>14765,665
+    <Top>
+      <Left>14765,665</Left>
+      <Right>14830,665</Right>
     </Top>
   </Position>
 </Family>
@@ -24469,5 +24548,9 @@
 <PedigreeLink PedigreeLink="Biological" Family="fam00449" Individual="ind01547"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00174" Individual="ind01548"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00412" Individual="ind01549"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00412" Individual="ind01550"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00450" Individual="ind01018"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00450" Individual="ind01551"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00345" Individual="ind01552"/>
 </PedigreeLinks>
 </GenoPro>
