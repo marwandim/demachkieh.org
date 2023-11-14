@@ -241,6 +241,7 @@ AddEvent(20230922,'ziad mohamad Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E7th\x3
 AddEvent(20240922,'ziad mohamad Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E8th\x3C/bdo\x3E birthday','birthday','','Demachkieh-ziadMohamad-ind01529.htm','','','','');
 AddEvent(20231120,'mariam mohamad Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E5th\x3C/bdo\x3E birthday','birthday','','Demachkieh-mariamMohamad-ind01530.htm','','','','');
 AddEvent(20231114,'mohamad rab Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E9th\x3C/bdo\x3E birthday','birthday','','Demachkieh-mohamadRab-ind01532.htm','','','','');
+AddEvent(20241114,'mohamad rab Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E10th\x3C/bdo\x3E birthday','birthday','','Demachkieh-mohamadRab-ind01532.htm','','','','');
 AddEvent(20231123,'joury rabih Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E6th\x3C/bdo\x3E birthday','birthday','','Demachkieh-jouryRabih-ind01533.htm','','','','');
 AddEvent(20230716,'hamza mohamad Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E2nd\x3C/bdo\x3E birthday','birthday','','Demachkieh-hamzaMohamad-ind01537.htm','','','','');
 AddEvent(20240716,'hamza mohamad Demachkieh \x3Cbdo dir=\\\x27ltr\\\x27\x3E3rd\x3C/bdo\x3E birthday','birthday','','Demachkieh-hamzaMohamad-ind01537.htm','','','','');

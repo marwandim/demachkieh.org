@@ -5,7 +5,7 @@
     <Version>3.1.0.1</Version>
     <Address>http://www.genopro.com</Address>
   </Software>
-  <Date>13 Nov 2023</Date>
+  <Date>14 Nov 2023</Date>
 
 <Global DisplayPictures="Y">
   <Name>
@@ -7693,6 +7693,10 @@
   </Name>
   <Position z="120" BoundaryRect="6933,902,7007,809">6970,870</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
   <Comment>1.1.2.11.02.05.03.</Comment>
 </Individual>
 <Individual ID="ind00827">
@@ -7803,6 +7807,10 @@
   </Name>
   <Position z="120" BoundaryRect="7433,902,7507,809">7470,870</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
   <Comment>1.1.2.11.02.05.04.</Comment>
 </Individual>
 <Individual ID="ind00839">
