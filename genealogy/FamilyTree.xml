@@ -5,7 +5,7 @@
     <Version>3.1.0.1</Version>
     <Address>http://www.genopro.com</Address>
   </Software>
-  <Date>14 Nov 2023</Date>
+  <Date>16 Nov 2023</Date>
 
 <Global DisplayPictures="Y">
   <Name>
@@ -35,7 +35,6 @@
 </Global>
 <GenoMaps>
 <GenoMap Name="GenoMap1" Zoom="50" Position="-2,5" BoundaryRect="-21727,1752,21723,-1741">
-  <Selection>ind01047</Selection>
   <Print Scale="100" DimensionPaper="5x5"/>
 </GenoMap>
 </GenoMaps>
@@ -7638,6 +7637,10 @@
   </Name>
   <Position z="120" BoundaryRect="6703,862,6777,769">6740,830</Position>
   <Gender>F</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
   <Comment>1.1.2.11.02.03.</Comment>
 </Individual>
 <Individual ID="ind00822">
@@ -7649,6 +7652,10 @@
   </Name>
   <Position z="120" BoundaryRect="6753,972,6827,879">6790,940</Position>
   <Gender>F</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
   <Comment>1.1.2.11.02.04.</Comment>
 </Individual>
 <Individual ID="ind00823">
@@ -7660,6 +7667,10 @@
   </Name>
   <Position z="120" BoundaryRect="6833,992,6907,899">6870,960</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
   <Comment>1.1.2.11.02.05.</Comment>
 </Individual>
 <Individual ID="ind00824">
@@ -7763,6 +7774,10 @@
   </Name>
   <Position z="120" BoundaryRect="7143,802,7217,709">7180,770</Position>
   <Gender>F</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
   <Comment>1.1.2.11.02.05.03.03.</Comment>
 </Individual>
 <Individual ID="ind00835">
@@ -11862,6 +11877,10 @@
   </Name>
   <Position BoundaryRect="6633,912,6707,819">6670,880</Position>
   <Gender>M</Gender>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>dead</Date>
+  </Death>
 </Individual>
 <Individual ID="ind01150">
   <Name>hadiya abdel-kader Demachkieh
