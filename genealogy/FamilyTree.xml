@@ -5,7 +5,7 @@
     <Version>3.1.0.1</Version>
     <Address>http://www.genopro.com</Address>
   </Software>
-  <Date>16 Nov 2023</Date>
+  <Date>17 Jun 2024</Date>
 
 <Global DisplayPictures="Y">
   <Name>
@@ -35,6 +35,7 @@
 </Global>
 <GenoMaps>
 <GenoMap Name="GenoMap1" Zoom="50" Position="-2,5" BoundaryRect="-21727,1752,21723,-1741">
+  <Selection>ind00899</Selection>
   <Print Scale="100" DimensionPaper="5x5"/>
 </GenoMap>
 </GenoMaps>
@@ -2469,6 +2470,13 @@
   </Name>
   <Position z="120" BoundaryRect="-13187,-1138,-13113,-1231">-13150,-1170</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>4 Mar 1954</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>6 Jun 2024</Date>
+  </Death>
 </Individual>
 <Individual ID="ind00253">
   <Name>bassem mustafa Demachkieh
@@ -12634,6 +12642,13 @@
   </Name>
   <Position BoundaryRect="12923,452,12997,359">12960,420</Position>
   <Gender>F</Gender>
+  <Birth>
+    <Date>6 Oct 1939</Date>
+  </Birth>
+  <IsDead>Y</IsDead>
+  <Death>
+    <Date>22 Dec 2023</Date>
+  </Death>
 </Individual>
 <Individual ID="ind01224">
   <Name>jida majed Demachkieh
@@ -16054,8 +16069,46 @@
   <Position BoundaryRect="13713,567,13787,474">13750,535</Position>
   <Gender>F</Gender>
   <Birth>
-    <Date>2015</Date>
+    <Date>19 Jul 2015</Date>
   </Birth>
+</Individual>
+<Individual ID="ind01553">
+  <Name>omar khaled son of moh&#39;d-omar Demachkieh
+    <Display>omar khaled son of moh&#39;d-omar Demachkieh</Display>
+    <First>omar</First>
+    <Middle>khaled son of moh&#39;d-omar</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="17137,267,17232,174">17185,235</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>10 Apr 2024</Date>
+  </Birth>
+  <Comment>mm.dd.yyyy</Comment>
+</Individual>
+<Individual ID="ind01554">
+  <Name>walid mohamad son of khaled Demachkieh
+    <Display>walid mohamad son of khaled Demachkieh</Display>
+    <First>walid</First>
+    <Middle>mohamad son of khaled</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="17569,327,17660,234">17615,295</Position>
+  <Gender>M</Gender>
+  <Birth>
+    <Date>13 Mar 2024</Date>
+  </Birth>
+  <Comment>mm.dd.yyyy</Comment>
+</Individual>
+<Individual ID="ind01555">
+  <Name>mohamad nabil Demachkieh
+    <Display>mohamad nabil Demachkieh</Display>
+    <First>mohamad</First>
+    <Middle>nabil</Middle>
+    <Last>Demachkieh</Last>
+  </Name>
+  <Position BoundaryRect="20743,397,20817,304">20780,365</Position>
+  <Gender>M</Gender>
 </Individual>
 </Individuals>
 <Families>
@@ -19298,7 +19351,7 @@
   <Position>20690,415
     <Top>
       <Left>20690,415</Left>
-      <Right>20740,415</Right>
+      <Right>20780,415</Right>
     </Top>
   </Position>
 </Family>
@@ -20011,6 +20064,22 @@
     <Top>
       <Left>14765,665</Left>
       <Right>14830,665</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00451">
+  <Position>17210,290
+    <Top>
+      <Left>17160,290</Left>
+      <Right>17260,290</Right>
+    </Top>
+  </Position>
+</Family>
+<Family ID="fam00452">
+  <Position>17590,345
+    <Top>
+      <Left>17590,345</Left>
+      <Right>17645,345</Right>
     </Top>
   </Position>
 </Family>
@@ -24579,5 +24648,10 @@
 <PedigreeLink PedigreeLink="Parent" Family="fam00450" Individual="ind01018"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00450" Individual="ind01551"/>
 <PedigreeLink PedigreeLink="Biological" Family="fam00345" Individual="ind01552"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00451" Individual="ind01065"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00451" Individual="ind01553"/>
+<PedigreeLink PedigreeLink="Parent" Family="fam00452" Individual="ind01071"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00452" Individual="ind01554"/>
+<PedigreeLink PedigreeLink="Biological" Family="fam00361" Individual="ind01555"/>
 </PedigreeLinks>
 </GenoPro>
